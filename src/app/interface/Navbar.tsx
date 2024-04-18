@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link href={"/"}>
           <Image
             priority
-            src="/fusion.png"
+            src="/img/fusion.png"
             width={200}
             height={200}
             alt="Picture of the author"
