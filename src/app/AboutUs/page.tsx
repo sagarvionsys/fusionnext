@@ -12,7 +12,7 @@ const AboutUs = () => {
 
       <section id="features"className=" px-6 py-10 md:py-20 md:px-10  border-t border-b border-neutral-900 bg-neutral-900/30">
         <div className="relative mx-auto max-w-5xl text-center">
-          <span className="text-gray-400 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
+          <span className="text-gray-300 my-3 flex items-center justify-center font-medium uppercase tracking-wider">
             Why choose us
           </span>
           <h2
@@ -52,19 +52,19 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="mt-10 px-5 py-5 text-center border border-gray-600 bg-gradient-to-br from-black to-slate-900">
+      <div className="mt-10 sm:ml-10 sm:mr-10 sm:px-5 sm:py-5 text-center border border-gray-800 bg-gradient-to-br from-black to-slate-900">
       <div className="mt-5 px-5 py-5 md:py-5 md:px-5 mx-auto max-w-5xl text-center">
-        <h2 className="block w-full bg-gradient-to-b from-white to-green-200 bg-clip-text font-bold text-transparent text-3xl sm:text-3xl">
+        <h2 className="block w-full bg-gradient-to-b from-white to-blue-200 bg-clip-text text-transparent font-semibold text-2xl sm:text-3xl">
         Our Key Features
         </h2>
       </div>
 
-      <div className="hover:cursor-pointer px-6 py-10 md:py-10 md:px-17 -mx-4 flex flex-wrap p-8">
+      <div className="hover:cursor-pointer sm:px-6 sm:py-10 md:py-10 md:px-17 -mx-4 flex flex-wrap p-8">
        {features.map((feat)=>
         { return (<div key={feat.id} className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="mb-9 rounded-xl py-8 px-7 border border-gray-700 shadow shadow-green-200 shadaow-md transition-all hover:shadow-green-200 hover:shadow-lg sm:p-9 lg:px-6 xl:px-9">
+        <div className="mb-9 md:ml-8 md:mr-8 rounded-xl py-8 px-7  shadow shadow-gray-600 shadaow-md transition-all hover:shadow-gray-400 hover:shadow-md sm:p-9 lg:px-6 xl:px-9">
           <div className="flex items-center justify-center text-5xl text-white"><feat.Icon color={feat?.color}/></div>
-          <h3 className="flex items-center justify-center mb-4 text-xl font-bold text-gray-300">{feat?.title}</h3>
+          <h3 className="flex items-center justify-center mb-4 text-xl text-gray-300">{feat?.title}</h3>
           </div>
         </div>);
         }
@@ -74,13 +74,13 @@ const AboutUs = () => {
 
       <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2">
         <div className="content-center p-4 text-center">
-          <h1 className="block mt-6 w-full bg-gradient-to-b from-white to-red-200 bg-clip-text font-bold text-transparent text-2xl sm:text-3xl">
-          Our Vision
+          <h1 className="block mt-6 w-full bg-gradient-to-b from-white to-red-200 bg-clip-text font-semibold text-transparent text-2xl sm:text-3xl">
+          OUR VISION
           </h1>
           <p className="text-gray-300 mt-6 text-sm sm:text-xl md:text-2xl">Our vision is to provide optimal, job oriened and real time training</p>
         </div>
         <div className="content-center p-4 text-center">
-          <h1 className="block mt-6 w-full bg-gradient-to-b from-white to-red-200 bg-clip-text font-bold text-transparent text-2xl sm:text-3xl">
+          <h1 className="block mt-6 w-full bg-gradient-to-b from-white to-red-200 bg-clip-text font-semibold text-transparent text-2xl sm:text-3xl">
           OUR MISSION
           </h1>
           <p className="text-gray-300 mt-6 text-sm sm:text-xl md:text-2xl ">Our Mission is to place students in IT industry and make them financially strong, productive and successful</p>
@@ -88,13 +88,13 @@ const AboutUs = () => {
       </div>
       </section>
       <section className="text-gray-300 body-font">
-        <div className="container px-5 py-24 mx-auto">   
-          <div className="flex flex-wrap -m-4 text-center">
+        <div className="container py-13 pb-20 mx-auto">   
+          <div className="flex flex-wrap m-4 text-center">
             {numbers.map((feat)=>{
               return(
                 <div key={feat.id} className="hover:cursor-pointer p-4 md:w-1/4 sm:w-1/2 w-full">
                   <div className="border-2 border-gray-600 px-4 py-6 rounded-lg transform transition duration-500 hover:scale-110">          
-                    <h2 className="title-font font-medium text-4xl">{feat?.number}</h2>
+                    <h2 className="title-font font-medium text-3xl sm:text-4xl">{feat?.number}</h2>
                     <p className="leading-relaxed">{feat?.description}</p>
                   </div>
                 </div>
