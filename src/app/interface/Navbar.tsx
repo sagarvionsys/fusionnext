@@ -42,7 +42,7 @@ const Navbar = () => {
             return (
               <Link
                 key={link.id}
-                className="hover:bg-gray-900 p-2 rounded-xl font-semibold"
+                className="hover:bg-gray-900 p-2 rounded-xl text-white font-semibold"
                 href={link.url}
               >
                 {link.label}
@@ -50,13 +50,13 @@ const Navbar = () => {
             );
           })}
           <Link
-            className="hover:bg-gray-900 p-2 rounded-xl font-semibold"
+            className="hover:bg-gray-900 p-2 rounded-xl text-white font-semibold"
             href={"/SignUp"}
           >
             SignUp
           </Link>
           <Link
-            className="hover:bg-gray-900 p-2 rounded-xl font-semibold"
+            className="hover:bg-gray-900 p-2 rounded-xl text-white font-semibold"
             href={"/SignIn"}
           >
             SignIn
@@ -66,59 +66,5 @@ const Navbar = () => {
     </header>
   );
 };
-
-// const FlyoutLink = ({ children, href, FlyoutContent }) => {
-//   const [open, setOpen] = useState(false);
-//   const showFlyout = FlyoutContent && open;
-
-//   return (
-//     <div
-//       onMouseEnter={() => setOpen(true)}
-//       onMouseLeave={() => setOpen(false)}
-//       className="relative w-fit h-fit"
-//     >
-//       <a href={href} className="relative flex items-center text-white">
-//         {children}
-//         <span
-//           style={{
-//             transform: showFlyout ? "scaleX(1)" : "scaleX(0)",
-//           }}
-//           className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
-//         />
-//       </a>
-//       <AnimatePresence>
-//         {showFlyout && (
-//           <motion.div
-//             initial={{ opacity: 0, y: 15 }}
-//             animate={{ opacity: 1, y: 0 }}
-//             exit={{ opacity: 0, y: 15 }}
-//             style={{ translateX: "-50%" }}
-//             transition={{ duration: 0.3, ease: "easeOut" }}
-//             className="absolute left-[60%] top-[52px] z-50  md:top-[3.6rem] bg-white text-black"
-//           >
-//             <FlyoutContent />
-//           </motion.div>
-//         )}
-//       </AnimatePresence>
-//     </div>
-//   );
-// };
-
-// const PricingContent = () => {
-//   return (
-//     <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-3 md:overflow-hidden flex flex-col p-4  md:grid md:grid-cols-2 shadow-lg rounded-lg">
-//       {links.map((l) => {
-//         return (
-//           <div key={l.id} className="hover:bg-gray-200 rounded-xl p-2">
-//             <Link to={l.link}>
-//               <h1 className="font-bold w-fit">{l.name}</h1>
-//               <span className="text-xs">{l.desc}</span>
-//             </Link>
-//           </div>
-//         );
-//       })}
-//     </div>
-//   );
-// };
 
 export default Navbar;
