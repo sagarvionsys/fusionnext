@@ -4,7 +4,7 @@ import { MotionConfig, motion } from "framer-motion";
 
 export const Ham = (props) => {
   return (
-    <div className="grid place-content-center bg-black">
+    <div className="grid place-content-center text-black">
       <AnimatedHamburgerButton setnav={props} />
     </div>
   );
