@@ -4,7 +4,7 @@ const Enquiry_home = () => {
   return (
     <main className="flex py-5">
       <div className="test">
-        <h1>Enquery Now</h1>
+        <h1>Enquiry Now</h1>
       </div>
       <div className="Inpu_fileds">
         <input type="text" placeholder="Enter your name" />
