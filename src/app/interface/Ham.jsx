@@ -28,17 +28,17 @@ const AnimatedHamburgerButton = ({ setnav }) => {
       >
         <motion.span
           variants={VARIANTS.top}
-          className="absolute h-1 w-9 bg-white" // Set the icon color to white
+          className="absolute h-1 w-9 bg-black" // Set the icon color to white
           style={{ y: "-50%", left: "50%", x: "-50%", top: "35%" }}
         />
         <motion.span
           variants={VARIANTS.middle}
-          className="absolute h-1 w-9 bg-white" // Set the icon color to white
+          className="absolute h-1 w-9 bg-black" // Set the icon color to white
           style={{ left: "50%", x: "-50%", top: "50%", y: "-50%" }}
         />
         <motion.span
           variants={VARIANTS.bottom}
-          className="absolute h-1 w-4 bg-white" // Set the icon color to white
+          className="absolute h-1 w-4 bg-black" // Set the icon color to white
           style={{
             x: "-50%",
             y: "50%",

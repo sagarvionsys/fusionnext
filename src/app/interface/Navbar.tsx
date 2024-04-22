@@ -1,13 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { links } from "./Mylinks";
+import { links } from "../../Data/Mylinks";
 import { Ham } from "./Ham";
 import Link from "next/link";
 import Image from "next/image";
-
-// Import your useClient hook here
-// Change the import path accordingly
 
 const Navbar: React.FC = () => {
   const [showNav, setShowNav] = useState(false);
@@ -16,11 +13,16 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="flex gap-5 p-2 text-lg bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full ">
+    <header className="flex gap-2 p-1 text-lg bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full ">
       <div className="logo">
-        {/* <Link href={"/"}>
-          <Image src={GTW} alt="GreatWay" />
-        </Link> */}
+        <Link href={"/"}>
+          <Image
+            src={"/img/fusion.png"}
+            width={250}
+            height={250}
+            alt="GreatWay"
+          />
+        </Link>
       </div>
       <span className="md:hidden">
         <Ham setshowNav={handleNav} showNav={showNav} />
@@ -133,12 +135,11 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
 
 const PricingContent: React.FC = () => {
   return (
-    <div className="md:w-[50rem] bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-3 md:overflow-hidden flex flex-col p-4  md:grid md:grid-cols-2 shadow-lg rounded-lg">
+    <div className=" bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-2 md:overflow-hidden flex flex-col p-4  shadow-lg rounded-lg">
       {links.map((l, index) => (
         <div key={index} className="hover:bg-gray-200 rounded-xl p-2">
           <Link href={l.link}>
             <h1 className="font-bold w-fit">{l.name}</h1>
-            <span className="text-xs">{l.desc}</span>
           </Link>
         </div>
       ))}
