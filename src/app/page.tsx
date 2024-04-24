@@ -1,12 +1,41 @@
 "use client";
 import React from "react";
 import { Boxes } from "@/components/ui/background-boxes";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { cn } from "@/utils/cn";
+import Link from "next/link";
+import Image from "next/image";
+import Hero_Section from "./interface/Hero_Section";
+import Feature_home from "./interface/Features_home";
+
 const Home = () => {
+  const words = [
+    {
+      text: "Build",
+    },
+    {
+      text: "awesome",
+    },
+    {
+      text: "career",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Fusion Institute.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
+
   return (
-    <>
+    <main className="pt-16">
       {/* hero section  */}
-      <section></section>
+
+      <Hero_Section />
+
+      <Feature_home />
+
       {/* box glowing pattern */}
       <section className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
@@ -21,7 +50,23 @@ const Home = () => {
           Development·Python-Data Science etc.
         </p>
       </section>
-    </>
+
+      {/* typewriting section */}
+      <section>
+        <div className="flex flex-col items-center justify-center h-[25rem]  ">
+          <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
+            The road to freedom starts from here
+          </p>
+          <TypewriterEffectSmooth words={words} />
+
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4">
+            <button className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
+              <Link href={"/SignIn"}>SignIn</Link>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 };
 
