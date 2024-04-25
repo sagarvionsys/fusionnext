@@ -57,7 +57,7 @@ const AboutUs = () => {
       <div className="relative flex felx-col-1 md:flex-col-2 items-center justify-center">
         <div className="flex-1">
         <div className="mt-20 md:px-30 md:py-5 max-w-5xl text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold">What is Corporate Training?</h2>
+          <h2 className="text-2xl md:text-3xl bg-gradient-to-b from-gray-900 to-gray-700 bg-clip-text font-bold text-transparent">What is Corporate Training?</h2>
         </div>
         <div className="flex p-5">
           <div className="md:pl-10 flex justify-center text-2xl md:text-3xl text-violet-950">
