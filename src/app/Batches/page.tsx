@@ -64,7 +64,7 @@ const Batches = () => {
      }
   ]
 
-  return <main className="bg-white">
+  return <main className="bg-white pt-[90px]">
     
     <section className="h-auto w-full pb-1">
       <div className="flex lg:h-[500px] md:h-[800px] h-[600px] relative">
