@@ -17,7 +17,7 @@ const Footer = () => {
     message: ''
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e:any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -25,7 +25,7 @@ const Footer = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     console.log('Form Data:', formData);
     setFormData({
@@ -84,7 +84,8 @@ const Footer = () => {
         <div className="flex flex-col sm:text-[17px] text-[15px] h-auto w-auto">
 
          <Link href={"/AboutUs"} className="text-slate-400 hover:text-sky-400 pl-2 pt-0">About Us</Link>
-         <Link href={"/Courses" } className="text-slate-400 hover:text-sky-400 pl-2 pt-0">Courses</Link>
+         <Link href={"/Career/it_profile"} className="text-slate-400 hover:text-sky-400 pl-2 pt-0">IT Career</Link>
+         <Link href={"/Career/non-it_profile"} className="text-slate-400 hover:text-sky-400 pl-2 pt-0">NON-IT Career</Link>
          <Link href={"/Batches"} className="text-slate-400 hover:text-sky-400 pl-2 pt-0 ">Batches</Link>
          <Link href={"/"} className="text-slate-400 hover:text-sky-400 pl-2 pt-0">FAQs</Link>
          <Link href={"/"} className="text-slate-400 hover:text-sky-400 pl-2 pt-0">Testimonials</Link>

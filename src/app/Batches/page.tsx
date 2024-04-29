@@ -12,7 +12,7 @@ import Image from "next/image";
 
 
 const Batches = () => {
-  //  const Color="#"+Math.floor(Math.random()*6177722).toString(16);
+  
    const Data=[
     {
      id:1,
@@ -101,7 +101,7 @@ const Batches = () => {
             <div key={index} className="h-auto w-auto my-4 flex sm:text-[18px] text-[13px] ">
               <div className="flex w-full">
                 <div className="h-24 lg:w-[110px] w-[70px] px-2 py-2 flex items-center text-white md:text-[25px] text-[15px] bg-lime-400">{Batches.date}</div>
-                <div className="lg:w-[400px] justify-evenly w-full flex h-24 items-center bg-white">
+                <div className="lg:w-[400px] justify-evenly w-full flex h-24 items-center text-black bg-white">
                   <p className="h-24 lg:w-52 md:w-96 place-content-center px-2">{Batches.title}</p>
                   <p className="sm:mr-6 mr-2 md:w-40 ">{Batches.date}</p>
                   <p className=" pr-2 md:w-40">{Batches.rutine}</p>
@@ -158,14 +158,12 @@ const Batches = () => {
     <div className="border-l-2 mt-10">
       
         {Data.map((Batches,index)=><div key={index} className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
-          {/* <!-- Dot Follwing the Left Vertical Line --> */}
+          
           <div className="w-8 h-8 bg-blue-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"> 
           <p className="text-white ml-2 mt-2">{<Batches.logo/>}</p></div>
           
-          {/* <!-- Line that connecting the box with the vertical line --> */}
           <div className="w-10 h-1 bg-blue-300 absolute -left-10 z-0"></div>
 
-          {/* <!-- Content that showing in the box --> */}
           <div className="flex-auto">
             <h1 className="text-lg">{Batches.date}</h1>
             <h1 className="text-xl font-bold">{Batches.title}</h1>
