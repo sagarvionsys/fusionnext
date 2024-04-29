@@ -7,37 +7,35 @@ const work_field = [
   {
     id: 1,
     logo: LuActivity,
-    title: "Publishing",
-    desc: "Plan, collaborate, and publishing your contetn that drivees meaningful engagement and growth for your barnd",
+    title: "Publish Interactive Learning Platforming",
+    desc: "A feature-rich platform that supports interactive teaching methods such as live video lectures, screen sharing, whiteboarding, and real-time Q&A sessions.",
   },
   {
     id: 2,
     logo: LuActivity,
-    title: "Analytics",
-    desc: "Analyze your performance and create goegeous report",
+    title: "Course Management",
+    desc: "Tools for organizing and managing courses, including creating, editing, and scheduling classes, as well as tracking student progress and performance.",
   },
   {
     id: 3,
     logo: LuActivity,
-    title: "Engagement",
-    desc: "Quiuckly navigate you anda engage with your adience",
+    title: "Student Engagement",
+    desc: "Features to foster student engagement and collaboration, such as discussion forums, group projects, and peer-to-peer learning communities.",
   },
 ];
 
 const Features_home = () => {
   return (
-    <main className="w-full flex p-3 py-9 flex-col md:flex-row text-black bg-[#F9F8FE]">
-      <section className="the_ratings flex flex-col w-full md:w-[50%] px-0 md:px-[5%]">
+    <main className="w-full flex p-3 py-9 flex-col md:flex-row text-black bg-[#F9F8FE] ">
+      <section className="the_ratings flex flex-col w-full md:w-[50%] px-0 md:px-[5%] ">
         <div className=" px-5 md:px-16">
-          <h1 className="text-4xl font-bold">
-            How we support our pratner all over the world
+          <h1 className="text-4xl font-bold text-red-500">
+            Discover How We Deliver Exceptional Services with a Personal Touch
           </h1>
         </div>
         <div className="p-3 px-5 md:px-16">
           <p className="text-sm Navtext">
-            SaaS become a common delivery model for many business application,
-            including office software, messaging software, payroll processing
-            software, DBMS software, management software
+            we pride ourselves on delivering services that exceed expectations while providing a personalized experience tailored to each client's unique needs. Our approach to service delivery is characterized
           </p>
         </div>
         <div className="stars flex px-5 md:px-16 space-x-8 py-10">

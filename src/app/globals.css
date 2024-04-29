@@ -31,3 +31,16 @@ body {
     text-wrap: balance;
   }
 }
+
+.carousel .slide .sli_img {
+  width: 250px !important; 
+  height: 250px !important;
+  border-radius:50%;
+}
+
+
+.custom-carousel .control-arrow:hover {
+  background-color: transparent !important; /* Remove background color on hover */
+}
+
+

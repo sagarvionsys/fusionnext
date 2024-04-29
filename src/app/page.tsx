@@ -8,6 +8,12 @@ import Image from "next/image";
 import Hero_Section from "./interface/Hero_Section";
 import Feature_home from "./interface/Features_home";
 
+import Enquiry_home from "./interface/Enquiry_home";
+import Reviews_section from "./interface/Reviews_section";
+import Course_section from "./interface/Course_section";
+import Faq_section from "./interface/Faq_section";
+import SuffleHero from "./interface/SuffleHero";
+
 const Home = () => {
   const words = [
     {
@@ -32,6 +38,38 @@ const Home = () => {
     <main className="pt-16">
       {/* hero section  */}
 
+      <section className="bg-white">
+               <SuffleHero />
+           
+
+          {/* the image area */}
+        </section>
+
+
+
+        <br></br>
+<section className="the Inqury form h-50">
+          <Enquiry_home />
+        </section>
+        <hr className="text-black-200 bg-black-200"></hr>
+   < Course_section />
+        {/* pattaerns sectionn */}
+        
+        <div className="w-full bg-blue-500">
+        <div className="w-full flex justify-center text-center">
+          <div className="">
+            <Reviews_section />
+          </div>
+        </div>
+      </div>
+
+      <div className="w-full bg-white text-black justify-center text-center">
+          <div className="">
+            
+      < Faq_section />
+          </div>
+        
+      </div>
       <Hero_Section />
 
       <Feature_home />
