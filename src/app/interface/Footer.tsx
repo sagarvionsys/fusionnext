@@ -6,37 +6,64 @@ import { FaFacebookF ,FaWhatsapp , FaInstagram ,FaLinkedinIn } from "react-icons
 import { CiMobile3 } from "react-icons/ci";
 import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { footerSchema } from "@/schema/footerSchema";
+
+
+type Inputs={
+  name:string
+  email:string
+  subject:string
+  messag:string
+}
 
 
 const Footer = () => {
 
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+  const { register, handleSubmit,formState:{errors,isSubmitting}, reset } = useForm<Inputs>({
+    defaultValues:{
+      email:"",
+      subject:"",
+      messag:"",
+    },
+    resolver:zodResolver(footerSchema)
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+  const onSubmit :SubmitHandler<Inputs>= (data) => {
+    console.log(data);
+    reset(); 
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form Data:', formData);
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
+
+
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   subject: '',
+  //   message: ''
+  // });
+
+  // const handleInputChange = (e:any) => {
+  //   const { name, value } = e.target;
+  //   setFormData({
+  //     ...formData,
+  //     [name]: value
+  //   });
+  // };
+
+  // const handleSubmit = (e:any) => {
+  //   e.preventDefault();
+  //   console.log('Form Data:', formData);
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     subject: "",
+  //     message: "",
+  //   });
     // Here you can add your logic to send the form data to your backend or API
     // For now, we'll just log the form data to the console
-  };
+  //};
 
 
      
@@ -129,20 +156,25 @@ const Footer = () => {
        <div className="sm:w-52 w-full">
         <h2 className="sm:text-[22px] text-[18px] pb-2">Contact Us</h2>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}  noValidate>
 
           <div className="mb-4">
             <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
             <input
               type="text"
               id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleInputChange}
+              // name="name"
+              // value={formData.name}
+              // onChange={handleInputChange}
+              disabled={isSubmitting}
+                      {...register('name')}
               placeholder="Your Name"
               required
               className="border rounded text-black px-1 w-full"
             />
+            {errors.name && (
+                <div  className="text-red-500 text-xs">{errors.name.message}</div>
+                )}
           </div>
 
           <div className="mb-4">
@@ -150,13 +182,19 @@ const Footer = () => {
             <input
               type="email"
               id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleInputChange}
+              // name="email"
+              // value={formData.email}
+              // onChange={handleInputChange}
+              
+              disabled={isSubmitting}
+                      {...register('email')}
               placeholder="Your Email"
               required
               className="border rounded text-black px-1 w-full"
             />
+            {errors.email && (
+                <div  className="text-red-500 text-xs">{errors.email.message}</div>
+                )}
           </div>
 
           <div className="mb-4">
@@ -164,27 +202,41 @@ const Footer = () => {
             <input
               type="text"
               id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleInputChange}
+              // name="subject"
+              // value={formData.subject}
+              // onChange={handleInputChange}
+              disabled={isSubmitting}
+                      {...register('subject')}
               placeholder="Subject"
               required
               className="border rounded text-black px-1 w-full"
             />
+            
+           {errors.subject && (
+<div  className="text-red-500 text-xs">{errors.subject.message}</div>
+)}
           </div>
 
           <div className="mb-4">
             <label htmlFor="message" className="block text-sm font-medium mb-1">Message</label>
             <textarea
               id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleInputChange}
+              // name="message"
+              // value={formData.message}
+              // onChange={handleInputChange}
+              disabled={isSubmitting}
+                      {...register('messag')}
               placeholder="Message"
               required
               rows={2}
               className="border rounded text-black px-1 w-full"
-            ></textarea>
+            >
+            </textarea>
+            
+            {errors.messag && (
+          <div  className="text-red-500 text-xs">{errors.messag.message}</div>
+)}
+
           </div>
 
           <button
@@ -195,7 +247,6 @@ const Footer = () => {
         </form>
       </div>
       </section>
-
     </main>
       <div className="md:text-[18px] text-[15px] sm:pl-10 pl-8"><h3>Privacy Policy | Terms of Service</h3></div>
       <div className="bg-slate-900 text-white md:text-[15px] text-[10px] md:h-[50px] h-auto flex justify-center md:pt-[15px]"><h3>2024 © All Rights Reserved | Designed and Developed by Fusion</h3></div>
