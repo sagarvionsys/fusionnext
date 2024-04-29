@@ -1,295 +1,92 @@
-"use client"
-import React, {useState} from "react";
-import { TypeAnimation } from 'react-type-animation';
+"use client";
+import React, { useState } from "react";
+import { TypeAnimation } from "react-type-animation";
 import { FaMobileAlt } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { AiFillMail } from "react-icons/ai";
+import backgroundImage from "/public/img/msg.avif";
 
 const ContactUs = () => {
-  interface User {
-    firstName: string;
-    lastName: string;
-    email: string;
-    phoneNumber: string;
-    company: string;
-    course: string;
-    message: string;
-  }
-
-  const [user, setUser] = useState<User>({
-    firstName:"",
-    lastName:"",
-    email:"",
-    phoneNumber:"",
-    company:"" ,
-    course:"",
-    message:""
-  });
-
-  const handleInputs = (event: { target: { name: any; value: any; }; }) => {
-    const newObj = {...user, [event.target.name]: event.target.value}
-    setUser(newObj);
-};
-
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-    console.log(user);
-    alert("Form Submitted Successfully");
-  }
-
   return (
     <>
-      <div className="bg-black  ">  {/* Complete */}
-        <div className="inline-block px-[10%] my-[5%]">    {/* Heading */}
-          <p className=" text-white uppercase font-bold	
-          border-r-5 border-solid border-white w-1/2	whitespace-nowrap flex
-          text-3xl md:text-7xl	
-          	">
-            <TypeAnimation
-              sequence={[
-                // Same substring at the start will only be typed once, initially
-                'Get in touch_',
-                1500,
-                ""
-              ]}
-              repeat={Infinity}
-            /></p>
-        </div>
-        <div className="px-[10%] w-[100%] pb-[10%]">
-          <section className="size-4/5 w-full	 bg-white box-border rounded-3xl	px-[5%] py-[5%]">
-            <section className="w-full justify-center	"	>
-             {/* Body */}
-                <form className="w-full grid	" action="" onSubmit={handleSubmit}>
-                  <section>
-                  <div className="w-full min-h-[56px] items-end mb-[24px] pb-[1%] flex relative	">
-                    <label className="text-black font-normal pb-1 mb-5	inline-block	absolute
-                     cursor-default decoration-[#3d4045] required
-                    ">FIRST NAME*</label>
-                    <input className="w-full border-b  border-black	text-[15px] focus:outline-none " 
-                    type="text" id="firstName" name="firstName"
-                    value={user.firstName}
-                    onChange={handleInputs}
-                    />   
-                  </div>
-                  <div className="w-full min-h-[56px] items-end mb-[24px] pb-[1%] flex relative	">
-                    <label className="text-black pb-1 mb-5 font-normal	inline-block	absolute
-                     cursor-default decoration-[#3d4045] required
-                    ">LAST NAME*</label>
-                    <input className="w-full border-b  border-black	text-[15px] focus:outline-none" 
-                     type="text" id="lastName" name="lastName"
-                     value={user.lastName}
-                     onChange={handleInputs} 
-                     />   
-                  </div>
-                  <div className="w-full min-h-[56px] items-end mb-[24px] pb-[1%] flex relative	">
-                    <label className="text-black pb-1 mb-5 font-normal	inline-block	absolute
-                     cursor-default decoration-[#3d4045] required
-                    ">EMAIL*</label>
-                    <input className="w-full border-b  border-black	text-[15px] focus:outline-none" 
-                      type="email" id="email" name="email"
-                      value={user.email}
-                      onChange={handleInputs} 
-                       />   
-                  </div>
-                  <div className="w-full min-h-[56px] items-end mb-[24px] pb-[1%] flex relative	">
-                    <label className="text-black pb-1 mb-5 font-normal	inline-block	absolute
-                     cursor-default decoration-[#3d4045] 
-                    ">PHONE NUMBER</label>
-                    <input className="w-full border-b  border-black	text-[15px] focus:outline-none" 
-                      type="text" id="phoneNumber" name="phoneNumber"
-                      value={user.phoneNumber}
-                      onChange={handleInputs} 
-                     />   
-                  </div>
-                  <div className="w-full min-h-[56px] items-end mb-[24px] pb-[1%] flex relative	">
-                    <label className="text-black pb-1 mb-5 font-normal	inline-block	absolute
-                     cursor-default decoration-[#3d4045] 
-                    ">COMPANY</label>
-                    <input className="w-full border-b  border-black	text-[15px] focus:outline-none"
-                    type="text" id="company" name="company"
-                    value={user.company}
-                    onChange={handleInputs}  
-                     />   
-                  </div>
-                  </section>
-                  
-                  {/* partision */}
-                  <section>
-                  <div className="w-full min-h-[56px] items-end mb-[24px] pb-[1%] flex relative	">
-                    <label className="text-black pb-1 mb-5 text-xs		inline-block	absolute
-                     cursor-default decoration-[#3d4045] required
-                    ">I AM INTERESTED IN:*</label>
-                    <div className="w-full border-b  border-black	text-[15px] ">
-                    <select className="w-[100%]  	text-[15px] focus:outline-none" 
-                    id="course" name="course"
-                    value={user.course}
-                    onChange={handleInputs}
-                    >
-                    <option className=" font-normal" 
-                    value="" >
-                    Select 
-                    </option>
+      <div className="flex justify-center items-center py-16 bg-white">
+        <div className="container mx-auto my-4 px-4 lg:px-20">
+          <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+            <div className="flex">
+              <h1 className="font-bold uppercase text-5xl text-black">
+                Send us a <br /> message
+              </h1>
+            </div>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+              <input
+                className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="First Name*"
+              />
+              <input
+                className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="text"
+                placeholder="Last Name*"
+              />
+              <input
+                className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="email"
+                placeholder="Email*"
+              />
+              <input
+                className="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                type="number"
+                placeholder="Phone*"
+              />
+            </div>
+            <div className="my-4">
+              <textarea
+                placeholder="Message*"
+                className="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+              ></textarea>
+            </div>
+            <div className="my-2 w-1/2 lg:w-1/4">
+              <button
+                className="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full 
+                      focus:outline-none focus:shadow-outline"
+              >
+                Send Message
+              </button>
+            </div>
+          </div>
 
-                    <option className=" font-normal" 
-                    value="Advance Software Testing (Manual+ Automation)" >
-                    Advance Software Testing (Manual+ Automation)
-                    </option>
-                    <option className=" font-normal" value="Java Full Stack Development">
-                    Java Full Stack Development
-                    </option>
-                    <option className=" font-normal" value="Python Development">
-                    Python Development
-                    </option>
-                    <option className=" font-normal" value=".Net Full Stack Development">
-                    .Net Full Stack Development
-                    </option> 
-                    <option className=" font-normal" value="RPA Development">
-                    RPA Development
-                    </option>
-                    <option className=" font-normal" value="AWS/DevOps">
-                    AWS/DevOps
-                    </option>
-                    <option className=" font-normal" value="Power BI">
-                    Power BI
-                    </option>
-                    <option className=" font-normal" value="Salesforce">
-                    Salesforce
-                    </option>
-                    <option className=" font-normal" value="SAP Material Management">
-                    SAP Material Management
-                    </option>
-                    <option className=" font-normal" value="Data Science">
-                    Data Science
-                    </option>
-                    <option className=" font-normal" value="SAP Fieldglass">
-                    SAP Fieldglass
-                    </option>
-                    <option className=" font-normal" value="SAP FICO">
-                    SAP FICO
-                    </option>
-                    <option className=" font-normal" value="Full Stack web development">
-                    Full Stack web development
-                    </option>
-                    <option className=" font-normal" value="DevOps">
-                    DevOps
-                    </option>
-                    <option className=" font-normal" value="Big Data Hadoop">
-                    Big Data Hadoop
-                    </option>
-                    <option className=" font-normal" value="Sap SD">
-                    Sap SD
-                    </option>
-                    <option className=" font-normal" value="Microsoft Azure">
-                    Microsoft Azure
-                    </option>
-                    <option className=" font-normal" value="React JS">
-                    React JS
-                    </option>
-                    <option className=" font-normal" value="Angular JS">
-                    Angular JS
-                    </option>
-                    <option className=" font-normal" value="Oracle SQL &amp; PLSQL">
-                    Oracle SQL &amp; PLSQL
-                    </option>
-                    <option className=" font-normal" value="Data Analyst">
-                    Data Analyst
-                    </option>
-                    <option className=" font-normal" value="Fullstack Data Analyst">
-                    Fullstack Data Analyst
-                    </option>
+          <div className=" subcard bg-blue-900 w-full lg:-mt-96 lg:w-2/6 px-8 py-14 ml-auto rounded-2xl">
+            <div className="flex flex-col text-white">
+              <h1 className="font-bold uppercase text-4xl my-4">
+                Drop in our office
+              </h1>
 
-                    </select>
-                    </div>
-                  </div>
-                  <div>
-                  <label className="	 text-black font-normal	inline-block	
-                     cursor-default decoration-[#3d4045] 
-                    ">MESSAGE</label>
-                    {/* <div className="h-[5%] border-b  border-black	text-[15px] "> */}
-                    <textarea className="w-full h-44 border 	border-[#3d4045]  text-[15px] 
-                    px-[12px] py-[8px] "   
-                    id="message" name="message"
-                    value={user.message}
-                    onChange={handleInputs}                 
-                    >
-                    </textarea>                    
-                  </div>
-                  <div>
-                    <button className="bg-[#ED9B82] pt-[10px] pb-[10px] pl-[20px] pr-[20px] border border-dark-salmon bg-dark-salmon text-black ml-auto
-                
-                text-center uppercase cursor-pointer rounded-full justify-center items-center px-5 py-3 font-Mabry text-lg font-bold hover:text-[#ED9B82] hover:bg-black transition-all duration-500 flex
-                " type="submit" 
-
-
-                >SUBMIT</button>
-                  </div>
-                  </section>
-                </form>   
-             </section>
-         
-              {/* second half */}
-
-            <section className="w-full		">
-
-            <div className="left ">
-                {/* Where to find us */}
-                <div className=" font-Mabry text-3xl leading-snug  font-bold mt-2 text-4xl	 leading-6">
-                  <h4 className="text-[#3D4045]">Where to find us </h4>
+              <div className="flex my-4 w-2/3 lg:w-1/2">
+                <div className="flex flex-col">
+                  <i className="fas fa-map-marker-alt pt-2 pr-2" />
                 </div>
-                {/* Map */}
-                <div className="w-full	" >
-                <iframe className="h-60 md:h-80		w-full py-[1%] my-[1%]"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1891.266279781637!2d73.94106!3d18.550014!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfe631fc9f7f%3A0x40bae74e7709affa!2sFusion%20Software%20Institute%20Pune!5e0!3m2!1sen!2sin!4v1713520066611!5m2!1sen!2sin"  loading="lazy">
-                </iframe> 
-
+                <div className="flex flex-col">
+                  <h2 className="text-2xl">Main Office</h2>
+                  <p className="text-gray-400 w-full">
+                    Office 101, 01st Floor, Stellar Spaces, Kharadi South Main
+                    Road, opp. Zensar, IT Park, Kharadi, Pune, Maharashtra
+                    411014
+                  </p>
                 </div>
-                 {/* two  */}
-                <div className="text-black flex flex flex-col md:flex-row md:space-x-8  justify-start my-[3%] ">
-                  {/* 1st */}
-                      <div className="items-start flex  mr-20 md:mr-2">
-                        <div className="items-start flex mt-1 mr-2">
-                        < FaLocationDot style={{fontSize: '1.25rem'}}/>
-                        </div>       
-                        <div className="	">
-                          <h4 className="text-[#3D4045]  font-Mabry text-xl leading-snug font-bold text-xl leading-6">Address
-                          </h4>
-                          <p className="text-[#3D4045]">
-                          Office 101, 01st Floor, Stellar Spaces,<br />
-                          Kharadi South Main Road, opp. Zensar, IT Park,<br />
-                          Kharadi, Pune, Maharashtra 411014
-                          </p>  
-                        </div>
-                    </div>
-                  {/* 2nd  */}
-                    <div className="items-start flex mr-2">
-                      <div className="items-start flex mt-1  mr-2">
-                       <FaMobileAlt style={{fontSize: '1.25rem'}}/>
-                      </div>
-                      <div className="">
-                        <h4 className="text-[#3D4045] mb-1 font-Mabry text-xl leading-snug font-bold text-xl leading-6">Contact Number
-                        </h4>
-                        <p className="text-[#3D4045]">
-                        7498992609 <br/>
-                        7741817273 <br/>
-                        7719987273 <br />
-                        </p>
-                      </div>
-                  </div>
-                </div>
-                 {/* email */}
-                  <div className="items-start flex font-Mabry text-xl  font-bold text-xl leading-6">
-                      <div className="mr-2">
-                      <AiFillMail style={{fontSize: '1.25rem'}}/>
-                      </div>
-                       <a href="inquiry@fusion-institute.com" 
-                      className="text-[#333333] hover:underline ">inquiry@fusion-institute.com
-                      </a>
-                  </div>
-
               </div>
-            </section>
 
-          </section>
+              <div className="flex my-4 w-2/3 lg:w-1/2">
+                <div className="flex flex-col">
+                  <i className="fas fa-phone-alt pt-2 pr-2" />
+                </div>
+                <div className="flex flex-col">
+                  <h2 className="text-2xl">Call Us</h2>
+                  <p className="text-gray-400">Mob: 7498992609</p>
+                  <p className="text-gray-400">Tel: 7741817273</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
