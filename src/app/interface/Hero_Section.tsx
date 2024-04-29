@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import notion from "/public/svg/Notion.svg";
-import Enquiry_home from "./Enquiry_home";
 //svg around charlie image
 
 //svg of collab brands
@@ -24,66 +23,46 @@ const Hero_Section = () => {
   return (
     <>
       <main>
-        <section className="heading_text_and_img w-full bg-white flex flex-col md:flex-row px-4 md:px-2 xl:px-16 md:py-2">
-          {/* the text and button area */}
-          <div className="heading_text_ w-full md:w-1/2 flex justify-center md:p-8">
-            <div>
-              <h1 className="p-4 md:p-8 text-black text-4xl md:text-6xl font-bold ">
-                Build awesome career with Fusion Institute.
-              </h1>
-              {/* <div className="md:w-full flex pl-6 w-[20rem]">
-                <Image src={line} alt="enimate line" width={400} />
-              </div> */}
-              <p className="text-black font-bold text-sm md:py-8 p-4 md:p-8 md:px-10">
-                We don't simply train, We shape careers!
-              </p>
-              <div className="buttons p-4 md:ml-5 flex space-x-4">
-                <button className="bg-[#54BD95] rounded-xl p-2 text-white">
-                  Book Demo
-                </button>
-                <button className="bg-[#54BD95] rounded-xl p-2 text-white">
-                  Explore Programs
-                </button>
-                {/* <div className="flex space-x-1 items-center">
-                  <Image src={play} alt="enimate line" width={20} />
-                  <button className="text-[#54BD95]">View mode</button>
-                </div> */}
-              </div>
-            </div>
-          </div>
 
-          {/* the image area */}
-        </section>
-        <section className="the Inqury form bg-slate-400">
-          <Enquiry_home />
-        </section>
-
-        {/* pattaerns sectionn */}
         <section className="patterns_section">
           <div className="text-2xl flex justify-center font-bold p-3">
-            <h1>More than 25,000 teams use Collabs</h1>
+            <h1 className="text-red-400 py-3">More than 25,000 teams use Collabs</h1>
           </div>
-          <div className="logos grid grid-cols-2 md:flex justify-center  space-x-5 p-5">
-            {brands.map((brand) => {
-              return (
-                <span
-                  key={brand.id}
-                  className="flex justify-center items-center space-x-1 p-2 md:p-5"
-                >
-                  <Image
-                    src={brand.logo}
-                    alt={brand.name}
-                    width={20}
-                    color="#A6A6A6"
-                  />
-                  <h1 className="text-xl font-bold text-[#A6A6A6]">
-                    {brand.name}
-                  </h1>
-                </span>
-              );
-            })}
+          {/* <div className="logos grid grid-cols-2 md:flex justify-center space-x-5 p-5">
+  {brands.map((brand) => {
+    return (
+      <span
+        key={brand.id}
+        className="flex justify-center items-center space-x-1 p-2 md:p-5 overflow-hidden"
+        style={{ whiteSpace: 'nowrap' }}
+      >
+        <Image
+          src={brand.logo}
+          alt={brand.name}
+          width={20}
+          className="mr-1 animate-marquee"
+        />
+        <h1 className="text-xl font-bold text-[#A6A6A6]">{brand.name}</h1>
+      </span>
+    );
+  })}
+</div> */}
+
+          <p className="p-3 text-white-500 mb-1">
+            "Collabs has reached a significant milestone, with over 25,000 teams now utilizing our platform for streamlined collaboration. From remote teams to in-house departments, organizations across industries rely on Collabs to facilitate seamless communication, project management, and teamwork. Join the community of over 25,000 teams today and experience the benefits of efficient collaboration firsthand!"
+          </p>
+
+
+          <div className="grid grid-cols-5 gap-4 py-8">
+            <img src="./img/accenture.png" className="w-22 p-2 transition-transform hover:-translate-y-1" style={{ borderRadius: '50%' }} alt="Image 1" />
+            <img src="./img/fisver.png" className="w-22 p-2 transition-transform hover:-translate-y-1" style={{ borderRadius: '50%' }} alt="Image 2" />
+            <img src="./img/ibm.jpg" className="w-22 p-2 transition-transform hover:-translate-y-1" style={{ borderRadius: '50%' }} alt="Image 5" />
+            <img src="/./img/infosys.png" className="w-22 p-2 transition-transform hover:-translate-y-1" style={{ borderRadius: '50%' }} alt="Image 1" />
+            <img src="./img/microsoft.jpg" className="w-22 p-2 transition-transform hover:-translate-y-1" style={{ borderRadius: '50%' }} alt="Image 2" />
           </div>
         </section>
+
+
       </main>
     </>
   );
