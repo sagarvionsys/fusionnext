@@ -7,56 +7,33 @@ import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SignUpSchema } from "@/schema/signUpSchema";
 
-type Inputs={
-  userName:string
-  email:string
-  password:string
-  confirmPassword:string
-}
+type Inputs = {
+  userName: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};
 
 const SignUp = () => {
-  
-  const { register, handleSubmit,formState:{errors,isSubmitting}, reset } = useForm<Inputs>({
-    defaultValues:{
-      userName:"",
-      email:"",
-      password:"",
-      confirmPassword:"",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<Inputs>({
+    defaultValues: {
+      userName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
     },
-    resolver:zodResolver(SignUpSchema)
+    resolver: zodResolver(SignUpSchema),
   });
 
-  const onSubmit :SubmitHandler<Inputs>= (data) => {
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data); // Form data will be logged when submitted
     reset(); // Reset form fields after submission
   };
-
-  // const [user, setUser] = useState({
-  //   userName: "",
-  //   email: "",
-  //   password: "",
-  //   confirmPassword: "",
-  // });
-
-  // const handleInputes = (e: ChangeEvent<HTMLInputElement>) => {
-  //   let name = e.target.name;
-  //   let value = e.target.value;
-  //   setUser({
-  //     ...user,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleCreateUser = (e: any) => {
-  //   e.preventDefault();
-  //   console.log(user);
-  //   setUser({
-  //     userName: "",
-  //     email: "",
-  //     password: "",
-  //     confirmPassword: "",
-  //   });
-  // };
 
   return (
     <section className=" bg-white text-black pt-[70px]">
@@ -72,13 +49,12 @@ const SignUp = () => {
                 href="/SignIn"
                 title=""
                 className="font-medium text-black transition-all duration-200 hover:underline hover:text-gray-500"
-          >
+              >
                 Sign In
               </Link>
             </p>
 
-            <form 
-            onSubmit={handleSubmit(onSubmit)} action="#" method="POST" className="mt-8">
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
               <div className="space-y-3">
                 <div>
                   <label
@@ -95,13 +71,13 @@ const SignUp = () => {
                       // name="userName"
                       id="userName"
                       disabled={isSubmitting}
-                      {...register('userName')}
-                      // value={user.userName}
-                      // onChange={handleInputes}
+                      {...register("userName")}
                     />
                     {errors.userName && (
-<div  className="text-red-500 text-xs">{errors.userName.message}</div>
-)}
+                      <div className="text-red-500 text-xs">
+                        {errors.userName.message}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -119,13 +95,15 @@ const SignUp = () => {
                       id="email"
                       disabled={isSubmitting}
                       // name="email"
-                      {...register('email')}
+                      {...register("email")}
                       // value={user.email}
                       // onChange={handleInputes}
                     />
                     {errors.email && (
-<div className="text-red-500 text-xs">{errors.email.message}</div>
-)}
+                      <div className="text-red-500 text-xs">
+                        {errors.email.message}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -145,13 +123,13 @@ const SignUp = () => {
                       id="password"
                       disabled={isSubmitting}
                       // name="password"
-                      {...register('password')}
-                      // value={user.password}
-                      // onChange={handleInputes}
+                      {...register("password")}
                     />
                     {errors.password && (
-<div  className="text-red-500 text-xs">{errors.password.message}</div>
-)}
+                      <div className="text-red-500 text-xs">
+                        {errors.password.message}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -171,13 +149,13 @@ const SignUp = () => {
                       id="confirmpassword"
                       disabled={isSubmitting}
                       //name="confirmPassword"
-                      {...register('confirmPassword')}
-                      // value={user.confirmPassword}
-                      // onChange={handleInputes}
+                      {...register("confirmPassword")}
                     />
                     {errors.confirmPassword && (
-<div  className="text-red-500 text-xs">{errors.confirmPassword.message}</div>
-)}
+                      <div className="text-red-500 text-xs">
+                        {errors.confirmPassword.message}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div>

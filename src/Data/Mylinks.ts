@@ -1,4 +1,4 @@
-export const links = [
+const links = [
   {
     id: 1,
     name: "Python Devlopment ",
@@ -65,3 +65,10 @@ export const links = [
     link: "/Service-Support",
   },
 ];
+
+const CareerLink = [
+  { id: 1, name: "IT Career", link: "/Career/it_profile" },
+  { id: 2, name: "Non-IT Career", link: "/Career/non-it_profile" },
+];
+
+export { links, CareerLink };

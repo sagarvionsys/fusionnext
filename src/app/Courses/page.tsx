@@ -71,15 +71,12 @@ const Courses = () => {
   mycourseData.sort(customSort);
 
   return (
-
-    <div className="bg-orange-50 px-4 md:px-10 lg:px-20 py-6 md:py-10 lg:py-10 mb-20  ">
-      
-
-      
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-10 ">
-      
+    <div className="bg-orange-50 pt-20 md:px-8 lg:px-10  mb-20  ">
+      <div
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6
+       p-10 "
+      >
         {mycourseData.map((course, index) => (
-          
           <div
             key={index}
             className="border border-gray-600 rounded-lg overflow-hidden hover:shadow-lg hover:bg-white transition-transform hover:scale-105 shadow-2xl"
@@ -137,7 +134,6 @@ const Courses = () => {
         ))}
       </div>
     </div>
-
   );
 };
 
