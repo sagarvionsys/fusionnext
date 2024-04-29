@@ -7,58 +7,32 @@ import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInSchema } from "@/schema/signInSchema";
 
-type Inputs={
-  
-  email:string
-  password:string
-  
-}
+type Inputs = {
+  email: string;
+  password: string;
+};
 
 const SignIn = () => {
-
-  const { register, handleSubmit,formState:{errors,isSubmitting}, reset } = useForm<Inputs>({
-    defaultValues:{
-      email:"",
-      password:"",
-      
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<Inputs>({
+    defaultValues: {
+      email: "",
+      password: "",
     },
-    resolver:zodResolver(signInSchema)
+    resolver: zodResolver(signInSchema),
   });
 
-  const onSubmit :SubmitHandler<Inputs>= (data) => {
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
-    reset(); 
+    reset();
   };
 
-
-  // const [user, setUser] = useState({
-  //   email: "",
-  //   password: "",
-  //   confirmPassword: "",
-  // });
-
-  // const handleInputes = (e: ChangeEvent<HTMLInputElement>) => {
-  //   let name = e.target.name;
-  //   let value = e.target.value;
-
-  //   setUser({
-  //     ...user,
-  //     [name]: value,
-  //   });
-  // };
-
-  // const handleLoginUser = (e: any) => {
-  //   e.preventDefault();
-  //   console.log(user);
-  //   setUser({
-  //     email: "",
-  //     password: "",
-  //     confirmPassword: "",
-  //   });
-  // };
-
   return (
-    <section className=" bg-white text-black pt-[70px] ">
+    <section className=" bg-white text-black pt-20 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-2 min-h-[90vh]">
         <div className="relative flex items-end sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24  mb-2 lg:order-last">
           <div className="absolute inset-0">
@@ -70,7 +44,7 @@ const SignIn = () => {
             />
           </div>
           <div className=" inset-0 bg-gradient-to-t from-black to-transparent"></div>
-          <div className="relative">
+          <div className="relative p-8">
             <h1 className="text-5xl font-bold from-purple-600 via-red-600  to-white bg-gradient-to-r bg-clip-text text-transparent ">
               Welcome Back to Fusion
             </h1>
@@ -178,8 +152,8 @@ const SignIn = () => {
               </Link>
             </p>
 
-            <form onSubmit={handleSubmit(onSubmit)} action="#" method="POST" className="mt-8">
-              <div className="space-y-10">
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
+              <div className="space-y-4">
                 <div>
                   <label
                     htmlFor="email"
@@ -193,15 +167,14 @@ const SignIn = () => {
                       type="email"
                       placeholder="Email"
                       id="email"
-                      // name="email"
-                      // value={user.email}
-                      // onChange={handleInputes}
                       disabled={isSubmitting}
-                      {...register('email')}
+                      {...register("email")}
                     />
                     {errors.email && (
-                <div  className="text-red-500 text-xs">{errors.email.message}</div>
-                  )}
+                      <div className="text-red-500 text-xs">
+                        {errors.email.message}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div>
@@ -219,18 +192,17 @@ const SignIn = () => {
                       type="password"
                       placeholder="Password"
                       id="password"
-                      //name="password"
-                      // value={user.password}
-                      // onChange={handleInputes}
                       disabled={isSubmitting}
-                      {...register('password')}
+                      {...register("password")}
                     />
-                    {errors.password && (
-              <div  className="text-red-500 text-xs">{errors.password.message}</div>
-              )}
+                    {errors?.password && (
+                      <div className="text-red-500 text-xs">
+                        {errors?.password?.message}
+                      </div>
+                    )}
                   </div>
                 </div>
-                
+
                 <div>
                   <button
                     // onClick={(e) => handleLoginUser(e)}
