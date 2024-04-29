@@ -1,55 +1,163 @@
 "use client";
-import { motion } from "framer-motion";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import React, { ChangeEvent, useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
 import Link from "next/link";
+import React, { ChangeEvent, useState } from "react";
+import { FcGoogle } from "react-icons/fc";
+import Image from "next/image";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { signInSchema } from "@/schema/signInSchema";
+
+type Inputs = {
+  email: string;
+  password: string;
+};
 
 const SignIn = () => {
-    const [user, setUser] = useState({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<Inputs>({
+    defaultValues: {
       email: "",
       password: "",
-      confirmPassword: "",
-    });
-  
-    const handleInputes = (e: ChangeEvent<HTMLInputElement>) => {
-      let name = e.target.name;
-      let value = e.target.value;
-      setUser({
-        ...user,
-        [name]: value,
-      });
-    };
-  
-    const handleCreateUser = (e: any) => {
-      e.preventDefault();
-      console.log(user);
-    };
-  
+    },
+    resolver: zodResolver(signInSchema),
+  });
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
+    reset();
+  };
+
   return (
-    <section>
-      <div className="signupform grid p-5 grid-cols-1 lg:grid-cols-2 ">
-        <div>
-          <div className="ml-4 xl:ml-40">
-            <h2 className="text-3xl font-bold leading-tight alice-blue sm:text-4xl">
+    <section className=" bg-white text-black pt-20 ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 mx-2 min-h-[90vh]">
+        <div className="relative flex items-end sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24  mb-2 lg:order-last">
+          <div className="absolute inset-0">
+            <Image
+              className="h-full w-full object-cover object-top rounded-l-lg"
+              src="/img/MySignUp.jpg"
+              alt=""
+              layout="fill"
+            />
+          </div>
+          <div className=" inset-0 bg-gradient-to-t from-black to-transparent"></div>
+          <div className="relative p-8">
+            <h1 className="text-5xl font-bold from-purple-600 via-red-600  to-white bg-gradient-to-r bg-clip-text text-transparent ">
+              Welcome Back to Fusion
+            </h1>
+            <br />
+            <div className="w-full max-w-xl xl:mx-auto xl:w-full xl:max-w-xl xl:pr-24">
+              <h3 className="text-4xl font-bold text-white">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id,
+                aperiam!
+              </h3>
+              <ul className="mt-10 grid grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-2">
+                <li className="flex items-center space-x-3">
+                  <div className="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
+                    <svg
+                      className="h-3.5 w-3.5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span className="text-lg font-medium text-white">
+                    100% Placement
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
+                    <svg
+                      className="h-3.5 w-3.5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span className="text-lg font-medium text-white">
+                    Live projects
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
+                    <svg
+                      className="h-3.5 w-3.5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span className="text-lg font-medium text-white">
+                    Mock interviews
+                  </span>
+                </li>
+                <li className="flex items-center space-x-3">
+                  <div className="inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-green-500">
+                    <svg
+                      className="h-3.5 w-3.5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span className="text-lg font-medium text-white">
+                    Doubt-clearing session
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-4 border-black rounded-r-lg mb-2 order-first lg:order-last pt-10">
+          <div className="md:mx-20 md:mt-4 mx-10 mt-2">
+            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
               Sign In
             </h2>
-
-            <p className="mt-2 text-base alice-blue">
-              Don't have an account ?
+            <p className="mt-2 text-base text-gray-600">
+              Don't have an account?
               <Link
-                href={"/SignUp"}
+                href="/SignUp"
                 title=""
-                className="font-medium alice-blue transition-all duration-200 hover:underline text-alice-blue "
+                className="font-medium text-black transition-all duration-200 hover:underline hover:text-gray-500"
               >
-                Sign up
+                Sign Up
               </Link>
             </p>
-            <form action="#" method="POST" className="mt-8">
-              <div className="space-y-5">
+
+            <form onSubmit={handleSubmit(onSubmit)} className="mt-8">
+              <div className="space-y-4">
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-base font-medium alice-blue"
+                    className="text-base font-medium text-gray-900"
                   >
                     Email address
                   </label>
@@ -57,19 +165,23 @@ const SignIn = () => {
                     <input
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
-                      name="email"
-                      placeholder="Enter your Email"
+                      placeholder="Email"
                       id="email"
-                      value={user.email}
-                      onChange={handleInputes}
+                      disabled={isSubmitting}
+                      {...register("email")}
                     />
+                    {errors.email && (
+                      <div className="text-red-500 text-xs">
+                        {errors.email.message}
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div>
                   <div className="flex items-center justify-between">
                     <label
                       htmlFor="password"
-                      className="text-base font-medium alice-blue"
+                      className="text-base font-medium text-gray-900"
                     >
                       Password
                     </label>
@@ -78,41 +190,24 @@ const SignIn = () => {
                     <input
                       className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
-                      name="password"
-                      placeholder="Enter your Password"
+                      placeholder="Password"
                       id="password"
-                      value={user.password}
-                      onChange={handleInputes}
+                      disabled={isSubmitting}
+                      {...register("password")}
                     />
+                    {errors?.password && (
+                      <div className="text-red-500 text-xs">
+                        {errors?.password?.message}
+                      </div>
+                    )}
                   </div>
                 </div>
-                <div>
-                  <div className="flex items-center justify-between">
-                    <label
-                      htmlFor="Confirm password"
-                      className="text-base font-medium alice-blue"
-                    >
-                      Confirm Password
-                    </label>
-                  </div>
-                  <div className="mt-2">
-                    <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                      type="C1password"
-                      name="confirmPassword"
-                      placeholder="Confirm your Password"
-                      id="C2password"
-                      value={user.confirmPassword}
-                      onChange={handleInputes}
-                      
-                    />
-                  </div>
-                </div>
+
                 <div>
                   <button
-                     onClick={(e) => handleCreateUser(e)}
+                    // onClick={(e) => handleLoginUser(e)}
                     type="submit"
-                    className="inline-flex h-full w-full items-center justify-center rounded-md bg-white/90 px-3.5 py-2.5 font-semibold leading-7 text-black hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500"
+                    className=" relative inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-gradient-to-r hover:from-purple-600 hover:via-red-600 hover:to-blue-500"
                   >
                     Sign In
                     <svg
@@ -122,94 +217,30 @@ const SignIn = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="ml-2 mt-1 "
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="ml-2"
                     >
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
                   </button>
-
-                  <div className="flex items-center ">
-                    <div className="w-full border-t border-gray-300"></div>
-                    <div className="px-4">or</div>
-                    <div className="w-full border-t border-gray-310"></div>
-                  </div>
-                  <button
-                    type="button"
-                    className="inline-flex h-full w-full items-center justify-center rounded-md bg-white/90 px-3.5 py-2.5 font-semibold leading-7 text-black hover:text-white hover:bg-gradient-to-r from-indigo-500 to-purple-500 mb-4"
-                  >
-                    <span className="mr-2 inline-block">
-                      <svg
-                        className="h-[18px] w-[18px] mt-[1px]"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 533.5 544.3"
-                      >
-                        <path
-                          fill="#4285F4"
-                          d="M533.5 278.7c0-18.5-1.5-36.5-4.4-54.3H272v103h143c-6.1 33.6-26.6 62.1-55.2 80.9v67h88.7c51.9-48.1 82.1-119 82.1-196.6z"
-                        />
-                        <path
-                          fill="#34A853"
-                          d="M272 544.3c74.1 0 136.3-24.2 181.4-65.9l-88.7-67c-24.7 16.7-56.7 26.6-92.7 26.6-71 0-131.2-47.9-152.8-112.1H27.6v70.1c46.1 91.6 140.3 152.3 244.4 152.3z"
-                        />
-                        <path
-                          fill="#FBBC05"
-                          d="M119.2 326c-11.4-33.8-11.4-70.2 0-104.1V151H27.6a271.4 271.4 0 0 0 0 242c35.6 33.6 81.9 54.1 133.7 54.1 38.5 0 73.5-12.6 101.5-34l-47.6-36z"
-                        />
-                        <path
-                          fill="#EA4335"
-                          d="M272 106.2c39.3-.6 76.2 13.7 104.1 36L427.7 82c-45.7-43.4-105.8-70-171.7-70-104.1 0-198.3 60.7-244.4 155v70.1c21.6-64.2 81.8-112.1 152.7-112.1z"
-                        />
-                      </svg>
-                    </span>
-                    Sign in with Google
-                  </button>
                 </div>
               </div>
             </form>
-          </div>
-        </div>
-
-        <div className="hero">
-          <HeroHighlight>
-            <motion.h1
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: [20, -5, 0],
-              }}
-              transition={{
-                duration: 0.5,
-                ease: [0.4, 0.0, 0.2, 1],
-              }}
-              className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto "
-            >
-              <span className="text-3xl">
-                <h1 className="text-6xl border-x-4 border-indigo-500 mb-4">
-                  Welcome back
-                </h1>
-                <div className="leading-tight">
-                 Empowering mind's , Transforming future's
-                <br/>
-                The Gateway to Success with Fusion Institute.
-                <br />
-                </div>
-              </span>
-              <br />
-              {""}
-              <Highlight className="text-black dark:text-white">
-                <span className="text-4xl">
-                  Fusion Software Training Institute.
+            <div className="mt-3 space-y-3">
+              <button
+                type="button"
+                className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-black transition-all duration-200 hover:bg-gradient-to-r hover:from-purple-600 hover:via-red-600 hover:to-blue-500 hover:text-white focus:text-black focus:outline-none"
+              >
+                <span className="mr-2 mt-[2px] inline-block">
+                  <FcGoogle />
                 </span>
-              </Highlight>
-            </motion.h1>
-          </HeroHighlight>
+                Sign In with Google
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { links } from "../../Data/Mylinks";
+import { CareerLink, links } from "../../Data/Mylinks";
+
 import { Ham } from "./Ham";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,14 +14,14 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="flex gap-2 p-1 text-lg bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full ">
+    <header className="flex gap-2 p-3 text-md bg-white z-50 justify-between px-2 md:justify-evenly fixed w-full ">
       <div className="logo">
         <Link href={"/"}>
           <Image
             src={"/img/fusion.png"}
-            width={250}
-            height={250}
-            alt="GreatWay"
+            width={200}
+            height={200}
+            alt="fusionLogo"
           />
         </Link>
       </div>
@@ -37,48 +38,35 @@ const Navbar: React.FC = () => {
             showNav ? "visible" : "hidden"
           } md:visible nav flex flex-col md:flex-row text-black items-center justify-center md:justify-end md:gap-6 absolute md:static top-20 bg-white w-full -left-[2px] md:w-auto md:flex md:items-center`}
         >
-          <Link
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            href={"/"}
-          >
+          <Link className=" p-2 rounded-xl font-bold" href={"/"}>
             Home
           </Link>
-          <FlyoutLink href={"/Service-softDev"} FlyoutContent={PricingContent}>
+          <FlyoutLink href={"/Service-softDev"} FlyoutContent={CourseContent}>
             <Link
               href={"/Courses"}
-              className="hover:bg-gray-300 p-2 rounded-xl font-bold text-black"
+              className=" p-2 rounded-xl font-bold text-black"
             >
               Courses
             </Link>
           </FlyoutLink>
-          <Link
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            href={"/AboutUs"}
-          >
+          <Link className=" p-2 rounded-xl font-bold" href={"/AboutUs"}>
             About Us
           </Link>
-          <Link
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            href={"/AboutUs"}
-          >
+          <Link className=" p-2 rounded-xl font-bold" href={"/AboutUs"}>
             Contact Us
           </Link>
-          <Link
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            href={"/Career"}
-          >
-            Career
-          </Link>
-          <Link
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            href={"/Batches"}
-          >
+          <FlyoutLink href={"/Service-softDev"} FlyoutContent={CareerContent}>
+            <Link
+              href={"/Courses"}
+              className=" p-2 rounded-xl font-bold text-black"
+            >
+              Career
+            </Link>
+          </FlyoutLink>
+          <Link className=" p-2 rounded-xl font-bold" href={"/Batches"}>
             Batches
           </Link>
-          <Link
-            className="hover:bg-gray-300 p-2 rounded-xl font-bold"
-            href={"/SignIn"}
-          >
+          <Link className=" p-2 rounded-xl font-bold" href={"/SignIn"}>
             Sign In
           </Link>
         </motion.nav>
@@ -133,13 +121,27 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
   );
 };
 
-const PricingContent: React.FC = () => {
+const CourseContent: React.FC = () => {
   return (
-    <div className=" bg-white overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-2 md:overflow-hidden flex flex-col p-4  shadow-lg rounded-lg">
-      {links.map((l, index) => (
+    <div className=" bg-white  overflow-y-scroll h-[20rem] md:h-full w-[21rem] gap-1 md:overflow-hidden flex flex-col p-4  shadow-lg rounded-lg">
+      {links?.map((l, index) => (
         <div key={index} className="hover:bg-gray-200 rounded-xl p-2">
-          <Link href={l.link}>
-            <h1 className="font-bold w-fit">{l.name}</h1>
+          <Link href={l?.link}>
+            <h1 className="font-bold w-fit">{l?.name}</h1>
+          </Link>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+const CareerContent: React.FC = () => {
+  return (
+    <div className=" bg-white  overflow-y-scroll h-fit md:h-full w-[21rem] gap-1 md:overflow-hidden flex flex-col p-4  shadow-lg rounded-lg">
+      {CareerLink?.map((l, index) => (
+        <div key={index} className="hover:bg-gray-200 rounded-xl p-2">
+          <Link href={l?.link}>
+            <h1 className="font-bold w-fit">{l?.name}</h1>
           </Link>
         </div>
       ))}
