@@ -1,5 +1,5 @@
 const cources=[
-    {id:1, course:""},
+    {id:1, course:"Select Course"},
     {id:2, course:"Advanced Software Testing (Manual+Automation)"},
     {id:3, course:"Java Full Stack Development"},
     {id:4, course:"Python Development"},

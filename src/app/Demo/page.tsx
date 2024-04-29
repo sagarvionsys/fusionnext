@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import cources from "@/Data/cources";
+import { message } from "antd";
 
 const Demo = () => {
   const[name,setName]=useState('');
@@ -12,6 +13,7 @@ const Demo = () => {
   const logInputValue = () => {
     const data={name,email,mobile,course}
     console.log(data);
+    message.success("Successfully booked demo class!");
     setName("");
     setEmail("");
     setMobile("");
@@ -34,37 +36,33 @@ const Demo = () => {
         <form action="" method="post">
         <div className="flex -mx-3">
           <div className="w-full px-3 mb-5">
-            <label className="text-xs font-semibold px-1">Name</label>
+            <label className="text-xs md:text-sm font-semibold px-1">Full Name</label>
             <div className="flex">
-              <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-              <input type="text" id="Name" className="w-full -ml-10 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)} required></input>
+              <input type="text" id="Name" className="w-full bg-slate-100 -ml-15 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter name" value={name} onChange={(e) => setName(e.target.value)}></input>
             </div>
           </div>
         </div>
         <div className="flex -mx-3">
           <div className="w-full px-3 mb-5">
-            <label className="text-xs font-semibold px-1">Email</label>
+            <label className="text-xs md:text-sm font-semibold px-1">Email Address</label>
             <div className="flex">
-              <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-              <input type="email" className="w-full -ml-10 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter email address" value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+              <input type="email" className="w-full bg-slate-100 -ml-15 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter email address" value={email} onChange={(e) => setEmail(e.target.value)}></input>
             </div>
           </div>
         </div>
         <div className="flex -mx-3">
           <div className="w-full px-3 mb-5">
-            <label className="text-xs font-semibold px-1">Mobile number</label>
+            <label className="text-xs md:text-sm font-semibold px-1">Mobile Number</label>
             <div className="flex">
-              <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-              <input type="number" className="w-full -ml-10 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter mobile number" pattern="[0-9]{10}" value={mobile} onChange={(e) => setMobile(e.target.value)} required></input>
+              <input type="number" className="w-full bg-slate-100 -ml-15 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Enter mobile number" pattern="[0-9]{10}" value={mobile} onChange={(e) => setMobile(e.target.value)}></input>
             </div>
           </div>
         </div>
         <div className="flex -mx-3">
           <div className="w-full px-3 mb-5">
-            <label className="text-xs font-semibold px-1">Select course</label>
+            <label className="text-xs md:text-sm font-semibold px-1">Select Course</label>
             <div className="flex">
-              <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                <select className="w-full -ml-10 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" value={course} onChange={(e) => setCourse(e.target.value)}>
+                <select className="w-full bg-slate-100 -ml-15 pl-10 pr-1 py-1 sm:pr-3 sm:py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" value={course} onChange={(e) => setCourse(e.target.value)}>
                   {cources.map((feat)=>{
                     return(
                       <option key={feat.id} value={feat.course}>{feat.course}</option>
