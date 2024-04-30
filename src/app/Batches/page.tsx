@@ -6,13 +6,23 @@ import { BsBrowserChrome } from "react-icons/bs";
 import { PiFileSqlDuotone } from "react-icons/pi";
 import { SiPython } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
-import React from "react";
-import { TypeAnimation } from 'react-type-animation';
+import React ,{useEffect}  from "react";
 import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+ 
 
 const Batches = () => {
   
+  useEffect(()=>{
+    AOS.init({offset: 200,
+      duration: 1000,
+      delay: 100,});
+  },[])
+    
+ 
+
    const Data=[
     {
      id:1,
@@ -64,7 +74,7 @@ const Batches = () => {
      }
   ]
 
-  return <main className="bg-white pt-[90px]">
+  return <main className="bg-white pt-[70px]">
     
     <section className="h-auto w-full pb-1">
       <div className="flex lg:h-[500px] md:h-[800px] h-[600px] relative">
@@ -76,7 +86,7 @@ const Batches = () => {
           height={1000}
           className="object-cover lg:w-full blur-sm lg:h-[500px]"
         /> 
-        <div className=" absolute mx-8 my-8  z-40 top-0 bottom-0 left-0 right-0 lg:right-[45%]">
+        <div className=" absolute flex lg:justify-evenly flex-col mx-8 my-8  z-40 top-0 bottom-0 left-0 right-0 lg:right-[45%]">
         <p className="text-white pl-2 md:text-[25px] sm:text-[15px] text-[10px]">OUR APPROACH</p>
         <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 lg:py-2 pt-2 px-[15%] lg:px-1 md:text-[55px] sm:text-[35px] text-[20px]">
           <p>Batch Schedule for (2024)</p>
@@ -95,7 +105,7 @@ const Batches = () => {
         </div>
 
         
-        <div className="absolute z-40 lg:ml-[55%] lg:h-[450px] h-[350px] md:top-[400px] top-[200px] lg:top-[0px]  left-0 right-0 lg:px-6 sm:px-12 px-4 lg:py-6 sm:py-12 py-4 overflow-y-scroll">
+        <div data-aos="fade-down" className="absolute z-40 lg:ml-[55%] lg:h-[450px] h-[350px] md:top-[400px] top-[200px] lg:top-[0px]  left-0 right-0 lg:px-6 sm:px-12 px-4 lg:py-6 sm:py-12 py-4 overflow-y-scroll">
           
           {Data.map((Batches, index) => (
             <div key={index} className="h-auto w-auto my-4 flex sm:text-[18px] text-[13px] ">
@@ -113,65 +123,87 @@ const Batches = () => {
       </div>
     </section>
 
-    <div className="absolute z-10 w-full sm:mt-32 mt-44 sm:text-4xl text-3xl text-center text-black">
-        <TypeAnimation
-      sequence={[
-       
-        'Data Science',
-        1000,
-        'Python Development',
-        1000,
-        'Web Development',
-        1000,
-        'Power BI',
-        1000,
-      ]}
-      speed={20}
-      repeat={Infinity}
-    />
+
+    <section>
+        
+        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-white">
+          <div data-theme="teal" className="mx-auto max-w-6xl">
+            <section className="font-sans text-black relative z-30">
+              <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
+                <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-50">
+                  <div className="h-full " data-aos="fade-up" data-aos-duration="600">
+                    <article className="h-full">
+                      <div className="h-full">
+                        <Image
+                        
+                          className="h-full object-cover"
+                          src={"/img/Baches.png"}
+                          alt=""
+                          width={733}
+                          height={412}
+                          loading="lazy"
+                        />
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div className="py-6 px-8 bg-grey" data-aos="fade-left">
+                  <div className="leading-relaxed">
+                    <h2 className="leading-tight text-4xl font-bold">
+                    Establish constructive spaces.
+                    </h2>
+                    <p className="mt-4 " >
+                    These spaces should encourage open communication, idea sharing, and mutual respect among team members. Constructive spaces provide a platform for diverse perspectives to be heard and valued, creating an environment where everyone feels empowered to contribute their best ideas. By cultivating a culture of constructive feedback and continuous improvement, these spaces promote accountability and drive positive change. </p>
+                    
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
+      </section>
 
-     <section className="h-[200px] w-full mt-1">
-      <h1 className="h-[200px] w-full text-start absolute bg-clip-text text-transparent bg-gradient-to-r from-slate-600 to-violet-500 md:text-[80px] text-[60px]">ONG0ING BATCHES...</h1>
-        <Image
-          src={"/img/background1.png"}
-          alt=""
-          width={1000}
-          height={1000}
-          className="object-cover h-full w-full"
-        /> 
-
-     </section>
-
-
-    <section className=" bg-slate-300 md:h-[630px] h-[550px] w-auto top-0 bottom-0 left-0 right-0 overflow-y-scroll">
-      <div className="flex flex-col absolute z-0 sm:text-[200px] text-[100px] blur-sm mt-5 w-full h-full gap-5 text-white">
-      <Image
-          src={"/img/ongoingbatchbackground.png"}
-          alt=""
-          width={1000}
-          height={1000}
-          className="object-cover h-full w-full blur-sm"
-        /> 
-      </div>
-      <div className="w-10/12 md:w-6/12 lg:6/12 mx-auto relative py-4">
-    <div className="border-l-2 mt-10">
-      
-        {Data.map((Batches,index)=><div key={index} className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
-          
-          <div className="w-8 h-8 bg-blue-600 absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"> 
-          <p className="text-white ml-2 mt-2">{<Batches.logo/>}</p></div>
-          
-          <div className="w-10 h-1 bg-blue-300 absolute -left-10 z-0"></div>
-
-          <div className="flex-auto">
-            <h1 className="text-lg">{Batches.date}</h1>
-            <h1 className="text-xl font-bold">{Batches.title}</h1>
-            <h3>{Batches.rutine}</h3>
-          </div>
-          </div>
+   
+    <section className=" h-auto w-auto bg-gray-50">
+    <div className="flex w-fit flex-col px-12 ">
+          <h2 className="font-bold text-2xl pb-2 text-black">
+            See our Ongoing Batche's
+          </h2>
+          <div className="border-2  border-sky-600 mb-3 text"></div>
+        </div>
+    
+     <div className="flex flex-wrap justify-evenly h-auto w-auto bg-gray-50 py-6 px-8 sm:py-8">
+     
+    
+        {Data.map((Batches,index)=><div
+        key={index}
+        data-aos="fade-right"
+        className="sm:h-[300px] h-[300px] sm:w-[400px] w-[260px] group relative cursor-pointer overflow-hidden bg-white mb-5 py-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl mx-auto max-w-sm rounded-lg px-10">
+        <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 transition-all duration-300 group-hover:scale-[10]"></span>
+        <div className="relative z-10 mx-auto max-w-md">
+        <span className="grid h-20 w-20 place-items-center rounded-full bg-sky-500 transition-all duration-300 group-hover:bg-sky-400">
+        <p className="text-white text-[30px]"><Batches.logo/></p> 
+            </span>
+           
+            <div
+                className="space-y-6 pt-5 text-sm font-bold  leading-7 text-gray-600 transition-all duration-300 group-hover:text-white/90">
+                
+                <p><span className="sm:text-xl text-md">
+                  {Batches.title}
+                  </span> <br />
+                <span>{Batches.date}</span>
+                <span className="px-4 text-green-600 transition-all duration-300 group-hover:text-white">
+                  {Batches.rutine}
+                  </span></p>
+                <p className="text-sky-500 transition-all duration-300 group-hover:text-white">
+                  {Batches.time}
+                  </p>
+            </div>
+           
+        </div>
+    </div>
         )}
-      </div>
+   
       </div>
     </section>
     <hr />
