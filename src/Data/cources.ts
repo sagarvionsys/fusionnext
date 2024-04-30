@@ -1,0 +1,26 @@
+const cources=[
+    {id:1, course:"Select Course"},
+    {id:2, course:"Advanced Software Testing (Manual+Automation)"},
+    {id:3, course:"Java Full Stack Development"},
+    {id:4, course:"Python Development"},
+    {id:5, course:".Net Full Stack Development"},
+    {id:6, course:"RPA Development"},
+    {id:7, course:"AWS/DevOps"},
+    {id:8, course:"Power BI"},
+    {id:9, course:"Salseforce"},
+    {id:10, course:"SAP Material Management"},
+    {id:11, course:"Data Science"},
+    {id:12, course:"SAP Fieldglass"},
+    {id:13, course:"SAP FICO"},
+    {id:14, course:"Full Stack Web Development"},
+    {id:15, course:"DevOps"},
+    {id:16, course:"Big Data Hadoop"},
+    {id:17, course:"Sap SD"},
+    {id:18, course:"Microsoft Azure"},
+    {id:19, course:"React JS"},
+    {id:20, course:"Angular JS"},
+    {id:21, course:"Oracle SQL & PLSQL"},
+    {id:22, course:"Data Analyst"},
+    {id:23, course:"Full Stack Data Analyst"}
+]
+export default cources;
