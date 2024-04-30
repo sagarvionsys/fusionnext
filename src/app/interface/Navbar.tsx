@@ -52,12 +52,12 @@ const Navbar: React.FC = () => {
           <Link className=" p-2 rounded-xl font-bold" href={"/AboutUs"}>
             About Us
           </Link>
-          <Link className=" p-2 rounded-xl font-bold" href={"/AboutUs"}>
+          <Link className=" p-2 rounded-xl font-bold" href={"/ContactUs"}>
             Contact Us
           </Link>
           <FlyoutLink href={"/Service-softDev"} FlyoutContent={CareerContent}>
             <Link
-              href={"/Courses"}
+              href={"Career/it_profile"}
               className=" p-2 rounded-xl font-bold text-black"
             >
               Career
@@ -65,6 +65,9 @@ const Navbar: React.FC = () => {
           </FlyoutLink>
           <Link className=" p-2 rounded-xl font-bold" href={"/Batches"}>
             Batches
+          </Link>
+          <Link className=" p-2 rounded-xl font-bold" href={"/OurPlacement"}>
+            Our Placements
           </Link>
           <Link className=" p-2 rounded-xl font-bold" href={"/SignIn"}>
             Sign In
