@@ -4,6 +4,7 @@ import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
 import { Rate } from "antd";
 
+
 const TestimonialSlider = () => {
   const sliderRef = useRef(null);
   let keenSlider: any = null;
@@ -80,7 +81,7 @@ const TestimonialSlider = () => {
               <button
                 aria-label="Previous slide"
                 id="keen-slider-previous"
-                className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+                className="rounded-full border border-rose-600 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white"
               >
                 Previous
               </button>
@@ -88,7 +89,7 @@ const TestimonialSlider = () => {
               <button
                 aria-label="Next slide"
                 id="keen-slider-next"
-                className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+                className="rounded-full border border-rose-600 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white"
               >
                 Next
               </button>
@@ -104,13 +105,13 @@ const TestimonialSlider = () => {
                       src="/img/ravi.jpg"
                       alt=""
                       width={80}
-                      height={70}
+                      height={70} className='m-1 h-full'
                     />
-                    <p className='m-1'>
+                    <p className=''>
                       "Working at Vionsys has been an incredible experience. The work culture fosters collaboration, creativity, and continuous learning. The leadership team is supportive and truly values employee input. I couldn't ask for better place to grow my career in IT."
                     </p>
                   </span>
-                  <footer className='font-bold text-black m-1'>- Ravi Waghmare</footer>
+                  <footer className='font-bold text-black '>- Ravi Waghmare</footer>
 
                   <span className="start_symbol ">
                     <Rate disabled defaultValue={5} />
@@ -125,13 +126,13 @@ const TestimonialSlider = () => {
                       src="/img/shivam.jpg"
                       alt=""
                       width={80}
-                      height={70}
+                      height={70}className='m-1 h-full'
                     />
-                    <p className='m-1'>
+                    <p className=''>
                       "Vionsys IT Solutions shares my positive experience and satisfaction with the services provided by the company. One of the key strengths of Vionsys IT Solutions is the depth of technical knowledge possessed by your professionals."
                     </p>
                   </span>
-                  <footer className='font-bold text-black m-1'>- Mohini Rokade</footer>
+                  <footer className='font-bold text-black'>- Mohini Rokade</footer>
 
                   <span className="start_symbol">
                     <Rate disabled defaultValue={2} />
@@ -142,17 +143,17 @@ const TestimonialSlider = () => {
               <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600" >
                 <blockquote className="testimonial">
                   <span className='flex'>
-                    <Image style={{ borderRadius: '50%' }}
-                      src="/img/shivv.jpg"
+                    <Image style={{ borderRadius: '50%' }} className='m-1 h-full'
+                      src="/img/ravi.jpg"
                       alt=""
                       width={80}
                       height={70}
                     />
-                    <p className='m-1'>
+                    <p className=''>
                       "Vionsys IT Solution is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt. Greatful for being a part of Vionsys family."
                     </p>
                   </span>
-                  <footer className='font-bold text-black m-1'>- Vishnu Jadhav</footer>
+                  <footer className='font-bold text-black '>- Vishnu Jadhav</footer>
 
                   <span className="start_symbol">
                     <Rate disabled defaultValue={4} />
@@ -167,7 +168,7 @@ const TestimonialSlider = () => {
         <button
           aria-label="Previous slide"
           id="keen-slider-previous-mobile"
-          className="rounded-full border border-rose-600 m-4 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
+          className="rounded-full border border-rose-600 m-4 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
         >
           Previous
         </button>
@@ -175,7 +176,7 @@ const TestimonialSlider = () => {
         <button
           aria-label="Next slide"
           id="keen-slider-next-mobile"
-          className="rounded-full border border-rose-600 m-4 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
+          className="rounded-full border border-rose-600 m-4 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
         >
           Next
         </button>
