@@ -6,6 +6,7 @@ import { Vortex } from "@/components/ui/vortex";
 import Link from "next/link";
 import { Modal, message } from "antd";
 
+
 const it_profile = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -120,42 +121,42 @@ const it_profile = () => {
 
       <section className="h-full px-3 py-12 bg-orange-50">
         <div className="flex flex-col px-6 ">
-          <h2 className="font-bold text-2xl pb-2 dark:text-gray-100">
+          <h2 className="font-bold text-2xl pb-2 text-black">
             See our areas of Work & Opportunities for you
           </h2>
           <div className="border-2  border-blue-500 mb-3 text"></div>
         </div>
 
-        <div className=" h-full dark:bg-gray-700">
-          <div className="flex justify-center flex-wrap">
+        <div className=" h-full bg-orange-50">
+          <div className="flex justify-evenly flex-wrap">
             {Jobs.map((it_profile, index) => (
               <div
                 key={index}
-                className="border w-full max-w-sm bg-white mx-3 rounded-lg shadow-2xl mt-5 dark:shadow-blue-900 hover:shadow-xl hover:transform hover:scale-105 duration-300"
+                className="border w-full max-w-sm bg-white mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl hover:transform hover:scale-105 duration-300"
               >
                 <div className="flex flex-col justify-evenly h-full">
                   <div className="flex flex-col h-full items-center md:items-start px-6 py-4">
                     <div className="flex flex-col ">
-                      <h2 className="font-bold text-xl dark:text-gray-100">
+                      <h2 className="font-bold text-xl text-black">
                         {it_profile.position}
                       </h2>
                       <div className="border-2 border-blue-500 mb-3 text"></div>
                     </div>
-                    <div className="text-gray-500 dark:text-gray-200 text-[15px] text-center md:text-start">
+                    <div className="text-gray-500 text-[15px] text-center md:text-start">
                       <p>{it_profile.jobDescription}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-gray-100 px-6 py-3 rounded-lg dark:bg-blue-100">
-                    <p className="text-gray-600 w-full h-auto dark:text-gray-600 ">
+                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-gray-100 px-6 py-3 rounded-lg">
+                    <p className="text-gray-600 w-full h-auto ">
                       {it_profile.EmploymentType}
                     </p>
-                    <p className="text-gray-600 w-full h-auto dark:text-gray-600 ">
+                    <p className="text-gray-600 w-full h-auto">
                       {it_profile.Experience}
                     </p>
-                    <p className="text-gray-600 w-full h-auto dark:text-gray-600 ">
+                    <p className="text-gray-600 w-full h-auto">
                       {it_profile.education}
                     </p>
-                    <p className="text-gray-600 w-full h-auto dark:text-gray-600 ">
+                    <p className="text-gray-600 w-full h-auto">
                       {it_profile.Location}
                     </p>
                     <button
@@ -266,9 +267,7 @@ const it_profile = () => {
       </section>
 
       <section>
-        <div className="absolute z-10 bg-rose-400 shadow-2xl dark:shadow-blue-900 left-0 lg:h-40 lg:w-40 lg:mt-[6.6%] lg:ml-[5.8%]"></div>
-        <div className="absolute z-10 bg-rose-400 shadow-2xl dark:shadow-blue-900 lg:h-40 lg:w-40 lg:mt-[27%] lg:ml-[54.7%]"></div>
-
+        
         <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-orange-50">
           <div data-theme="teal" className="mx-auto max-w-6xl">
             <section className="font-sans text-black relative z-30">
@@ -279,7 +278,7 @@ const it_profile = () => {
                       <div className="h-full">
                         <Image
                           className="h-full object-cover"
-                          src={"/img/best-career.png"}
+                          src={"/img/Career.png"}
                           alt=""
                           width={733}
                           height={412}
