@@ -5,6 +5,7 @@ const Enquiry_home = () => {
     name: '',
     email: '',
     number: '',
+    subject: '',
     selectedOption: 'volvo'
   });
 
@@ -28,11 +29,11 @@ const Enquiry_home = () => {
   };
 
   return (
-    <main className="flex flex-colpy-5 bg-gradient-to-r  pb-6 ">
+    <main className="flex flex-colpy-5 pt-6   pb-6  ">
       <div className="test">
-        <h1 className="px-10 px-20 text-lg font-serif h-8 font-bold  m-1 text-blue-300">Enquiry Now</h1>
+        <h1 className="px-7 px-20 text-lg font-serif h-8 font-bold  m-1 text-blue-500">Enquiry  Now</h1>
       </div>
-      <div className="Inpu_fileds  justify-center  ">
+      <div className="Inpu_fileds  justify-center   ">
         <form className="form-inline md:flex  justify-between space-5 " onSubmit={handleSubmit}>
           <input
             type="name"
@@ -63,6 +64,17 @@ const Enquiry_home = () => {
             onChange={handleChange}
             placeholder="Enter Your Email"
           />
+
+        <input
+            type="text"
+            className="m-1 form-control block h-8 font-serif text-black outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+            id="subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            placeholder="Enter Your Subject"
+          />
+
           <select
             name="selectedOption"
             id="cars"
@@ -76,9 +88,9 @@ const Enquiry_home = () => {
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
           </select>
-          <div className="button-container md:flex md:items-center md:space-x-1 md:mt-0">
+          <div className="button-container md:flex  md:items-center md:space-x-1 md:mt-0">
             <button
-              className="m-1 bg-orange-500 hover:bg-blue-700 font-serif h-8 text-white px-5 ml-0 md:ml-8 rounded md:w-auto"
+              className="m-1 bg-orange-500 hover:bg-blue-700 font-serif h-8 text-white px-5 ml-0 md:ml-8 rounded md:w-auto "
               type="submit"
             >
               Submit

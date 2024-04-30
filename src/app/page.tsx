@@ -35,7 +35,7 @@ const Home = () => {
   ];
 
   return (
-    <main className="pt-16">
+    <main className="pt-16 bg-white">
       {/* hero section  */}
 
       <section className="bg-white">
@@ -47,8 +47,8 @@ const Home = () => {
 
 
 
-        <br></br>
-<section className="the Inqury form h-50">
+        <br></br><hr className="p-4 bg-dark" />
+<section className="the Inqury form h-50  bg-violet-100 mb-6">
           <Enquiry_home />
         </section>
         <hr className="text-black-200 bg-black-200"></hr>
@@ -75,7 +75,7 @@ const Home = () => {
       <Feature_home />
 
       {/* box glowing pattern */}
-      <section className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+      <section className=" bg-black h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
         <Boxes />
@@ -90,7 +90,7 @@ const Home = () => {
       </section>
 
       {/* typewriting section */}
-      <section>
+      <section className="bg-black">
         <div className="flex flex-col items-center justify-center h-[25rem]  ">
           <p className="text-neutral-600 dark:text-neutral-200 text-xs sm:text-base  ">
             The road to freedom starts from here

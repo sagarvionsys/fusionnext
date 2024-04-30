@@ -136,8 +136,9 @@ const Placements = () => {
               <p className='font-serif justify-center  p-4 m-4 text-center text-indigo-400 text-[20px]'>Students Placed With Companies</p>
 
 
-          <Images_logo />
             </div>
+            
+            <Images_logo />
             <div className='bg-indigo-50 p-3'>
               <h1 className="justify-center text-center text-[26px] p-3 pt-10">WHAT OUR STUDENTS SAY'S</h1>
 
@@ -191,29 +192,31 @@ const Placements = () => {
                       <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600">
                         <blockquote className="testimonial">
                           <span className='flex'>
-                            <Image style={{ borderRadius: '50%' }}
+                            <Image style={{ borderRadius: '50%' }} className='m-1 h-24 w-24 rounded-full'
                               src="/img/ravi.jpg"
                               alt=""
-                              width={80}
-                              height={70}
+                              width={80}height={70}
                             />
-                            <p className='m-1'>
+                            <p className='m-1 '>
                               "Working at Vionsys has been an incredible experience. The work culture fosters collaboration, creativity, and continuous learning. The leadership team is supportive and truly values employee input. I couldn't ask for better place to grow my career in IT."
                             </p>
                           </span>
-                          <footer className='font-bold text-black m-1'>- Ravi Waghmare</footer>
-
-                          <span className="start_symbol ">
-                            <Rate disabled defaultValue={5} />
-                          </span>
-                          <p className="the_rating_text text-sm p-1">4.8 / 5 rating</p>
+                          <span className='justify-center text-center'>
+                         <footer className='font-bold text-black m-1'>- Rahul Jadhav</footer>
+                          <div className="flex justify-center items-center">
+                            <span className="start_symbol">
+                              <Rate disabled defaultValue={4} />
+                            </span>
+                            <p className="the_rating_text text-sm p-1">4.1 / 5 rating</p>
+                          </div>
+                         </span>
                         </blockquote>
                       </div>
                       <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600">
                         <blockquote className="testimonial">
                           <span className='flex'>
-                            <Image style={{ borderRadius: '50%' }}
-                              src="/img/shivam.jpg"
+                            <Image style={{ borderRadius: '50%' }} className='m-1 h-24 w-24 rounded-full'
+                              src="/img/karl.jpg"
                               alt=""
                               width={80}
                               height={70}
@@ -222,19 +225,22 @@ const Placements = () => {
                               "Vionsys IT Solutions shares my positive experience and satisfaction with the services provided by the company. One of the key strengths of Vionsys IT Solutions is the depth of technical knowledge possessed by your professionals."
                             </p>
                           </span>
-                          <footer className='font-bold text-black m-1'>- Mohini Rokade</footer>
-
-                          <span className="start_symbol">
-                            <Rate disabled defaultValue={2} />
-                          </span>
-                          <p className="the_rating_text text-sm p-1">2.8 / 5 rating</p>
+                          <span className='justify-center text-center'>
+                         <footer className='font-bold text-black m-1'>- Vishnu Jadhav</footer>
+                          <div className="flex justify-center items-center">
+                            <span className="start_symbol">
+                              <Rate disabled defaultValue={2} />
+                            </span>
+                            <p className="the_rating_text text-sm p-1">2.1 / 5 rating</p>
+                          </div>
+                         </span>
                         </blockquote>
                       </div>
                       <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600" >
                         <blockquote className="testimonial">
                           <span className='flex'>
-                            <Image style={{ borderRadius: '50%' }}
-                              src="/img/shivv.jpg"
+                            <Image style={{ borderRadius: '50%' }} className='m-1 h-24 w-24 rounded-full' 
+                              src="/img/shivam.jpg"
                               alt=""
                               width={80}
                               height={70}
@@ -243,12 +249,16 @@ const Placements = () => {
                               "Vionsys IT Solution is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt. Greatful for being a part of Vionsys family."
                             </p>
                           </span>
-                          <footer className='font-bold text-black m-1'>- Vishnu Jadhav</footer>
+                          <span className='justify-center text-center'>
+                         <footer className='font-bold text-black m-1'>- Sonam sharma</footer>
+                          <div className="flex justify-center items-center">
+                            <span className="start_symbol">
+                              <Rate disabled defaultValue={2} />
+                            </span>
+                            <p className="the_rating_text text-sm p-1">2 / 5 rating</p>
+                          </div>
+                         </span>
 
-                          <span className="start_symbol">
-                            <Rate disabled defaultValue={4} />
-                          </span>
-                          <p className="the_rating_text text-sm p-1">4.1 / 5 rating</p>
                         </blockquote>
                       </div>
                       {/* Add more testimonial slides as needed */}
