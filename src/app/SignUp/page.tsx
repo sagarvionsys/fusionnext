@@ -1,7 +1,7 @@
 "use client";
 import { SubmitHandler, useForm } from "react-hook-form";
 import Link from "next/link";
-import React, { ChangeEvent, useState } from "react";
+import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -36,19 +36,19 @@ const SignUp = () => {
   };
 
   return (
-    <section className=" bg-white text-black pt-[70px]">
+    <section className=" bg-white text-black dark:bg-[#12151a] dark:text-white pt-[70px]">
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-2">
         <div className="order-first border-4 border-black rounded-l-lg mb-2">
           <div className="md:mx-20 md:mt-4 mx-10 mt-2">
-            <h2 className="text-3xl font-bold leading-tight text-black sm:text-4xl">
+            <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
               Sign up
             </h2>
-            <p className="mt-2 text-base text-gray-600">
+            <p className="mt-2 text-base text-gray-600 dark:text-gray-300">
               Already have an account?{" "}
               <Link
                 href="/SignIn"
                 title=""
-                className="font-medium text-black transition-all duration-200 hover:underline hover:text-gray-500"
+                className="font-medium text-black dark:text-gray-200 transition-all duration-200 hover:underline hover:text-gray-500 dark:hover:text-white"
               >
                 Sign In
               </Link>
@@ -59,13 +59,13 @@ const SignUp = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="text-base font-medium text-gray-900"
+                    className="text-base font-medium text-gray-900 dark:text-gray-300"
                   >
                     Full Name
                   </label>
                   <div className="mt-1">
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-500 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="text"
                       placeholder="Full Name"
                       // name="userName"
@@ -83,13 +83,13 @@ const SignUp = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="text-base font-medium text-gray-900"
+                    className="text-base font-medium text-gray-900 dark:text-gray-300"
                   >
                     Email address
                   </label>
                   <div className="mt-1">
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-500 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="email"
                       placeholder="Email"
                       id="email"
@@ -110,14 +110,14 @@ const SignUp = () => {
                   <div className="flex items-center justify-between">
                     <label
                       htmlFor="password"
-                      className="text-base font-medium text-gray-900"
+                      className="text-base font-medium text-gray-900 dark:text-gray-300"
                     >
                       Password
                     </label>
                   </div>
                   <div className="mt-1">
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-500 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Password"
                       id="password"
@@ -136,14 +136,14 @@ const SignUp = () => {
                   <div className="flex items-center justify-between">
                     <label
                       htmlFor="Password"
-                      className="text-base font-medium text-gray-900"
+                      className="text-base font-medium text-gray-900 dark:text-gray-300"
                     >
                       Confirm Password
                     </label>
                   </div>
                   <div className="mt-1">
                     <input
-                      className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex h-10 w-full rounded-md border border-gray-300 dark:border-gray-500 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
                       type="password"
                       placeholder="Confirm Password"
                       id="confirmpassword"
@@ -162,7 +162,7 @@ const SignUp = () => {
                   <button
                     // onClick={(e) => handleCreateUser(e)}
                     type="submit"
-                    className=" relative inline-flex w-full items-center justify-center rounded-md bg-black px-3.5 py-2.5 font-semibold leading-7 text-white hover:bg-gradient-to-r hover:from-purple-600 hover:via-red-600 hover:to-blue-500"
+                    className=" relative inline-flex w-full items-center justify-center rounded-md bg-black dark:bg-gray-200 px-3.5 py-2.5 font-semibold leading-7 text-white dark:text-black hover:bg-gradient-to-r hover:from-purple-600 hover:via-red-600 hover:to-blue-500"
                   >
                     Create Account
                     <svg
@@ -187,7 +187,7 @@ const SignUp = () => {
             <div className="mt-3 space-y-3">
               <button
                 type="button"
-                className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white px-3.5 py-2.5 font-semibold text-black transition-all duration-200 hover:bg-gradient-to-r hover:from-purple-600 hover:via-red-600 hover:to-blue-500 hover:text-white focus:text-black focus:outline-none"
+                className="relative inline-flex w-full items-center justify-center rounded-md border border-gray-400 bg-white dark:bg-black px-3.5 py-2.5 font-semibold text-black dark:text-white transition-all duration-200 hover:bg-gradient-to-r hover:from-purple-600 hover:via-red-600 hover:to-blue-500 hover:text-white focus:text-black focus:outline-none"
               >
                 <span className="mr-2 mt-[2px] inline-block">
                   <FcGoogle />
