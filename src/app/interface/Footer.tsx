@@ -1,5 +1,4 @@
 "use client"
-import React, {useState} from "react";
 import { TfiLocationArrow} from "react-icons/tfi";
 import { MdOutlineAttachEmail } from "react-icons/md";
 import { FaFacebookF ,FaWhatsapp , FaInstagram ,FaLinkedinIn } from "react-icons/fa";
@@ -111,11 +110,11 @@ const Footer = () => {
 
         <div className="flex sm:gap-4 gap-2 justify-center ">
 
-          <div className="rounded-full bg-white hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.facebook.com/people/Fusion-Software-Institute/100088395132564/?mibextid=ZbWKwL"}><FaFacebookF style={{ fontSize: '1.5rem' }} color="blue" /></a> </div>
-          <div className="rounded-full bg-white hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://api.whatsapp.com/send/?phone=7498992609&text=I+am+intersted+in+course+you+provide"}><FaWhatsapp style={{ fontSize: '1.5rem' }} color="#25D366"/></a></div>
-          <div className="rounded-full bg-white hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.instagram.com/fusion_institute_pune/"}><FaInstagram style={{ fontSize: '1.5rem' }} color="#e1306c"/></a></div>
-          <div className="rounded-full bg-white hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.linkedin.com/company/fusion-software-institute-kharadi/?originalSubdomain=in"}><FaLinkedinIn style={{ fontSize: '1.5rem' }} color= '#0077B5'/></a></div>
-          <div className="rounded-full bg-white hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.linkedin.com/company/fusion-software-institute-kharadi/?originalSubdomain=in"}><FaYoutube style={{ fontSize: '1.5rem' }} color= '#FF0000'/></a></div>
+          <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.facebook.com/people/Fusion-Software-Institute/100088395132564/?mibextid=ZbWKwL"}><FaFacebookF style={{ fontSize: '1.5rem' }} color="blue" /></a> </div>
+          <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://api.whatsapp.com/send/?phone=7498992609&text=I+am+intersted+in+course+you+provide"}><FaWhatsapp style={{ fontSize: '1.5rem' }} color="#25D366"/></a></div>
+          <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.instagram.com/fusion_institute_pune/"}><FaInstagram style={{ fontSize: '1.5rem' }} color="#e1306c"/></a></div>
+          <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.linkedin.com/company/fusion-software-institute-kharadi/?originalSubdomain=in"}><FaLinkedinIn style={{ fontSize: '1.5rem' }} color= '#0077B5'/></a></div>
+          <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.linkedin.com/company/fusion-software-institute-kharadi/?originalSubdomain=in"}><FaYoutube style={{ fontSize: '1.5rem' }} color= '#FF0000'/></a></div>
 
         </div>
        </section>
@@ -139,7 +138,7 @@ const Footer = () => {
                       {...register('name')}
               placeholder="Your Name"
               required
-              className="border rounded text-black px-1 w-full"
+              className="border rounded text-black dark:bg-slate-700 dark:text-gray-300 px-1 w-full"
             />
             {errors.name && (
                 <div  className="text-red-500 text-xs">{errors.name.message}</div>
@@ -159,7 +158,7 @@ const Footer = () => {
                       {...register('email')}
               placeholder="Your Email"
               required
-              className="border rounded text-black px-1 w-full"
+              className="border rounded text-black dark:bg-slate-700 dark:text-gray-300 px-1 w-full"
             />
             {errors.email && (
                 <div  className="text-red-500 text-xs">{errors.email.message}</div>
@@ -178,7 +177,7 @@ const Footer = () => {
                       {...register('subject')}
               placeholder="Subject"
               required
-              className="border rounded text-black px-1 w-full"
+              className="border rounded text-black dark:bg-slate-700 dark:text-gray-300 px-1 w-full"
             />
             
            {errors.subject && (
@@ -198,7 +197,7 @@ const Footer = () => {
               placeholder="Message"
               required
               rows={2}
-              className="border rounded text-black px-1 w-full"
+              className="border rounded text-black dark:bg-slate-700 dark:text-gray-300 px-1 w-full"
             >
             </textarea>
             
@@ -210,7 +209,7 @@ const Footer = () => {
 
           <button
             type="submit"
-            className="bg-rose-600 hover:bg-rose-700 text-white font-medium py-2 rounded w-full"
+            className="bg-rose-600 hover:bg-rose-700 dark:bg-rose-700 dark:hover:bg-rose-600 text-white font-medium py-2 rounded w-full"
           >Send</button>
 
         </form>
