@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Rate } from "antd";
 import { LuActivity } from "react-icons/lu";
 
@@ -26,7 +25,7 @@ const work_field = [
 
 const Features_home = () => {
   return (
-    <main className="w-full flex p-3 py-9 flex-col md:flex-row text-black bg-[#F9F8FE] ">
+    <main className="w-full flex p-3 py-9 flex-col md:flex-row text-black dark:text-gray-200 bg-[#F9F8FE] dark:bg-slate-950 ">
       <section className="the_ratings flex flex-col w-full md:w-[50%] px-0 md:px-[5%] ">
         <div className=" px-5 md:px-16">
           <h1 className="text-4xl font-bold text-red-500">
@@ -41,14 +40,14 @@ const Features_home = () => {
         <div className="stars flex px-5 md:px-16 space-x-8 py-10">
           <span className="1st_start_scetion">
             <span className="start_symbol">
-              <Rate disabled defaultValue={2} />
+              <Rate disabled defaultValue={4.9} />
             </span>
             <p className="the_rating_text text-sm p-1">4.9 / 5 rating</p>
             <p className="the_client Navtext font-bold p-1">databriks</p>
           </span>
           <span className="2st_start_scetion">
             <span className="start_symbol">
-              <Rate disabled defaultValue={2} />
+              <Rate disabled defaultValue={4.8} />
             </span>
             <p className="the_rating_text text-sm p-1">4.8 / 5 rating</p>
             <p className="the_client Navtext font-bold p-1">Chainalysis</p>

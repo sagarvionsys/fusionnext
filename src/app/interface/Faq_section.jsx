@@ -4,7 +4,7 @@ function AccordionItem({ title, content, isOpen, onClick }) {
   return (
     <div className="accordion-item">
       <button
-        className={`accordion-header bg-indigo-100 w-[70%] text-blacks justify-left text-left font-bold p-2 m-1 border border-blue-500 rounded-lg ${
+        className={`accordion-header bg-indigo-100 dark:bg-indigo-950 w-[70%] text-black dark:text-gray-200 justify-left text-left font-bold p-2 m-1 border border-blue-500 rounded-lg ${
           isOpen ? 'rounded-t-lg' : 'rounded-lg'
         }`}
         onClick={onClick}
@@ -15,7 +15,7 @@ function AccordionItem({ title, content, isOpen, onClick }) {
           <span className='font-bold text-black-400 '>{isOpen ? '▲' : '▼'}</span>
         </span>
       </button>
-      {isOpen && <div className="accordion-content bg-gray-100 p-4 w-[70%] m-auto">{content}</div>}
+      {isOpen && <div className="accordion-content bg-gray-100 dark:bg-gray-900 dark:text-gray-300 p-4 w-[70%] m-auto">{content}</div>}
     </div>
   );
 }

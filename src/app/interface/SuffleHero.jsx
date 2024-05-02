@@ -9,15 +9,15 @@ const ShuffleHero = () => {
           <h1>  Better every day</h1>
 
         </span>
-        <h3 className="text-4xl md:text-6xl text-red-900 font-serif">
+        <h3 className="text-4xl md:text-6xl text-red-900 dark:text-red-700 font-serif">
           Learn without limits brighten your <span className="text-indigo-500">Career</span>
         </h3>
-        <p className="text-base md:text-lg text-slate-700 my-4 md:my-6">
+        <p className="text-base md:text-lg text-slate-700 dark:text-slate-400 my-4 md:my-6">
           5,000,000 careers advanced
           1,500 live classes every month
           85% report career benefits including promotion or a new job
         </p>
-        <button className="bg-indigo-500 text-white font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
+        <button className="bg-indigo-500 text-white dark:text-gray-800 font-medium py-2 px-4 rounded transition-all hover:bg-indigo-600 active:scale-95">
           Find a class
         </button>
       </div>
