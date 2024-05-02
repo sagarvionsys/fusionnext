@@ -31,13 +31,13 @@ const Enquiry_home = () => {
   return (
     <main className="flex flex-colpy-5 pt-6   pb-6  ">
       <div className="test">
-        <h1 className="px-7 px-20 text-lg font-serif h-8 font-bold  m-1 text-blue-500">Enquiry  Now</h1>
+        <h1 className="px-7 px-20 text-lg font-serif h-8 font-bold  m-1 text-blue-500 dark:text-blue-100">Enquiry  Now</h1>
       </div>
       <div className="Inpu_fileds  justify-center   ">
         <form className="form-inline md:flex  justify-between space-5 " onSubmit={handleSubmit}>
           <input
             type="name"
-            className=" m-1 block form-control font-serif  h-8 text-black outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg "
+            className=" m-1 block form-control font-serif  h-8 text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg "
             id="name"
             name="name"
             value={formData.name}
@@ -46,7 +46,7 @@ const Enquiry_home = () => {
           />
           <input
             type="tel"
-            className="m-1 form-control block h-8 font-serif text-black outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+            className="m-1 form-control block h-8 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
             id="number"
             name="number"
             value={formData.number}
@@ -57,7 +57,7 @@ const Enquiry_home = () => {
 
           <input
             type="email"
-            className="m-1 form-control block h-8 font-serif text-black outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+            className="m-1 form-control block h-8 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
             id="email"
             name="email"
             value={formData.email}
@@ -67,7 +67,7 @@ const Enquiry_home = () => {
 
         <input
             type="text"
-            className="m-1 form-control block h-8 font-serif text-black outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+            className="m-1 form-control block h-8 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
             id="subject"
             name="subject"
             value={formData.subject}
@@ -78,7 +78,7 @@ const Enquiry_home = () => {
           <select
             name="selectedOption"
             id="cars"
-            className="h-8 w-60 sm:w-20 m-1 font-serif text-black outline-none pl-2 w-full md:pr-2 rounded-lg md:display-block"
+            className="h-8 w-60 sm:w-20 m-1 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border pl-2 w-full md:pr-2 rounded-lg md:display-block"
             style={{ width: '160px' }} // Inline style to set width to 20px for mobile devices
             value={formData.selectedOption}
             onChange={handleSelectChange}

@@ -4,15 +4,14 @@ import { Boxes } from "@/components/ui/background-boxes";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import Image from "next/image";
 import Hero_Section from "./interface/Hero_Section";
 import Feature_home from "./interface/Features_home";
 
+import SuffleHero from "./interface/SuffleHero";
 import Enquiry_home from "./interface/Enquiry_home";
 import Reviews_section from "./interface/Reviews_section";
 import Course_section from "./interface/Course_section";
 import Faq_section from "./interface/Faq_section";
-import SuffleHero from "./interface/SuffleHero";
 
 const Home = () => {
   const words = [
@@ -35,10 +34,10 @@ const Home = () => {
   ];
 
   return (
-    <main className="pt-16 bg-white">
+    <main className="pt-16 bg-white dark:bg-black">
       {/* hero section  */}
 
-      <section className="bg-white">
+      <section className="bg-white dark:bg-black">
                <SuffleHero />
            
 
@@ -48,7 +47,7 @@ const Home = () => {
 
 
         <br></br><hr className="p-4 bg-dark" />
-<section className="the Inqury form h-50  bg-violet-100 mb-6">
+<section className="the Inqury form h-50  bg-violet-100 dark:bg-violet-950 mb-6">
           <Enquiry_home />
         </section>
         <hr className="text-black-200 bg-black-200"></hr>
@@ -63,7 +62,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white text-black justify-center text-center">
+      <div className="w-full bg-white text-black dark:bg-black dark:text-white justify-center text-center">
           <div className="">
             
       < Faq_section />
@@ -75,7 +74,7 @@ const Home = () => {
       <Feature_home />
 
       {/* box glowing pattern */}
-      <section className=" bg-black h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+      <section className=" bg-black h-96 relative w-full overflow-hidden flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
         <Boxes />
