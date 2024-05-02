@@ -5,16 +5,25 @@ import { RiTeamFill } from "react-icons/ri";
 import { GiGrowth } from "react-icons/gi";
 import { RiMedalFill } from "react-icons/ri";
 import Apply from "@/components/Apply";
+import React ,{useEffect}  from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const page = () => {
+
+    useEffect(()=>{
+        AOS.init({offset: 150,
+          duration: 1000,
+          delay: 100,});
+      },[])
 
     return (
         <div>
             <div className="h-2"></div>
-            <div className=" md:hover:scale-105 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+            <div className=" h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
                 <Image className="w-full shadow-yellow-500 shadow-lg sm:rounded-bl-full mt-8 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-fit" width={1000} height={1000} src="/img/backImage2.jpeg" alt="background image"></Image>
                 <div className="absolute inset-0 shadow-yellow-500 shadow-lg sm:rounded-bl-full mt-10 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] bg-gray-900 opacity-10"></div>
-                <div className="absolute inset-0  mx-auto mt-20 md:mt-10 cursor-pointer h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex flex-col md:p-10 justify-center pr-2 md:pr-20">
+                <div className="absolute inset-0  mx-auto mt-20 md:mt-10 cursor-pointer h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] flex flex-col md:p-10 justify-center md:pl-52 md:px-20" data-aos="fade-down">
                     <h1 className="flex items-center justify-center font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white">We're looking for</h1>
                     <h1 className="flex items-center justify-center font-bold text-xl md:text-2xl lg:text-4xl text-orange-500 opacity-90">talented individuals</h1>
                     <p className="flex items-center justify-center text-sm text-white ">who share our passion to be the</p>
@@ -24,29 +33,31 @@ const page = () => {
                 </div>
             </div>
             <div className="flex flex-col pb-6 px-5 mt-3 sm:px-10 md:px-0 w-full rounded-lg bg-gray-300 dark:bg-gray-950 items-center justify-center border-b-2 border-gray">
-                <h2 className="text-2xl sm:text-3xl underline underline-offset-4 cursor-pointer bg-gradient-to-b from-yellow-700 to-gray-900 bg-clip-text font-bold md:mt-5 p-10 pb-20">Why work with us?</h2>
+                <h2 className="text-2xl sm:text-3xl underline underline-offset-4 cursor-pointer bg-gradient-to-b from-yellow-700 to-gray-900 bg-clip-text font-bold md:mt-5 p-10 pb-20" data-aos="zoom-in-up">Why work with us?</h2>
                 <div className="flex  flex-wrap gap-10 items-center justify-center w-full scroll:scale-105">
-                    <div className="flex  flex-col items-center justify-center rounded-full bg-gradient-to-bl from-orange-600 to-yellow-600 p-2 md:p-6 w-full md:w-1/4 border-2 border-white cursor-pointer hover:scale-105 transition duration-500">
+                    <div  data-aos="zoom-in" className="flex  flex-col items-center justify-center rounded-full bg-gradient-to-bl from-orange-600 to-yellow-600 p-2 md:p-6 w-full md:w-1/4 border-2 border-white cursor-pointer hover:scale-105 transition duration-500">
                         <div className="bg-green-500 p-3 sm:p-4 rounded-full text-2xl sm:text-3xl -translate-y-8 md:-translate-y-14"><RiTeamFill/></div>
                         <div className="text-l sm:text-xl font-bold -mt-8">Dynamic Work</div>
                         <div className="text-l sm:text-xl font-bold"> Environment</div>
                     </div>
-                    <div className="flex  flex-col items-center justify-center rounded-full bg-gradient-to-bl from-orange-600 to-yellow-600 p-2 md:p-6 w-full md:w-1/4 border-2 border-white cursor-pointer hover:scale-105 transition duration-500">
+                    <div data-aos="zoom-in" className="flex  flex-col items-center justify-center rounded-full bg-gradient-to-bl from-orange-600 to-yellow-600 p-2 md:p-6 w-full md:w-1/4 border-2 border-white cursor-pointer hover:scale-105 transition duration-500">
                         <div className="bg-green-500 p-3 sm:p-4 rounded-full text-2xl sm:text-3xl -translate-y-8 md:-translate-y-14"><GiGrowth/></div>
                         <div className="text-l sm:text-xl font-bold -mt-8">Opportunities </div>
                         <div className="text-l sm:text-xl font-bold"> for Growth</div>
                     </div>
-                    <div className="flex  flex-col items-center justify-center rounded-full bg-gradient-to-bl from-orange-600 to-yellow-600 p-2 md:p-6 w-full md:w-1/4 border-2 border-white cursor-pointer hover:scale-105 transition duration-500">
+                    <div data-aos="zoom-in" className="flex  flex-col items-center justify-center rounded-full bg-gradient-to-bl from-orange-600 to-yellow-600 p-2 md:p-6 w-full md:w-1/4 border-2 border-white cursor-pointer hover:scale-105 transition duration-500">
                         <div className="bg-green-500 p-3 sm:p-4 rounded-full text-2xl sm:text-3xl -translate-y-8 md:-translate-y-14"><RiMedalFill/></div>
                         <div className="text-l sm:text-xl font-bold -mt-8">Impactful </div>
                         <div className="text-l sm:text-xl font-bold"> Work</div>
                     </div>
                 </div>
             </div>
-            <div className="flex flex-wrap p-1 sm:p-4 md:p-6 lg:p-10 xl:py-10 items-center justify-center">
+            <h1 className="px-16 text-3xl pt-4 underline underline-offset-4 font-bold text-black dark:text-white">See Opportunities for you</h1>
+
+            <div className="flex flex-wrap p-1 sm:px-4 md:px-6 lg:px-10 items-center justify-center">
                 {nonIt.map((feat)=>
                 {return(
-                    <div key={feat.id} className="flex p-3 md:p-6 w-full md:h-[27rem] h-auto md:w-1/2 xl:w-1/3">
+                    <div  data-aos="slide-up" key={feat.id} className="flex p-3 md:p-6 w-full md:h-[27rem] h-auto md:w-1/2 xl:w-1/3">
                         <div className="flex relative items-center justify-center w-full h-full cursor-pointer dark:text-white">
                             <span className="absolute top-0 left-0 w-full h-full rounded-md mt-1 ml-1 bg-yellow-400"></span>
                             <div className="relative flex items-center justify-center overflow-hidden h-full rounded-md pl-4 p-3 md:p-6 bg-white dark:bg-gray-600 border-2 border-orange-400 hover:scale-105 transition duration-500">
@@ -79,7 +90,7 @@ const page = () => {
                             </article>
                         </div>
                         </div>
-                        <div className="text-lg cursor-pointer md:text-2xl dark:text-gray-200 mt-10 lg:mt-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, ipsum dolor. Rem, expedita iure aspernatur earum facere quae non vero sint quod voluptas totam soluta minus corporis repellendus modi maiores?</div>
+                        <div className="text-lg cursor-pointer md:text-2xl dark:text-gray-200 mt-10 lg:mt-0 lg:pl-12" data-aos="zoom-out">"Embrace each day with enthusiasm and dedication, knowing that your passion and commitment are the driving forces behind our shared success."</div>
                     </div>
                     </section>
                 </div>
