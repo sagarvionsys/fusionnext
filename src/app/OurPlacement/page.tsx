@@ -70,7 +70,7 @@ const Placements = () => {
   return (
     <>
       <div className="py-[5%]">
-        <div className="bg-white text-black ">
+        <div className="bg-white text-black dark:bg-black dark:text-white">
           <div className="px-5 md:px-10 lg:px-20 py-6"> {/* Add padding */}
             <div className="flex flex-col md:flex-row"> {/* Use flex column for mobile, flex row for larger screens */}
               <div className="w-full md:w-1/2 flex-shrink-0 mb-6 md:mb-0 md:mr-6"> {/* Set width to 100% on mobile, 50% on larger screens */}
@@ -111,11 +111,11 @@ const Placements = () => {
                 </Carousel>
               </div>
               <div className="w-full md:w-1/2 flex-shrink-0 p-5"> {/* Set width to 100% on mobile, 50% on larger screens */}
-                <h1 className="px-4 pt-8 font-serif text-lg text-[24px] text-indigo-700 font-serif">
+                <h1 className="px-4 pt-8 font-serif text-lg text-[24px] text-indigo-700 dark:text-indigo-600 font-serif">
                   Placements @Fusion
                 </h1>
 
-                <p className="p-3 m-1 text-gray-500">
+                <p className="p-3 m-1 text-gray-500 dark:text-gray-300">
                   We understand that landing a job in the competitive IT industry can be challenging, which is why we offer comprehensive training programs that prepare our students for the real-world demands of the industry. Our programs are designed to provide hands-on experience in the latest technologies and tools that are in high demand by leading IT companies.
                   Our experienced trainers work closely with our students to ensure they have the necessary knowledge and skills to excel in their careers. We cover a wide range of topics, including programming languages, database management, cloud computing, cybersecurity, and more.
                 </p>
@@ -123,7 +123,7 @@ const Placements = () => {
             </div>
 
 
-            <p className="p-3 text-gray-500 mb-12">
+            <p className="p-3 text-gray-500 dark:text-gray-300 mb-12">
               Our Placement Cell works tirelessly to identify job openings and facilitate placements for our students. We conduct regular placement drives and job fairs, where our students get the opportunity to interact with prospective employers and showcase their skills.
 
               We have a proven  students with a holistic learning experience that not only prepares them for their dream jobs but also equips them with the skills to grow and excel in their careers.
@@ -139,10 +139,10 @@ const Placements = () => {
             </div>
             
             <Images_logo />
-            <div className='bg-indigo-50 p-3'>
+            <div className='bg-indigo-50 dark:bg-[#050025] p-3'>
               <h1 className="justify-center text-center text-[26px] p-3 pt-10">WHAT OUR STUDENTS SAY'S</h1>
 
-              <p className="p-4 m-2  text-gray-500"> we understand that enrolling in IT certification courses is an investment in your future. Therefore, we offer top-notch training programs that increase your potential, capacity, and performance and also provide you with the skills necessary to succeed in the IT industry.
+              <p className="p-4 m-2  text-gray-500 dark:text-gray-300"> we understand that enrolling in IT certification courses is an investment in your future. Therefore, we offer top-notch training programs that increase your potential, capacity, and performance and also provide you with the skills necessary to succeed in the IT industry.
 
                 If you enroll in  training programs, you can jumpstart your IT career by learning from experienced and certified professionals at the best IT Training Institute in Pune.</p>
             </div>
@@ -154,16 +154,16 @@ const Placements = () => {
 
 
 
-            <section className="bg-gray-50">
+            <section className="bg-gray-50 dark:bg-gray-900">
               <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
                   <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                    <h2 className="text-3xl font-bold text-left tracking-tight text-gray-900 sm:text-4xl">
+                    <h2 className="text-3xl font-bold text-left tracking-tight text-gray-900 dark:text-gray-200 sm:text-4xl">
                       India’s Best Professional
                       IT-Training Institute...
                     </h2>
 
-                    <p className="mt-4 text-gray-700">
+                    <p className="mt-4 text-gray-700 dark:text-gray-300">
                       Our Success lies in our student's Success Stories
                       Read to those who have experienced the Magic...
                     </p>
@@ -189,7 +189,7 @@ const Placements = () => {
 
                   <div className="-mx-6 lg:col-span-2 lg:mx-0">
                     <div ref={sliderRef} className="keen-slider">
-                      <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600">
+                      <div className="keen-slider__slide  bg-slate-400 dark:bg-slate-700 p-5 rounded-lg">
                         <blockquote className="testimonial">
                           <span className='flex'>
                             <Image style={{ borderRadius: '50%' }} className='m-1 h-24 w-24 rounded-full'
@@ -197,12 +197,12 @@ const Placements = () => {
                               alt=""
                               width={80}height={70}
                             />
-                            <p className='m-1 '>
+                            <p className='m-1'>
                               "Working at Vionsys has been an incredible experience. The work culture fosters collaboration, creativity, and continuous learning. The leadership team is supportive and truly values employee input. I couldn't ask for better place to grow my career in IT."
                             </p>
                           </span>
                           <span className='justify-center text-center'>
-                         <footer className='font-bold text-black m-1'>- Rahul Jadhav</footer>
+                         <footer className='font-bold m-1'>- Rahul Jadhav</footer>
                           <div className="flex justify-center items-center">
                             <span className="start_symbol">
                               <Rate disabled defaultValue={4} />
@@ -212,7 +212,7 @@ const Placements = () => {
                          </span>
                         </blockquote>
                       </div>
-                      <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600">
+                      <div className="keen-slider__slide  bg-slate-400 dark:bg-slate-700 p-5 rounded-lg">
                         <blockquote className="testimonial">
                           <span className='flex'>
                             <Image style={{ borderRadius: '50%' }} className='m-1 h-24 w-24 rounded-full'
@@ -226,7 +226,7 @@ const Placements = () => {
                             </p>
                           </span>
                           <span className='justify-center text-center'>
-                         <footer className='font-bold text-black m-1'>- Vishnu Jadhav</footer>
+                         <footer className='font-bold m-1'>- Vishnu Jadhav</footer>
                           <div className="flex justify-center items-center">
                             <span className="start_symbol">
                               <Rate disabled defaultValue={2} />

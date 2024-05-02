@@ -6,7 +6,6 @@ import { Vortex } from "@/components/ui/vortex";
 import Link from "next/link";
 import { Modal, message } from "antd";
 
-
 const it_profile = () => {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -119,44 +118,44 @@ const it_profile = () => {
         </div>
       </section>
 
-      <section className="h-full px-3 py-12 bg-orange-50">
+      <section className="h-full px-3 py-12 bg-orange-50 dark:bg-black">
         <div className="flex flex-col px-6 ">
-          <h2 className="font-bold text-2xl pb-2 text-black">
+          <h2 className="font-bold text-2xl pb-2 text-black dark:text-white">
             See our areas of Work & Opportunities for you
           </h2>
           <div className="border-2  border-blue-500 mb-3 text"></div>
         </div>
 
-        <div className=" h-full bg-orange-50">
+        <div className=" h-full bg-orange-50 dark:bg-black">
           <div className="flex justify-evenly flex-wrap">
             {Jobs.map((it_profile, index) => (
               <div
                 key={index}
-                className="border w-full max-w-sm bg-white mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl hover:transform hover:scale-105 duration-300"
+                className="w-full max-w-sm bg-white dark:bg-[#180404] mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl hover:transform hover:scale-105 duration-300"
               >
                 <div className="flex flex-col justify-evenly h-full">
                   <div className="flex flex-col h-full items-center md:items-start px-6 py-4">
                     <div className="flex flex-col ">
-                      <h2 className="font-bold text-xl text-black">
+                      <h2 className="font-bold text-xl text-black dark:text-white">
                         {it_profile.position}
                       </h2>
                       <div className="border-2 border-blue-500 mb-3 text"></div>
                     </div>
-                    <div className="text-gray-500 text-[15px] text-center md:text-start">
+                    <div className="text-gray-500 dark:text-gray-300 text-[15px] text-center md:text-start">
                       <p>{it_profile.jobDescription}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-gray-100 px-6 py-3 rounded-lg">
-                    <p className="text-gray-600 w-full h-auto ">
+                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-gray-100 dark:bg-[#11162c] px-6 py-3 rounded-lg">
+                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto ">
                       {it_profile.EmploymentType}
                     </p>
-                    <p className="text-gray-600 w-full h-auto">
+                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
                       {it_profile.Experience}
                     </p>
-                    <p className="text-gray-600 w-full h-auto">
+                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
                       {it_profile.education}
                     </p>
-                    <p className="text-gray-600 w-full h-auto">
+                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
                       {it_profile.Location}
                     </p>
                     <button
@@ -268,9 +267,9 @@ const it_profile = () => {
 
       <section>
         
-        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-orange-50">
+        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-orange-50 dark:bg-[#1F2544]">
           <div data-theme="teal" className="mx-auto max-w-6xl">
-            <section className="font-sans text-black relative z-30">
+            <section className="font-sans relative z-30">
               <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
                 <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-60">
                   <div className="h-full ">
@@ -290,17 +289,17 @@ const it_profile = () => {
                 </div>
                 <div className="py-6 px-8 bg-grey">
                   <div className="leading-relaxed">
-                    <h2 className="leading-tight text-4xl font-bold">
+                    <h2 className="leading-tight text-4xl text-orange-50 font-bold">
                       Your career awaits.
                     </h2>
-                    <p className="mt-4 ">
+                    <p className="mt-4 dark:text-gray-300">
                       Republic is more than just a "tech job". We're making
                       real, lasting careers in the exciting world of technology,
                       helping people stay in touch in incredible new ways. Your
                       role is guaranteed to be fast-paced, but the experience
                       will last forever.
                     </p>
-                    <p className="mt-4">Hiring awesome people daily.</p>
+                    <p className="mt-4 dark:text-gray-300">Hiring awesome people daily.</p>
                   </div>
                 </div>
               </div>
