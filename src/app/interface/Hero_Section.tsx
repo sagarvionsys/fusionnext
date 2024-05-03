@@ -29,7 +29,7 @@ const Hero_Section = () => {
 
         <section className="patterns_section">
           <div className="text-2xl flex justify-center font-bold p-3">
-            <h1 className="text-red-500 py-3">More than 25,000 teams use Collabs</h1>
+            <h1 className="text-red-500 py-1 pt-4">More than 100 teams use Collabs</h1>
           </div>
           {/* <div className="logos grid grid-cols-2 md:flex justify-center space-x-5 p-5">
   {brands.map((brand) => {
@@ -52,7 +52,7 @@ const Hero_Section = () => {
 </div> */}
 
           <p className="p-8 text-blue-500 mb-1">
-            "Collabs has reached a significant milestone, with over 25,000 teams now utilizing our platform for streamlined collaboration. From remote teams to in-house departments, organizations across industries rely on Collabs to facilitate seamless communication, project management, and teamwork. Join the community of over 25,000 teams today and experience the benefits of efficient collaboration firsthand!"
+            Collabs has reached a significant milestone, with over 100 teams now utilizing our platform for streamlined collaboration. From remote teams to in-house departments, organizations across industries rely on Collabs to facilitate seamless communication, project management, and teamwork. Join the community of over 25,000 teams today and experience the benefits of efficient collaboration firsthand.
           </p>
 
 

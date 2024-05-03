@@ -39,23 +39,23 @@ const Home = () => {
       {/* hero section  */}
 
       <section className="bg-white">
-               <SuffleHero />
-           
-
-          {/* the image area */}
-        </section>
+        <SuffleHero />
 
 
+        {/* the image area */}
+      </section>
 
-        <br></br><hr className="p-4 bg-dark" />
-<section className="the Inqury form h-50  bg-violet-100 mb-6">
-          <Enquiry_home />
-        </section>
-        <hr className="text-black-200 bg-black-200"></hr>
-   < Course_section />
-        {/* pattaerns sectionn */}
-        
-        <div className="w-full bg-blue-500">
+
+
+      <br></br><hr className="p-4 bg-dark" />
+      <section className="the Inqury form h-50  bg-violet-300 ">
+        <Enquiry_home />
+      </section>
+      <hr className="text-black-200 bg-black-200"></hr>
+      < Course_section />
+      {/* pattaerns sectionn */}
+
+      <div className="w-full bg-blue-500">
         <div className="w-full flex justify-center text-center">
           <div className="">
             <Reviews_section />
@@ -64,11 +64,11 @@ const Home = () => {
       </div>
 
       <div className="w-full bg-white text-black justify-center text-center">
-          <div className="">
-            
-      < Faq_section />
-          </div>
-        
+        <div className="">
+
+          < Faq_section />
+        </div>
+
       </div>
       <Hero_Section />
 

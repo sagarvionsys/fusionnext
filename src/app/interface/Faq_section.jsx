@@ -4,21 +4,22 @@ function AccordionItem({ title, content, isOpen, onClick }) {
   return (
     <div className="accordion-item">
       <button
-        className={`accordion-header bg-indigo-100 w-[70%] text-blacks justify-left text-left font-bold p-2 m-1 border border-blue-500 rounded-lg ${
-          isOpen ? 'rounded-t-lg' : 'rounded-lg'
-        }`}
+        className={`accordion-header bg-gray-600 w-full sm:w-[80%] text-white justify-left text-left font-bold p-2 border border-blue-500 ${isOpen ? '' : ''
+          }`}
         onClick={onClick}
         aria-expanded={isOpen ? 'true' : 'false'}
       >
         <span className='flex justify-between items-center'>
           {title}
-          <span className='font-bold text-black-400 '>{isOpen ? '▲' : '▼'}</span>
+          <span className='font-bold text-black-400  pl-10'>{isOpen ? '▲' : '▼'}</span>
         </span>
       </button>
-      {isOpen && <div className="accordion-content bg-gray-100 p-4 w-[70%] m-auto">{content}</div>}
+      {isOpen && <div className="accordion-content bg-gray-100 p-4 w-full sm:w-[80%] m-auto">{content}</div>}
     </div>
   );
 }
+
+
 
 function Accordion({ items }) {
   const [openIndex, setOpenIndex] = useState(null);
@@ -30,11 +31,11 @@ function Accordion({ items }) {
   return (
     <div className="accordion p-5 font-bold ">
       {items.map((item, index) => (
-        <AccordionItem 
-          key={index} 
-          title={item.title} 
-          content={item.content} 
-          isOpen={openIndex === index} 
+        <AccordionItem
+          key={index}
+          title={item.title}
+          content={item.content}
+          isOpen={openIndex === index}
           onClick={() => handleClick(index)}
         />
       ))}
@@ -60,13 +61,13 @@ function App() {
 
   return (
     <>
-    <div className=" py-8 pb-5 mb-1">
-      <h1 className='font-bold text-blue-800 text-3xl px-7 py-1'>FAQ</h1>
-      <Accordion items={accordionItems} />
-     
-    </div>
-     <hr className='py-1' />
-     </>
+      <div className=" py-8 pb-5 mb-1 bg-gray-200 ">
+        <h1 className='font-bold text-blue-800 text-3xl px-7 py-1'>FAQ</h1>
+        <Accordion items={accordionItems} />
+
+      </div>
+      <hr className='py-1' />
+    </>
   );
 }
 

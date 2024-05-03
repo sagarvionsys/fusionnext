@@ -41,14 +41,14 @@ const Features_home = () => {
         <div className="stars flex px-5 md:px-16 space-x-8 py-10">
           <span className="1st_start_scetion">
             <span className="start_symbol">
-              <Rate disabled defaultValue={2} />
+              <Rate disabled defaultValue={4} />
             </span>
             <p className="the_rating_text text-sm p-1">4.9 / 5 rating</p>
             <p className="the_client Navtext font-bold p-1">databriks</p>
           </span>
           <span className="2st_start_scetion">
             <span className="start_symbol">
-              <Rate disabled defaultValue={2} />
+              <Rate disabled defaultValue={4} />
             </span>
             <p className="the_rating_text text-sm p-1">4.8 / 5 rating</p>
             <p className="the_client Navtext font-bold p-1">Chainalysis</p>
