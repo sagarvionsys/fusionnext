@@ -109,8 +109,8 @@ const Batches = () => {
           {Data.map((Batches, index) => (
             <div key={index} className="h-auto w-auto my-4 flex sm:text-[18px] text-[13px] ">
               <div className="flex w-full">
-                <div className="h-24 lg:w-[110px] w-[70px] px-2 py-2 flex items-center text-white md:text-[25px] text-[15px] bg-lime-400 dark:bg-lime-600">{Batches.date}</div>
-                <div className="lg:w-[400px] justify-evenly w-full flex h-24 items-center text-black bg-white dark:text-gray-200 dark:bg-gray-900">
+                <div className="h-24 lg:w-[110px] w-[70px] px-2 py-2 flex items-center rounded-l-xl text-white md:text-[25px] text-[15px] bg-lime-400 dark:bg-lime-600">{Batches.date}</div>
+                <div className="lg:w-[400px] justify-evenly w-full flex h-24 items-center rounded-r-xl text-black bg-white dark:text-gray-200 dark:bg-gray-900">
                   <p className="h-24 lg:w-52 md:w-96 place-content-center px-2">{Batches.title}</p>
                   <p className="sm:mr-6 mr-2 md:w-40 ">{Batches.date}</p>
                   <p className=" pr-2 md:w-40">{Batches.rutine}</p>
@@ -124,13 +124,13 @@ const Batches = () => {
 
 
     <section>
-        
-        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-white dark:bg-gray-950">
+        <hr />
+        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-white dark:bg-gray-800">
           <div data-theme="teal" className="mx-auto max-w-6xl">
             <section className="font-sans text-black relative z-30">
               <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
                 <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-50">
-                  <div className="h-full " data-aos="fade-up" data-aos-duration="600">
+                  <div className="h-full " data-aos="fade-up"data-aos-offset="100">
                     <article className="h-full">
                       <div className="h-full">
                         <Image
@@ -146,7 +146,7 @@ const Batches = () => {
                     </article>
                   </div>
                 </div>
-                <div className="py-6 px-8 bg-grey" data-aos="fade-left">
+                <div className="py-6 px-8 bg-grey" data-aos="fade-left"data-aos-offset="100">
                   <div className="leading-relaxed">
                     <h2 className="leading-tight text-4xl dark:text-white font-bold">
                     Establish constructive spaces.
@@ -163,20 +163,22 @@ const Batches = () => {
       </section>
 
    
-    <section className=" h-auto w-auto bg-gray-50 dark:bg-gray-800">
-    <div className="flex w-fit flex-col px-12 ">
+    <section className=" h-auto w-auto pb-6 bg-gray-50 dark:bg-gray-800">
+      <hr />
+    <div className="flex w-fit flex-col px-12 pt-6 ">
           <h2 className="font-bold text-2xl pb-2 text-black dark:text-gray-100">
-            See our Ongoing Batches
+            See our Ongoing Batche's
           </h2>
           <div className="border-2  border-sky-600 mb-3 text"></div>
         </div>
     
-     <div className="flex flex-wrap justify-evenly h-auto w-auto bg-gray-50 dark:bg-gray-800 py-6 px-8 sm:py-8">
+     <div className="flex flex-wrap justify-evenly h-auto w-auto bg-gray-50 dark:bg-gray-800 py-6 px-8 sm:py-8 gap-2">
      
     
         {Data.map((Batches,index)=><div
         key={index}
-        data-aos="fade-right"
+        data-aos="zoom-in"
+        data-aos-offset="100"
         className="sm:h-[300px] h-[300px] sm:w-[400px] w-[260px] group relative cursor-pointer overflow-hidden bg-white dark:bg-black mb-5 py-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl mx-auto max-w-sm rounded-lg px-10">
         <span className="absolute top-10 z-0 h-20 w-20 rounded-full bg-sky-500 dark:bg-sky-800 transition-all duration-300 group-hover:scale-[10]"></span>
         <div className="relative z-10 mx-auto max-w-md">
@@ -204,8 +206,91 @@ const Batches = () => {
         )}
    
       </div>
+            
     </section>
+   
+
+    <section className="text-black dark:text-white  bg-white dark:bg-slate-800 ">
     <hr />
+     <div className="px-12 py-24 max-w-full">
+
+      <div className="text-4xl pb-6">
+        <h1 className="w-fit">Student experience</h1>
+      </div>
+
+      <div className="text-[21px] py-6">
+        <p className="w-fit">"Numerous students have successfully secured employment while effectively juggling their studies, professional commitments, and personal life, showcasing the remarkable balance achieved through Fusion Institute's batch programs."</p>
+      </div>
+
+
+      <div className="flex lg:flex-row flex-col items-center gap-6 py-6">
+       <div
+        data-aos="fade-left" 
+        className="px-10 py-10 w-full  border rounded-md border-slate-800 dark:border-white">
+         <div className="flex justify-center pb-[52px]">
+                    <Image 
+                        className="object-cover"
+                        src={"/img/Screen1.png"}
+                        alt=""
+                        width={100}
+                        height={100}
+                        loading="lazy"
+                      />
+            </div>
+            <div className="flex justify-center font-bold">
+              <p>Manage Time with Flexible Courses</p>
+            </div>
+            <div className="flex justify-center pt-4 text-[17px] text-red-500 hover:text-red-800">
+              <p>Efficiently Navigate your Schedule</p>
+            </div>
+       </div>
+
+       
+       <div
+        className="px-10 py-10 w-full  border rounded-md border-slate-800 dark:border-white">
+         <div className="flex justify-center pb-12">
+                    <Image 
+                        className="object-cover"
+                        src={"/img/Screen2.png"}
+                        alt=""
+                        width={100}
+                        height={100}
+                        loading="lazy"
+                      />
+            </div>
+            <div className="flex justify-center font-bold">
+              <p>Use Robust Student Resources</p>
+            </div>
+            <div className="flex justify-center pt-4 text-[17px] text-red-500 hover:text-red-800">
+              <p>Empower you with Tools & Support</p>
+            </div>
+       </div>
+
+       <div 
+        data-aos="fade-right" 
+        className="px-10 py-10 w-full  border rounded-md border-slate-800 dark:border-white">
+         <div className="flex justify-center pb-10">
+                    <Image 
+                        className="object-cover"
+                        src={"/img/Screen3.png"}
+                        alt=""
+                        width={100}
+                        height={100}
+                        loading="lazy"
+                      />
+            </div>
+            <div className="flex justify-center font-bold">
+              <p>Learn Online</p>
+            </div>
+            <div className="flex justify-center pt-4 text-[17px] text-red-500 hover:text-red-800">
+              <p>Access to High-Quality Education</p>
+            </div>
+       </div>
+
+      </div>
+
+     </div>
+    </section>
   </main>;
 };
 
