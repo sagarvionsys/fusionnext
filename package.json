@@ -43,6 +43,7 @@
     "simplex-noise": "^4.0.1",
     "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.3.0",
+    "tsparticles": "^3.3.0",
     "tw-elements-react": "^1.0.0-alpha2",
     "zod": "^3.22.4"
   },

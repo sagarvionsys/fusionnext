@@ -11,6 +11,10 @@ import john from '/public/img/john.png';
 import mphasis from '/public/img/mphasis.jpg';
 import oracle from '/public/img/oracle.png';
 import wipro from '/public/img/wipro.jpg';
+import zoho from '/public/img/zoho.png';
+import bmc from '/public/img/bmc.png';
+import cybage from '/public/img/cybage.jpg';
+import tibc from '/public/img/tibc.png';
 
 const work_fields = [
   { id: 1, logo: accenture },
@@ -24,18 +28,22 @@ const work_fields = [
   { id: 9, logo: mphasis },
   { id: 10, logo: oracle },
   { id: 11, logo: wipro },
+  { id: 12, logo: tibc },
+  { id: 13, logo: bmc },
+  { id: 14, logo: cybage },
+  { id: 15, logo: zoho },
 ];
 
 const LogoImg = () => {
   return (
-    <div className='grid grid-cols-5 gap-2 py-5 w-full h-[100vh] justify-center'>
+    <div className='grid grid-cols-4 gap-1 py-4 w-full h-[100vh] justify-center'>
       {work_fields.map((logo) => (
-        <div key={logo.id} className="flex justify-center">
+        <div key={logo.id} className="flex justify-center ">
           <Image
             src={logo.logo}
             alt="brand logo"
-            width={70}
-            height={70}
+            width={80}
+            height={100}
             className='rounded-full'
           />
         </div>
@@ -43,5 +51,6 @@ const LogoImg = () => {
     </div>
   );
 };
+
 
 export default LogoImg;
