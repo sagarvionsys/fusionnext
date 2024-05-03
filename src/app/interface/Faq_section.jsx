@@ -57,6 +57,18 @@ function App() {
       title: 'Do you offer any online or remote learning options?',
       content: 'Yes, Fusion Software Institute offers both in-person and online learning options to cater to diverse student needs. Our online courses are designed to provide the same quality education and interactive experience as our in-person classes. You can participate in online lectures, access course materials, engage with instructors and classmates through virtual platforms, and complete assignments from the comfort of your home or any location with internet access.',
     },
+    {
+      title:'What sets Fusion Software Institute apart from other educational institutions?' ,
+      content: 'At Fusion Software Institute, we pride ourselves on our industry-relevant curriculum, experienced instructors, hands-on learning approach, and personalized attention to each student. We are committed to helping our students succeed in their careers by providing high-quality education and support every step of the way. ',
+    },
+    {
+      title: 'What career opportunities are available to graduates of Fusion Software Institute?' ,
+      content: 'Graduates of Fusion Software Institute are well-equipped to pursue a wide range of career opportunities in the tech industry, including roles such as software developer, web developer, data analyst, cybersecurity specialist, and more. Our career services team provides job placement assistance, networking opportunities, and career guidance to help graduates launch successful careers in their chosen field.' ,
+    },
+    {
+      title:'Is financial aid available for students?',
+      content:'Yes, we offer various financial aid options, including scholarships, grants, and tuition assistance programs, to eligible students. Our admissions team can provide more information on available financial aid opportunities and assist you in applying for assistance.',
+    }
   ];
 
   return (
