@@ -29,6 +29,7 @@ const Enquiry_home = () => {
   };
 
   return (
+
     <main className="">
 
 
@@ -39,6 +40,7 @@ const Enquiry_home = () => {
           <input
             type="name"
             className="m-2 block form-control font-serif h-8 text-black outline-none border text-center mb-2 rounded-lg w-1/2 sm:w-auto"
+
             id="name"
             name="name"
             value={formData.name}
@@ -49,7 +51,9 @@ const Enquiry_home = () => {
 
           <input
             type="tel"
+
             className="m-2 block form-control font-serif h-8 text-black text-center  outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
+
             id="number"
             name="number"
             value={formData.number}
@@ -59,6 +63,7 @@ const Enquiry_home = () => {
 
           <input
             type="email"
+
             className="m-2 block form-control font-serif h-8 text-black text-center outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
             id="email"
             name="email"
@@ -69,7 +74,9 @@ const Enquiry_home = () => {
 
           <input
             type="text"
+
             className="m-2 block form-control font-serif h-8 text-black text-center outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
+
             id="subject"
             name="subject"
             value={formData.subject}
@@ -80,6 +87,7 @@ const Enquiry_home = () => {
           <select
             name="selectedOption"
             id="cars"
+
             className="m-2 block form-control font-serif h-8 text-center text-black outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
             value={formData.selectedOption}
             onChange={handleSelectChange}

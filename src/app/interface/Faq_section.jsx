@@ -5,6 +5,7 @@ function AccordionItem({ title, content, isOpen, onClick }) {
     
     <div className="accordion-item">
       <button
+
         className={`accordion-header bg-gray-600 w-full sm:w-[80%] text-white justify-left text-left font-bold p-2 border border-blue-500 ${isOpen ? '' : ''
           }`}
         onClick={onClick}
@@ -15,6 +16,7 @@ function AccordionItem({ title, content, isOpen, onClick }) {
           <span className='font-bold text-black-400  pl-10'>{isOpen ? '▲' : '▼'}</span>
         </span>
       </button>
+
       {isOpen && <div className="accordion-content bg-gray-100 p-4 w-full sm:w-[80%] m-auto">{content}</div>}
     </div>
   );

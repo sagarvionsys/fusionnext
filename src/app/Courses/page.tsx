@@ -71,7 +71,7 @@ const Courses = () => {
   mycourseData.sort(customSort);
 
   return (
-    <div className="bg-orange-50 pt-20 md:px-8 lg:px-10  mb-20  ">
+    <div className="bg-orange-50 dark:bg-[#242121] pt-20 md:px-8 lg:px-10  mb-20  ">
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6
        p-10 "
@@ -79,7 +79,7 @@ const Courses = () => {
         {mycourseData.map((course, index) => (
           <div
             key={index}
-            className="border border-gray-600 rounded-lg overflow-hidden hover:shadow-lg hover:bg-white transition-transform hover:scale-105 shadow-2xl"
+            className="border border-gray-600 dark:border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:bg-white dark:hover:bg-black transition-transform hover:scale-105 shadow-2xl"
           >
             <img
               src={course.imagesrc}
@@ -88,7 +88,7 @@ const Courses = () => {
             />
             <div className="p-4">
               <div className="flex items-center justify-between mb-2">
-                <h1 className="text-lg font-semibold text-black ">
+                <h1 className="text-lg font-semibold text-black dark:text-white">
                   {course.courseName}
                 </h1>
                 {course.top && (
@@ -97,22 +97,22 @@ const Courses = () => {
                   </span>
                 )}
               </div>
-              <p className="mt-1 text-sm text-gray-800 mb-2">
+              <p className="mt-1 text-sm text-gray-800 dark:text-gray-300 mb-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Perferendis expedita ratione quae iste iusto quam eius ex quod
                 enim tempore.
               </p>
               <hr className="border-t border-gray-500" />
               <div className="mt-2 flex justify-between">
-                <span className="flex  py-1 text-xs font-semibold text-black">
+                <span className="flex  py-1 text-xs font-semibold text-black dark:text-white">
                   <GoDot className="mt-[2px]" /> {course?.trainer}
                 </span>
                 {course.courseMod && (
-                  <span className="flex  py-1 text-xs font-semibold text-black">
+                  <span className="flex  py-1 text-xs font-semibold text-black dark:text-white">
                     <GoDot className="mt-[2px]" /> {course?.courseMod}
                   </span>
                 )}
-                <span className="inline-flex items-center py-1 text-xs font-semibold text-black">
+                <span className="inline-flex items-center py-1 text-xs font-semibold text-black dark:text-white">
                   <CiClock1 className="mr-1 mt-[2px]" />
                   {course.duration}
                 </span>
