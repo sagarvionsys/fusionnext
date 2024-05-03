@@ -1,3 +1,5 @@
+//here our pdf file is downoladed but it is using anchor tag
+"use client";
 import React from "react";
 import Image from "next/image";
 import { PiCertificate } from "react-icons/pi";
@@ -7,21 +9,33 @@ import { GiTeacher } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa";
 
 const Page = () => {
+  const handleDownload = () => {
+    const pdfPath = "/Pdf_Syllabus/Software_Testing_Syllabus.pdf";
+    const fileName = (pdfPath ? pdfPath.split("/").pop() : "default_filename")!;
+    const aTag = document.createElement("a");
+    aTag.href = pdfPath;
+    //aTag.setAttribute("download",fileName);
+    aTag.download = fileName;
+    // document.body.appendChild(aTag)
+    aTag.click();
+    aTag.remove();
+  };
+
   return (
     <section className="pt-[70px] bg-white text-black ">
-
       <div className="mybgcurved pt-5">
-
         <div className="relative p-5 md:pt-5  z-10 flex flex-col justify-center items-center h-full text-center">
           <h1 className="text-4xl font-bold leading-tight mb-2">
             Software Testing (Manual+ Automation)
           </h1>
-          <a
-            href="#"
-            className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 px-6 rounded-full text-sm font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+          <button
+            className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 
+            px-6 rounded-full text-sm font-semibold transition duration-300 ease-in-out 
+            transform hover:scale-105 hover:shadow-lg"
+            onClick={handleDownload}
           >
-            Download Brochur
-          </a>
+            Download Brochure
+          </button>
         </div>
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -33,7 +47,6 @@ const Page = () => {
         </svg>
 
         <div className="flex flex-col lg:flex-row items-center justify-start mt-2">
-
           <div className="lg:w-1/2 flex justify-center mb-6 lg:mb-0 ">
             <Image
               src="/img/softwareTesting.jpg"
@@ -43,7 +56,6 @@ const Page = () => {
               className="rounded-lg border-4 border-white"
             />
           </div>
-
           <div className="lg:w-1/2 border-l-4 border-black mb-6 lg:mb-0 p-5">
             <h1 className="text-4xl p-2 font-bold">
               What is <span className="text-black">Software Testing ?</span>
@@ -60,11 +72,8 @@ const Page = () => {
               enhancing usability and user satisfaction.
             </p>
           </div>
-
         </div>
       </div>
-
-      {/* ------------------------------------------------------------------------------------ */}
 
       <section className="pb-12">
         <div className="container max-w-xl px-6 pb-6 mx-auto space-y-5 lg:px-8 lg:max-w-7xl">
@@ -193,7 +202,7 @@ const Page = () => {
               </ul>
             </div>
           </div>
-          <div className="w-full md:w-2/5 flex justify-center">
+          <div className="w-full md:w-2/5 flex justify-center h-[270px]">
             <img
               src="/img/whoCan.jpg"
               alt="side image"
@@ -208,7 +217,7 @@ const Page = () => {
           <div className="container mx-auto px-6 p-6 bg-white">
             <div className="mb-5 text-center">
               <h3 className="text-2xl text-orange-500 font-bold tracking-wide underline">
-                Course Overview
+                Course Offerings
               </h3>
             </div>
 
@@ -260,7 +269,6 @@ const Page = () => {
                   <div className="ml-4 text-xl">24 x 7 Support</div>
                 </div>
               </div>
-
               <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-4 border-orange-500">
                 <div className="flex items-center mb-4">
                   <svg
@@ -312,7 +320,6 @@ const Page = () => {
           </div>
         </div>
       </section>
-
     </section>
   );
 };

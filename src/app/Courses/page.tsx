@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { CiClock1 } from "react-icons/ci";
 import { GoDot } from "react-icons/go";
+import Image from "next/image";
 
 const Courses = () => {
   const mycourseData = [
@@ -68,10 +69,21 @@ const Courses = () => {
       return 0;
     }
   };
+
   mycourseData.sort(customSort);
+
 
   return (
     <div className="bg-orange-50 dark:bg-[#242121] pt-20 md:px-8 lg:px-10  mb-20  ">
+      <div className="flex justify-center items-center">
+  <div className="relative inline-block text-center">
+    <span className="text-2xl md:text-3xl font-bold">
+      Our Courses
+    </span>
+    <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
+  </div>
+</div>
+
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6
        p-10 "
@@ -81,10 +93,12 @@ const Courses = () => {
             key={index}
             className="border border-gray-600 dark:border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:bg-white dark:hover:bg-black transition-transform hover:scale-105 shadow-2xl"
           >
-            <img
+            <Image
               src={course.imagesrc}
               alt="course_Image"
               className="h-48 w-full object-cover"
+              width={600}
+              height={600}
             />
             <div className="p-4">
               <div className="flex items-center justify-between mb-2">
@@ -92,7 +106,7 @@ const Courses = () => {
                   {course.courseName}
                 </h1>
                 {course.top && (
-                  <span className="mt-1 px-1.5 py-0.5 text-[10px] font-medium bg-yellow-400 rounded-lg ">
+                  <span className="mt-1 px-1.5 py-0.5 text-[10px] font-medium bg-yellow-500 rounded-lg dark:text-black ">
                     {course.top}
                   </span>
                 )}
