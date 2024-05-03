@@ -20,6 +20,7 @@ const work_fields = [
 
 const CourseSection = () => {
   return (
+    
     <div className="max-w-screen-full-w mx-auto bg-gray-200 px-4 py-2 ">
       <h2 className="text-center text-2xl font-bold mt-8  font-serif text-black">Featured Courses</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 p-10 m-5 ">
@@ -45,6 +46,7 @@ const CourseSection = () => {
         </div>
       </div>
     </div>
+    
   ))}
 </div>
 

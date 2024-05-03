@@ -29,7 +29,7 @@ const Hero_Section = () => {
 
         <section className="patterns_section">
           <div className="text-2xl flex justify-center font-bold p-3">
-            <h1 className="text-red-500 py-1 pt-4">More than 100 teams use Collabs</h1>
+            <h1 className="text-red-500 py-1 pt-4">More than 50 teams use Collabs</h1>
           </div>
           {/* <div className="logos grid grid-cols-2 md:flex justify-center space-x-5 p-5">
   {brands.map((brand) => {

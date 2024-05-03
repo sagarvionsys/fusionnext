@@ -32,7 +32,7 @@ const Enquiry_home = () => {
     <main className="">
 
 
-
+<div>
       <div className=" ">
         <form className="flex flex-col items-center justify-center sm:flex-row sm:justify-start sm:m-4" onSubmit={handleSubmit}>
           <h1 className="px-7 px-20 text-lg font-serif h-8 font-bold m-1 text-blue-800 text-center">Enquiry Now</h1>
@@ -104,7 +104,7 @@ const Enquiry_home = () => {
 
       </div>
 
-
+      </div>
     </main>
   );
 };

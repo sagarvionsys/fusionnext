@@ -69,6 +69,7 @@ const TestimonialSlider = () => {
   }, [keenSlider]);
 
   return (
+    
     <section className="bg-gray-50">
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">

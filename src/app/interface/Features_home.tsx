@@ -7,7 +7,7 @@ const work_field = [
   {
     id: 1,
     logo: LuActivity,
-    title: "Publish Interactive Learning Platforming",
+    title: "Publish Interactive Learning Platformings",
     desc: "A feature-rich platform that supports interactive teaching methods such as live video lectures, screen sharing, whiteboarding, and real-time Q&A sessions.",
   },
   {

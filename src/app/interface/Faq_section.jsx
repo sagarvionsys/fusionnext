@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 function AccordionItem({ title, content, isOpen, onClick }) {
   return (
+    
     <div className="accordion-item">
       <button
         className={`accordion-header bg-gray-600 w-full sm:w-[80%] text-white justify-left text-left font-bold p-2 border border-blue-500 ${isOpen ? '' : ''
