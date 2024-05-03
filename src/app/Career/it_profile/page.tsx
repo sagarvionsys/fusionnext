@@ -1,12 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import { Jobs } from "@/Data/It_Profiles";
 import { Vortex } from "@/components/ui/vortex";
 import Link from "next/link";
 import { Modal, message } from "antd";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const it_profile = () => {
+  useEffect(()=>{
+    AOS.init({offset: 200,
+      duration: 1000,
+      delay: 100,});
+  },[])
+
   const [formData, setFormData] = useState({
     fullName: "",
     phoneNumber: "",
@@ -91,7 +99,7 @@ const it_profile = () => {
           </div>
         </div>
 
-        <div className="absolute z-10 flex justify-end w-11/12 md:h-[500px]">
+        <div className="absolute z-10 flex justify-end w-11/12 md:h-[500px]"data-aos="fade-left">
           <div className="h-auto  w-auto place-content-center ">
             <div className="md:mt-0 mt-20 h-auto w-auto">
               <Image
@@ -118,7 +126,7 @@ const it_profile = () => {
         </div>
       </section>
 
-      <section className="h-full px-3 py-12 bg-orange-50 dark:bg-black">
+      <section className="h-full px-3 pt-12 pb-6 bg-white dark:bg-black">
         <div className="flex flex-col px-6 ">
           <h2 className="font-bold text-2xl pb-2 text-black dark:text-white">
             See our areas of Work & Opportunities for you
@@ -126,15 +134,17 @@ const it_profile = () => {
           <div className="border-2  border-blue-500 mb-3 text"></div>
         </div>
 
-        <div className=" h-full bg-orange-50 dark:bg-black">
+        <div className=" h-full bg-white dark:bg-black">
           <div className="flex justify-evenly flex-wrap">
             {Jobs.map((it_profile, index) => (
               <div
+              data-aos="flip-left"
+              data-aos-offset="100"
                 key={index}
-                className="w-full max-w-sm bg-white dark:bg-[#180404] mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl hover:transform hover:scale-105 duration-300"
+                className="w-full max-w-sm bg-white dark:bg-[#180404] mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl"
               >
                 <div className="flex flex-col justify-evenly h-full">
-                  <div className="flex flex-col h-full items-center md:items-start px-6 py-4">
+                  <div className="flex flex-col h-full items-center md:items-start px-6 py-4 hover:transform hover:scale-105 duration-300">
                     <div className="flex flex-col ">
                       <h2 className="font-bold text-xl text-black dark:text-white">
                         {it_profile.position}
@@ -267,7 +277,7 @@ const it_profile = () => {
 
       <section>
         
-        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-orange-50 dark:bg-[#1F2544]">
+        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-white dark:bg-[#1F2544]">
           <div data-theme="teal" className="mx-auto max-w-6xl">
             <section className="font-sans relative z-30">
               <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
@@ -287,9 +297,9 @@ const it_profile = () => {
                     </article>
                   </div>
                 </div>
-                <div className="py-6 px-8 bg-grey">
+                <div className="py-6 px-8 bg-grey" data-aos="zoom-out-up">
                   <div className="leading-relaxed">
-                    <h2 className="leading-tight text-4xl text-orange-50 font-bold">
+                    <h2 className="leading-tight text-4xl dark:text-orange-50 text-black font-bold">
                       Your career awaits.
                     </h2>
                     <p className="mt-4 dark:text-gray-300">
