@@ -26,7 +26,7 @@ const CourseSection = () => {
       <h2 className="text-center text-2xl font-bold mt-8  font-serif text-black">Featured Courses</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-8 m-8">
   {work_fields.map((head) => (
-    <div key={head.id} className="border border-gray-200 rounded-lg shadow-md p-2 m-6 bg-black transform transition-transform hover:scale-110">
+    <div key={head.id} className="border sm:m-1 border-gray-200 rounded-lg shadow-md p-2 m-6 bg-black transform transition-transform hover:scale-110">
       <Link href="#" className="block">
         <Image
           src={head.logo}
