@@ -66,7 +66,7 @@ function App() {
       content: 'Graduates of Fusion Software Institute are well-equipped to pursue a wide range of career opportunities in the tech industry, including roles such as software developer, web developer, data analyst, cybersecurity specialist, and more. Our career services team provides job placement assistance, networking opportunities, and career guidance to help graduates launch successful careers in their chosen field.' ,
     },
     {
-      title:'Is financial aid available for students?',
+      title:'Is financial aid available for students and with what can we assist?',
       content:'Yes, we offer various financial aid options, including scholarships, grants, and tuition assistance programs, to eligible students. Our admissions team can provide more information on available financial aid opportunities and assist you in applying for assistance.',
     }
   ];

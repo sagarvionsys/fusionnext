@@ -37,15 +37,15 @@
     "react-icons": "^5.1.0",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.30.2",
+    "react-tsparticles": "^2.12.2",
     "react-type-animation": "^3.2.0",
     "resend": "^3.2.0",
-    "slick-carousel": "^1.8.1",
-    "zod": "^3.22.4",
     "simplex-noise": "^4.0.1",
+    "slick-carousel": "^1.8.1",
     "tailwind-merge": "^2.3.0",
-    "tw-elements-react": "^1.0.0-alpha2"
-
-
+    "tsparticles": "^3.3.0",
+    "tw-elements-react": "^1.0.0-alpha2",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
