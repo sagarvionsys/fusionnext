@@ -29,24 +29,31 @@ const Enquiry_home = () => {
   };
 
   return (
-    <main className="flex flex-colpy-5 pt-6   pb-6  ">
-      <div className="test">
-        <h1 className="px-7 px-20 text-lg font-serif h-8 font-bold  m-1 text-blue-500 dark:text-blue-100">Enquiry  Now</h1>
-      </div>
-      <div className="Inpu_fileds  justify-center   ">
-        <form className="form-inline md:flex  justify-between space-5 " onSubmit={handleSubmit}>
+
+    <main className="">
+
+
+<div>
+      <div className=" ">
+        <form className="flex flex-col items-center justify-center sm:flex-row sm:justify-start sm:m-4" onSubmit={handleSubmit}>
+          <h1 className="px-7 px-20 text-lg font-serif h-8 font-bold m-1 text-blue-800 text-center">Enquiry Now</h1>
           <input
             type="name"
-            className=" m-1 block form-control font-serif  h-8 text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg "
+            className="m-2 block form-control font-serif h-8 text-black outline-none border text-center mb-2 rounded-lg w-1/2 sm:w-auto"
+
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter Your Name"
           />
+
+
           <input
             type="tel"
-            className="m-1 form-control block h-8 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+
+            className="m-2 block form-control font-serif h-8 text-black text-center  outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
+
             id="number"
             name="number"
             value={formData.number}
@@ -54,10 +61,10 @@ const Enquiry_home = () => {
             placeholder="Enter Your Number"
           />
 
-
           <input
             type="email"
-            className="m-1 form-control block h-8 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+
+            className="m-2 block form-control font-serif h-8 text-black text-center outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
             id="email"
             name="email"
             value={formData.email}
@@ -65,9 +72,11 @@ const Enquiry_home = () => {
             placeholder="Enter Your Email"
           />
 
-        <input
+          <input
             type="text"
-            className="m-1 form-control block h-8 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border mb-2 md:mr-2 md:mb-0 md:pl-2 rounded-lg"
+
+            className="m-2 block form-control font-serif h-8 text-black text-center outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
+
             id="subject"
             name="subject"
             value={formData.subject}
@@ -78,8 +87,8 @@ const Enquiry_home = () => {
           <select
             name="selectedOption"
             id="cars"
-            className="h-8 w-60 sm:w-20 m-1 font-serif text-black dark:bg-gray-900 dark:text-gray-300 outline-none border pl-2 w-full md:pr-2 rounded-lg md:display-block"
-            style={{ width: '160px' }} // Inline style to set width to 20px for mobile devices
+
+            className="m-2 block form-control font-serif h-8 text-center text-black outline-none border mb-2 rounded-lg w-1/2 sm:w-auto"
             value={formData.selectedOption}
             onChange={handleSelectChange}
           >
@@ -88,16 +97,21 @@ const Enquiry_home = () => {
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
           </select>
-          <div className="button-container md:flex  md:items-center md:space-x-1 md:mt-0">
-            <button
-              className="m-1 bg-orange-500 hover:bg-blue-700 font-serif h-8 text-white px-5 ml-0 md:ml-8 rounded md:w-auto "
-              type="submit"
-            >
-              Submit
-            </button>
-          </div>
+
+
+
+          <button
+            className="m-2 bg-orange-500 hover:bg-blue-700 font-serif h-8 text-white px-5  md:ml-10 md:block  md:mx-auto  rounded"
+            type="submit"
+          >
+            Submit
+          </button>
 
         </form>
+
+
+      </div>
+
       </div>
     </main>
   );
