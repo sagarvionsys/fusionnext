@@ -37,24 +37,27 @@ const Home = () => {
     <main className="pt-16 bg-white dark:bg-black">
       {/* hero section  */}
 
-      <section className="bg-white dark:bg-black">
-               <SuffleHero />
-           
 
-          {/* the image area */}
-        </section>
+      <section className="bg-white">
+        <SuffleHero />
 
 
 
-        <br></br><hr className="p-4 bg-dark" />
-<section className="the Inqury form h-50  bg-violet-100 dark:bg-violet-950 mb-6">
-          <Enquiry_home />
-        </section>
-        <hr className="text-black-200 bg-black-200"></hr>
-   < Course_section />
-        {/* pattaerns sectionn */}
-        
-        <div className="w-full bg-blue-500">
+        {/* the image area */}
+      </section>
+
+
+
+      <br></br><hr className="p-4 bg-dark" />
+      <section className="the Inqury form h-50  bg-violet-300 ">
+        <Enquiry_home />
+      </section>
+      <hr className="text-black-200 bg-black-200"></hr>
+      < Course_section />
+      {/* pattaerns sectionn */}
+
+      <div className="w-full bg-blue-500">
+
         <div className="w-full flex justify-center text-center">
           <div className="">
             <Reviews_section />
@@ -62,12 +65,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full bg-white text-black dark:bg-black dark:text-white justify-center text-center">
-          <div className="">
-            
-      < Faq_section />
-          </div>
-        
+
+      <div className="w-full bg-white text-black justify-center text-center">
+        <div className="">
+
+          < Faq_section />
+        </div>
+
+
       </div>
       <Hero_Section />
 

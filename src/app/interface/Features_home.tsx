@@ -6,7 +6,7 @@ const work_field = [
   {
     id: 1,
     logo: LuActivity,
-    title: "Publish Interactive Learning Platforming",
+    title: "Publish Interactive Learning Platformings",
     desc: "A feature-rich platform that supports interactive teaching methods such as live video lectures, screen sharing, whiteboarding, and real-time Q&A sessions.",
   },
   {
@@ -40,14 +40,18 @@ const Features_home = () => {
         <div className="stars flex px-5 md:px-16 space-x-8 py-10">
           <span className="1st_start_scetion">
             <span className="start_symbol">
-              <Rate disabled defaultValue={4.9} />
+
+              <Rate disabled defaultValue={4} />
+
             </span>
             <p className="the_rating_text text-sm p-1">4.9 / 5 rating</p>
             <p className="the_client Navtext font-bold p-1">databriks</p>
           </span>
           <span className="2st_start_scetion">
             <span className="start_symbol">
-              <Rate disabled defaultValue={4.8} />
+
+              <Rate disabled defaultValue={4} />
+
             </span>
             <p className="the_rating_text text-sm p-1">4.8 / 5 rating</p>
             <p className="the_client Navtext font-bold p-1">Chainalysis</p>
