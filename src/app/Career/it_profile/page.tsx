@@ -2,11 +2,11 @@
 import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import { Jobs } from "@/Data/It_Profiles";
-import { Vortex } from "@/components/ui/vortex";
 import Link from "next/link";
 import { Modal, message } from "antd";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
 
 const it_profile = () => {
   useEffect(()=>{
@@ -57,81 +57,177 @@ const it_profile = () => {
   };
 
   return (
-    <main className="pt-[70px] bg-black">
-      <section>
-        <div className="w-full mx-auto rounded-md  h-[30rem] overflow-hidden">
-          <Vortex
-            backgroundColor="black"
-            className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
-          >
-            <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-700 text-2xl md:text-6xl font-bold text-center">
-              Work at{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-700">
-                Fusion
-              </span>
-            </h2>
-            <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-              Discover how you can make an impact: see our areas of work,
-              locations and opportunities for you.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center gap-4 mt-12">
-              <Link
-                href={"/ContactUs"}
-                className="px-12 py-2 bg-blue-500 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </Vortex>
-        </div>
-      </section>
-
+    <main className="pt-[70px]">
       <section className="h-[500px]">
+       
         <div className="absolute z-20 flex justify-start w-11/12 h-[500px]">
           <div className="h-auto w-auto place-content-center">
             <div className="my-12 pl-12 h-auto w-auto">
-              <p className="bg-teal-600 h-2 w-12 mb-4"></p>
-              <h1 className="leading-tight md:text-5xl text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-                Welcome
-                <p>to the future of work</p>
+              <p className="bg-sky-600 h-2 w-12 mb-4">
+                <p className="h-2 w-1 bg-white"></p>
+              </p>
+              <h1 className="leading-tight md:text-5xl text-4xl text-white font-bold">
+              Join Our Dynamic Team <br /><span>Today!</span>
               </h1>
+              <p className="leading-tight md:text-[22px] text-1xl text-white pt-8">
+              Be Part of a Collaborative Environment <br />
+              <span>Focused on Growth and Innovation.</span></p>
+              <div className="flex flex-col sm:flex-row items-center pt-6">
+              <Link
+                href={"/ContactUs"}
+                className="px-6 py-2 bg-sky-600 hover:bg-sky-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]"
+              >
+                Explore Opportunities
+              </Link>
+            </div>
             </div>
           </div>
         </div>
+        <div className="h-[500px] w-full">
+                        <Image
+                          className="h-[500px] lg:w-full object-cover"
+                          src={"/img/mainCareer2.jpg"}
+                          alt=""
+                          width={1000}
+                          height={1000}
+                        />
+                      </div>
+          </section>
 
-        <div className="absolute z-10 flex justify-end w-11/12 md:h-[500px]"data-aos="fade-left">
-          <div className="h-auto  w-auto place-content-center ">
-            <div className="md:mt-0 mt-20 h-auto w-auto">
-              <Image
-                src={"/img/tech.jpeg"}
-                alt=""
-                width={500}
-                height={500}
-                loading="lazy"
-                className="object-cover md:h-[500px] h-[350px] md:w-[550px] w-[350px] rounded-full"
-              />
-            </div>
+      <section className="overflow-x-hidden">
+        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-white dark:bg-[#1F2544]">
+          <div data-theme="teal" className="mx-auto max-w-6xl">
+            <section className="font-sans relative z-30">
+              <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
+                <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-60">
+                  <div className="h-full flex justify-center ">
+                    <article className="h-full">
+                      <div className="h-full">
+                        <Image
+                          className="h-full object-cover"
+                          src={"/img/career.jpg"}
+                          alt=""
+                          width={600}
+                          height={400}
+                          loading="lazy"
+                        />
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div className="py-6 px-8 text-center" data-aos="fade-left">
+                  <div className="leading-relaxed">
+                    <h2 className="leading-tight md:text-4xl text-3xl dark:text-orange-50 text-sky-700 font-bold">
+                      Your career awaits
+                    </h2>
+                    <p className="mt-4 dark:text-gray-300">
+                    Embark on a journey of growth and fulfillment with us! Join our dynamic team where innovation thrives, 
+                    collaboration flourishes, and opportunities abound. 
+                    We're committed to nurturing your potential, fostering creativity,
+                     and empowering you to make a meaningful impact.
+                    </p>
+                    <p className="mt-4 font-bold text-black hover:transform hover:scale-105 duration-300">
+                      Seize the opportunity today!</p>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
-        </div>
-
-        <div className="h-[500px] blur-xl">
-          <Image
-            src={"/img/full-stack-dev.jpg"}
-            alt=""
-            width={1000}
-            height={1000}
-            loading="lazy"
-            className="object-cover h-[500px] w-full"
-          />
         </div>
       </section>
+      <hr />
 
-      <section className="h-full px-3 pt-12 pb-6 bg-white dark:bg-black">
-        <div className="flex flex-col px-6 ">
+      <section className=" bg-sky-800 overflow-x-hidden">
+      <h2
+      data-aos="zoom-in-up" 
+      className="leading-tight md:text-5xl text-3xl py-12 px-4 flex justify-center dark:text-orange-50 text-white font-bold">
+                    Life @ Fusion Institute
+                    </h2><hr />
+        <div data-theme="teal" className="mx-auto py-12 px-6">
+            <section className="font-sans relative z-30">
+              <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
+
+              <div className="py-4 px-8 text-center">
+                  <div className="leading-relaxed">
+                    
+                    <p  data-aos="fade-right" className="pb-8 text-gray-200 ">
+                    <h1 className="font-semibold text-3xl pb-4 text-white">Benefit's</h1> 
+                    "We prioritizes the well-being and security of its workforce. Flexible work arrangements and professional development opportunities further enhance employee satisfaction and growth."
+                    </p>
+                    <p data-aos="fade-right" className=" text-gray-200 pt-4">
+                    <h1 className="font-semibold text-3xl pb-4 text-white">Flexible work</h1> 
+                    "Fusion Software embraces flexible work arrangements, fostering a dynamic environment where employees can balance work and life commitments."
+                     </p>
+                  </div>
+                </div>
+
+                <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-60">
+                  <div className="h-full flex justify-center">
+                    <article className="h-full">
+                      <div className="h-full">
+                        <Image
+                          className="h-full rounded-3xl object-cover"
+                          src={"/img/career2.jpg"}
+                          alt=""
+                          width={600}
+                          height={400}
+                          loading="lazy"
+                        />
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                
+              </div>
+            </section>
+          </div>
+          <hr />
+
+          <div data-theme="teal" className="mx-auto py-12 px-6">
+            <section className="font-sans relative z-30">
+              <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
+                <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-60">
+                  <div className="h-full flex justify-center">
+                    <article className="h-full">
+                      <div className="h-full">
+                        <Image
+                          className="h-full rounded-3xl object-cover"
+                          src={"/img/career1.jpg"}
+                          alt=""
+                          width={600}
+                          height={300}
+                          loading="lazy"
+                        />
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <div className="py-4 px-8 text-center">
+                <div className="leading-relaxed">
+                    
+                    <p  data-aos="fade-left" className="pb-16 text-gray-200 ">
+                    <h1 className="font-semibold text-3xl pb-4 text-white">Culture</h1> 
+                    "We thrive on collaboration, innovation, and inclusivity, fostering an environment where every voice is heard and valued."
+                    </p>
+                    <p data-aos="fade-left" className=" text-gray-200 pt-4">
+                    <h1 className="font-semibold text-3xl pb-4 text-white">Career Development</h1> 
+                    "Offering tailored paths for growth through mentorship, training programs, and opportunities for advancement. we empower our team to grow professionally, fostering innovation and excellence in software solutions."
+                     </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+       
+      </section>
+
+
+      <section className="h-full px-3 pt-12 pb-12 bg-white dark:bg-black">
+        <div className="flex flex-col w-fit px-6 ">
           <h2 className="font-bold text-2xl pb-2 text-black dark:text-white">
             See our areas of Work & Opportunities for you
           </h2>
-          <div className="border-2  border-blue-500 mb-3 text"></div>
+          <div className="border-2  border-sky-600 mb-3 text"></div>
         </div>
 
         <div className=" h-full bg-white dark:bg-black">
@@ -149,31 +245,32 @@ const it_profile = () => {
                       <h2 className="font-bold text-xl text-black dark:text-white">
                         {it_profile.position}
                       </h2>
-                      <div className="border-2 border-blue-500 mb-3 text"></div>
+                      <div className="border-2 border-sky-600 mb-3 text"></div>
                     </div>
                     <div className="text-gray-500 dark:text-gray-300 text-[15px] text-center md:text-start">
                       <p>{it_profile.jobDescription}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-gray-100 dark:bg-[#11162c] px-6 py-3 rounded-lg">
+                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-white dark:bg-[#11162c] px-6 py-3 rounded-3xl">
+                    <div className="hover:transform hover:scale-105 duration-300">
                     <p className="text-gray-600 dark:text-gray-300 w-full h-auto ">
-                      {it_profile.EmploymentType}
+                    <span className="text-black font-semibold">EmploymentType:</span>{it_profile.EmploymentType}
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
-                      {it_profile.Experience}
+                    <span className="text-black font-semibold">Experience:</span>{it_profile.Experience}
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
-                      {it_profile.education}
+                     <span className="text-black font-semibold">Education:</span>{it_profile.education}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
-                      {it_profile.Location}
-                    </p>
+                  <div className="w-full flex justify-center">
                     <button
-                      className="bg-blue-600 px-6 py-2 mt-3 rounded font-semibold text-white hover:bg-blue-700 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300"
+                      className="bg-sky-600 px-6 py-2 mt-3 rounded font-semibold text-white hover:bg-sky-700 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300"
                       onClick={showModal}
                     >
                       Apply
                     </button>
+                    </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -181,7 +278,7 @@ const it_profile = () => {
           </div>
         </div>
 
-        <Modal visible={isModalOpen} onCancel={handleCancel} footer={null}>
+        <Modal open={isModalOpen} onCancel={handleCancel} footer={null}>
           <form className="max-w-lg mx-auto">
             <h1 className="text-center font-bold text-lg">Application</h1>
             <div className="grid grid-cols-1 gap-1">
@@ -275,48 +372,7 @@ const it_profile = () => {
         </Modal>
       </section>
 
-      <section>
-        
-        <div className="min-h-screen  flex flex-col p-8 sm:p-16 md:p-24 justify-center bg-white dark:bg-[#1F2544]">
-          <div data-theme="teal" className="mx-auto max-w-6xl">
-            <section className="font-sans relative z-30">
-              <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
-                <div className="flex-shrink-0 self-stretch sm:flex-basis-40 md:flex-basis-50 xl:flex-basis-60">
-                  <div className="h-full ">
-                    <article className="h-full">
-                      <div className="h-full">
-                        <Image
-                          className="h-full object-cover"
-                          src={"/img/Career.png"}
-                          alt=""
-                          width={733}
-                          height={412}
-                          loading="lazy"
-                        />
-                      </div>
-                    </article>
-                  </div>
-                </div>
-                <div className="py-6 px-8 bg-grey" data-aos="zoom-out-up">
-                  <div className="leading-relaxed">
-                    <h2 className="leading-tight text-4xl dark:text-orange-50 text-black font-bold">
-                      Your career awaits.
-                    </h2>
-                    <p className="mt-4 dark:text-gray-300">
-                      Republic is more than just a "tech job". We're making
-                      real, lasting careers in the exciting world of technology,
-                      helping people stay in touch in incredible new ways. Your
-                      role is guaranteed to be fast-paced, but the experience
-                      will last forever.
-                    </p>
-                    <p className="mt-4 dark:text-gray-300">Hiring awesome people daily.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </section>
+     
     </main>
   );
 };
