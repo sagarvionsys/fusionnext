@@ -73,7 +73,7 @@ const Batches = () => {
      }
   ]
 
-  return <main className="bg-white pt-[70px]">
+  return <main className="bg-white pt-[70px] overflow-x-hidden">
     
     <section className="h-auto w-full pb-1">
       <div className="flex lg:h-[500px] md:h-[800px] h-[600px] relative">
@@ -234,7 +234,7 @@ const Batches = () => {
                         alt=""
                         width={100}
                         height={100}
-                        loading="lazy"
+                        
                       />
             </div>
             <div className="flex justify-center font-bold">
@@ -255,7 +255,7 @@ const Batches = () => {
                         alt=""
                         width={100}
                         height={100}
-                        loading="lazy"
+                        
                       />
             </div>
             <div className="flex justify-center font-bold">
@@ -271,12 +271,12 @@ const Batches = () => {
         className="px-10 py-10 w-full  border rounded-md border-slate-800 dark:border-white">
          <div className="flex justify-center pb-10">
                     <Image 
-                        className="object-cover"
+                        className="object-cover h-auto w-auto"
                         src={"/img/Screen3.png"}
                         alt=""
                         width={100}
                         height={100}
-                        loading="lazy"
+                        
                       />
             </div>
             <div className="flex justify-center font-bold">
