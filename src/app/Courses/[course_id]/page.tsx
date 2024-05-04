@@ -1,14 +1,19 @@
-//here our pdf file is downoladed but it is using anchor tag
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { PiCertificate } from "react-icons/pi";
 import { GoProjectSymlink } from "react-icons/go";
 import { FaRegHandshake } from "react-icons/fa";
 import { GiTeacher } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Page = () => {
+  useEffect(() => {
+    AOS.init({ offset: 200, duration: 1000, delay: 100 });
+  }, []);
+
   const handleDownload = () => {
     const pdfPath = "/Pdf_Syllabus/Software_Testing_Syllabus.pdf";
     const fileName = (pdfPath ? pdfPath.split("/").pop() : "default_filename")!;
@@ -22,7 +27,7 @@ const Page = () => {
   };
 
   return (
-    <section className="pt-[70px] bg-white text-black ">
+    <section className="pt-[70px] bg-white text-black overflow-x-hidden">
       <div className="mybgcurved pt-5">
         <div className="relative p-5 md:pt-5  z-10 flex flex-col justify-center items-center h-full text-center">
           <h1 className="text-4xl font-bold leading-tight mb-2">
@@ -53,14 +58,14 @@ const Page = () => {
               alt="image"
               width={600}
               height={600}
-              className="rounded-lg border-4 border-white"
+              className="rounded-lg  "
             />
           </div>
           <div className="lg:w-1/2 border-l-4 border-black mb-6 lg:mb-0 p-5">
             <h1 className="text-4xl p-2 font-bold">
               What is <span className="text-black">Software Testing ?</span>
             </h1>
-            <p className="text-xl p-4">
+            <p className="text-lg p-4">
               Software Testing is evaluation of the software against
               requirements gathered from users and system specifications.
               Testing is conducted at the phase level in software development
@@ -75,14 +80,14 @@ const Page = () => {
         </div>
       </div>
 
-      <section className="pb-12">
-        <div className="container max-w-xl px-6 pb-6 mx-auto space-y-5 lg:px-8 lg:max-w-7xl">
+      <section>
+        <div className="container max-w-xl px-6  mx-auto space-y-5 lg:px-8 lg:max-w-7xl pb-12">
           <h2 className="text-3xl font-bold text-center sm:text-4xl">
             Key Features
           </h2>
           <hr className="w-200 mx-auto mt-0 border-2 border-orange-600" />
           <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-            <div>
+            <div data-aos="zoom-in">
               <div className="space-y-5">
                 <div className="flex">
                   <div className="flex-shrink-0">
@@ -156,7 +161,11 @@ const Page = () => {
                 </div>
               </div>
             </div>
-            <div aria-hidden="true" className="mt-10 lg:mt-0">
+            <div
+              aria-hidden="true"
+              className="mt-10 lg:mt-0"
+              data-aos="flip-up"
+            >
               <Image
                 src="/img/feature_Courses.jpg"
                 alt="image"
@@ -168,61 +177,68 @@ const Page = () => {
           </div>
         </div>
       </section>
-      <section className="pt-0">
-        <div className="bg-orange-500 flex flex-col md:flex-row justify-between px-6 md:px-24 py-5">
-          <div className="w-full md:w-3/5 mb-6 md:mb-0">
-            <h2 className="text-2xl font-semibold mb-6 md:mb-10">
-              Who can apply for the course?
-            </h2>
-            <div className="space-y-4 md:space-y-6">
-              <ul className="text-white">
-                <li className="flex items-center mt-4">
-                  <FaCheck className="mr-2 text-black" />
-                  Aspiring Software developers who are interested in switching
-                  careers.
-                </li>
-                <li className="flex items-center mt-4">
-                  <FaCheck className="mr-2 text-black" />
-                  Graduate/post-graduate students wishing to pursue their
-                  careers in Software testing.
-                </li>
-                <li className="flex items-center mt-4">
-                  <FaCheck className="mr-2 text-black" />
-                  Professionals from non-IT backgrounds, who want to establish
-                  themselves in IT.
-                </li>
-                <li className="flex items-center mt-4">
-                  <FaCheck className="mr-2 text-black" />
-                  Candidates who would like to restart their career after a gap.
-                </li>
-                <li className="flex items-center mt-4">
-                  <FaCheck className="mr-2 text-black" />
-                  Software testing is a topic of interest to professionals.
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full md:w-2/5 flex justify-center h-[270px]">
-            <img
-              src="/img/whoCan.jpg"
-              alt="side image"
-              className="max-w-2/3 md:max-w-full max-h-48 md:max-h-full rounded-full border-4 border-white shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
+
+  <section className="">
+  <div className="relative w-full h-[360px] lg:w-[1562px]"> 
+    <Image
+      src="/img/CutImage.jpg"
+      alt="side image"
+      layout="fill"
+      objectFit="cover"
+      className=""
+    />
+    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start">
+    <div className="w-full md:w-3/5 mb-2 md:mb-0 mx-full py-5 md:pl-[80px] px-2">
+    <h2 className=" text-white text-2xl font-semibold mb-2 md:mb-2">
+      Who can apply for the course?
+    </h2>
+    <div className="space-y-4 md:space-y-6">
+      <ul className="text-black text-md font-semibold">
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-white" />
+          Aspiring Software developers who are interested in switching
+          careers.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-white" />
+          Graduate/post-graduate students wishing to pursue their
+          careers in Software testing.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-white" />
+          Professionals from non-IT backgrounds, who want to establish
+          themselves in IT.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-white" />
+          Candidates who would like to restart their career after a gap.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-white" />
+          Software testing is a topic of interest to professionals.
+        </li>
+      </ul>
+    </div>
+  </div>
+    </div>
+  </div>
+</section>
+
 
       <section className="bg-white ">
         <div className="max-w-7xl mx-auto">
           <div className="container mx-auto px-6 p-6 bg-white">
-            <div className="mb-5 text-center">
+            <div className="mb-5 text-center ">
               <h3 className="text-2xl text-orange-500 font-bold tracking-wide underline">
                 Course Offerings
               </h3>
             </div>
 
-            <div className="flex flex-wrap mt-5">
-              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-4 border-orange-500">
+            <div className="flex flex-wrap mt-5  ">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 p-4 border-orange-500 hover:bg-gray-200"
+                data-aos="fade-right"
+              >
                 <div className="flex items-center mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -238,7 +254,10 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-4 border-orange-500">
+              <div
+                className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r p-4 border-orange-500 hover:bg-gray-200"
+                data-aos="zoom-in"
+              >
                 <div className="flex items-center mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -254,7 +273,10 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-4 border-orange-500">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r lg:w-1/3 lg:border-r-0 p-4 border-orange-500 hover:bg-gray-200"
+                data-aos="fade-left"
+              >
                 <div className="flex items-center mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +291,10 @@ const Page = () => {
                   <div className="ml-4 text-xl">24 x 7 Support</div>
                 </div>
               </div>
-              <div className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-4 border-orange-500">
+              <div
+                className="w-full border-b md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 p-4 border-orange-500 hover:bg-gray-200"
+                data-aos="fade-right"
+              >
                 <div className="flex items-center mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -285,7 +310,10 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-4 border-orange-500">
+              <div
+                className="w-full border-b md:w-1/2 md:border-r md:border-b-0 lg:w-1/3 lg:border-b-0 p-4 border-orange-500 hover:bg-gray-200"
+                data-aos="zoom-in"
+              >
                 <div className="flex items-center mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -301,7 +329,10 @@ const Page = () => {
                 </div>
               </div>
 
-              <div className="w-full md:w-1/2 lg:w-1/3 p-4 border-orange-500">
+              <div
+                className="w-full md:w-1/2 lg:w-1/3 p-4 border-orange-500 hover:bg-gray-200"
+                data-aos="fade-left"
+              >
                 <div className="flex items-center mb-4">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -325,3 +356,49 @@ const Page = () => {
 };
 
 export default Page;
+
+{
+  /* <section>
+<div className="bg-orange-500 flex flex-col md:flex-row justify-between">
+  <div className="w-full md:w-3/5 mb-2 md:mb-0 mx-full py-5 md:px-[92px] px-2">
+    <h2 className="text-2xl font-semibold mb-2 md:mb-2">
+      Who can apply for the course?
+    </h2>
+    <div className="space-y-4 md:space-y-6">
+      <ul className="text-white">
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-black" />
+          Aspiring Software developers who are interested in switching
+          careers.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-black" />
+          Graduate/post-graduate students wishing to pursue their
+          careers in Software testing.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-black" />
+          Professionals from non-IT backgrounds, who want to establish
+          themselves in IT.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-black" />
+          Candidates who would like to restart their career after a gap.
+        </li>
+        <li className="flex items-center mt-4">
+          <FaCheck className="mr-2 text-black" />
+          Software testing is a topic of interest to professionals.
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div className=" md:w-2/5 flex justify-center">
+    <img
+      src="/img/whoCan.jpg"
+      alt="side image"
+      className="object-cover  h-[275px]"
+    />
+  </div>
+</div>
+</section> */
+}
