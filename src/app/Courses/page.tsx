@@ -8,30 +8,13 @@ const Courses = () => {
   const mycourseData = [
     {
       courseName: "AWS",
-      imagesrc: "https://wallpapercave.com/wp/wp13498907.jpg",
+      imagesrc: "https://media2.spaceref.com/wp-content/uploads/2023/09/13112723/AWS.jpg",
       trainer: "Trainer-Led",
       duration: "6-Months",
       top: "Top Selling",
       courseMod: "Online",
     },
-    {
-      courseName: "Salesforce",
-      imagesrc:
-        "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/4VHASVSF2FNDPMEZFMKW3IOVKE.jpg",
-      trainer: "Trainer-Led",
-      duration: "6-Months",
-      top: "Top tranding",
-      courseMod: "",
-    },
-    {
-      courseName: "Oracal-SQL/Pl-SQL",
-      imagesrc:
-        "https://redresscompliance.com/wp-content/uploads/2024/02/Future-Trends-of-Oracle-APEX-1024x585.webp",
-      trainer: "Trainer-Led",
-      duration: "3-Months",
-      top: "",
-      courseMod: "Offline",
-    },
+   
     {
       courseName: "Software Testing",
       imagesrc:
@@ -42,23 +25,51 @@ const Courses = () => {
       courseMod: "Online",
     },
     {
-      courseName: "power-Bi",
+      courseName: "Oracal-SQL/Pl-SQL",
       imagesrc:
-        "https://fusion-institute.com/public/uploads/course/1659161547-maxresdefault.jpg",
+        "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/315035597/original/dcf49ad30116a98f47d8080b7c764f5fbe0c6a90/do-simple-to-complex-sql-queries-and-plsql-procedures.jpg",
       trainer: "Trainer-Led",
       duration: "3-Months",
-      top: "",
+      top: "Top tranding",
       courseMod: "Offline",
     },
+    {
+      courseName: "Salesforce",
+      imagesrc:
+        "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/4VHASVSF2FNDPMEZFMKW3IOVKE.jpg",
+      trainer: "Trainer-Led",
+      duration: "6-Months",
+      top: "Top Trending",
+      courseMod: "Online/Offline",
+    },
+    
     {
       courseName: "RPA",
       imagesrc:
         "https://fusion-institute.com/public/uploads/course/1654431691-rpa.jpg",
       trainer: "Trainer-Led",
       duration: "4-Months",
-      top: "Top tranding",
+      top: "",
       courseMod: "Offline",
     },
+    {
+      courseName: "Salesforce",
+      imagesrc:
+        "https://cloudfront-us-east-2.images.arcpublishing.com/reuters/4VHASVSF2FNDPMEZFMKW3IOVKE.jpg",
+      trainer: "Trainer-Led",
+      duration: "6-Months",
+      top: "",
+      courseMod: "Online/Offline",
+    },
+    
+    {
+      courseName: "AWS",
+      imagesrc: "https://media2.spaceref.com/wp-content/uploads/2023/09/13112723/AWS.jpg",
+      trainer: "Trainer-Led",
+      duration: "6-Months",
+      top: "",
+      courseMod: "Online",
+    }
   ];
   const customSort = (a: any, b: any) => {
     if (a.top && !b.top) {
@@ -91,7 +102,7 @@ const Courses = () => {
         {mycourseData.map((course, index) => (
           <div
             key={index}
-            className="border border-gray-600 dark:border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:bg-white dark:hover:bg-black transition-transform hover:scale-105 shadow-2xl"
+            className="border hover:border-blue-800 dark:border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:bg-white dark:hover:bg-black transition-transform hover:scale-105 shadow-2xl"
           >
             <Image
               src={course.imagesrc}
@@ -106,7 +117,7 @@ const Courses = () => {
                   {course.courseName}
                 </h1>
                 {course.top && (
-                  <span className="mt-1 px-1.5 py-0.5 text-[10px] font-medium bg-yellow-500 rounded-lg dark:text-black ">
+                  <span className="  mt-1 px-1.5 py-0.5 text-[9px] font-medium  bg-gradient-to-r from-red-500 via-orange-400 to-red-500 text-white shadow-sm  rounded-sm dark:text-black ">
                     {course.top}
                   </span>
                 )}
@@ -132,12 +143,12 @@ const Courses = () => {
                 </span>
               </div>
               <div className="mt-4 flex justify-between">
-                <button className="text-white font-medium rounded-lg text-sm px-2 py-1 mr-1 bg-blue-800 hover:bg-red-500">
+                <button className="text-white font-medium rounded-lg text-sm px-2 py-1 mr-1  hover:bg-blue-100 bg-blue-800  hover:text-black border  hover:border-blue-800">
                   <Link href="#" className="text-alice-blue">
                     Know more
                   </Link>
                 </button>
-                <button className="text-white font-medium rounded-lg text-sm px-2 py-1 bg-red-500 hover:bg-blue-800">
+                <button className="text-white font-medium rounded-lg text-sm px-2 py-1  hover:bg-blue-100 hover:text-black  bg-blue-800  border  hover:border-blue-800 ">
                   <Link href="#" className="text-alice-blue">
                     Book demo
                   </Link>
