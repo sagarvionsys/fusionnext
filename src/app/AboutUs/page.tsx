@@ -14,7 +14,7 @@ const AboutUs = () => {
   useEffect(()=>{
     AOS.init({offset: 200,
       duration: 1000,
-      delay: 100,});
+      delay: 50,});
   },[])
 
   return (
@@ -23,7 +23,7 @@ const AboutUs = () => {
 
       <section id="features"className=" px-6 py-10 md:py-20 md:px-10  border-t border-b border-neutral-900">
         <div className="relative mx-auto max-w-5xl text-center">
-          <span className="text-gray-900 my-3 font-bold flex items-center justify-center uppercase tracking-wider">
+          <span className="text-gray-900 dark:text-gray-300 my-3 font-bold flex items-center justify-center uppercase tracking-wider">
             Why choose us ?
           </span>
           <h2
@@ -63,25 +63,17 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="relative flex felx-col-1 md:flex-col-2 items-center justify-center dark:bg-gray-950">
+      <div className="relative flex felx-col-1 lg:flex-col-2 mt-20 items-center justify-center dark:bg-gray-950">
         <div className="flex-1">
-        <div className="mt-20 md:px-30 md:py-5 max-w-5xl text-center">
-          <h2 className="text-2xl md:text-3xl bg-gradient-to-b from-gray-900 to-gray-700 bg-clip-text dark:text-gray-200 font-bold text-transparent">What is Corporate Training?</h2>
+        <div className="md:px-30 md:py-5 max-w-5xl text-center">
+          <h2 className="flex pl-[4rem] items-center justify-left text-2xl md:text-4xl bg-gradient-to-b from-gray-900 to-gray-700 bg-clip-text dark:text-gray-200 font-bold text-transparent">What is Corporate Training?</h2>
         </div>
         <div className="flex p-5">
           <div className="md:pl-10 flex justify-center text-2xl md:text-3xl text-violet-950 dark:text-violet-800" data-aos="fade-right">
           <MdDoubleArrow/>
           </div>
           <div>
-          <p className="md:px-5 text-sm sm:text-xl font-semibold text-gray-900 dark:text-gray-300" data-aos="fade-right">We defines training as partnering with students in a thought-provoking, challenging and creative process that inspires them to maximize their personal and professional potential.</p>
-          </div>
-        </div>
-        <div className="flex p-5">
-          <div className="md:pl-10 flex justify-center text-2xl md:text-3xl text-violet-950 dark:text-violet-800" data-aos="fade-right">
-          <MdDoubleArrow/>
-          </div>
-          <div>
-          <p className="md:px-5 text-sm sm:text-xl font-semibold text-gray-900 dark:text-gray-300" data-aos="fade-right">The process of traning often unlocks previously untapped sources of imagination, productivity and leadership quality of both students and trainers.</p>
+          <p className="md:px-5 text-sm sm:text-xl text-gray-900 dark:text-gray-300" data-aos="fade-right">We defines training as partnering with students in a thought-provoking, challenging and creative process that inspires them to maximize their personal and professional potential.</p>
           </div>
         </div>
         <div className="flex p-5">
@@ -89,32 +81,44 @@ const AboutUs = () => {
           <MdDoubleArrow/>
           </div>
           <div>
-          <p className="md:px-5 text-sm sm:text-xl font-semibold text-gray-900 dark:text-gray-300" data-aos="fade-right">We all have goals we want to reach, challenges we’re striving to overcome and times when we feel stuck. Partnering with a trainer can change your life, setting you on a path to greater personal and professional fulfillment.</p>
+          <p className="md:px-5 text-sm sm:text-xl text-gray-900 dark:text-gray-300" data-aos="fade-right">The process of traning often unlocks previously untapped sources of imagination, productivity and leadership quality of both students and trainers.</p>
+          </div>
+        </div>
+        <div className="flex p-5">
+          <div className="md:pl-10 flex justify-center text-2xl md:text-3xl text-violet-950 dark:text-violet-800" data-aos="fade-right">
+          <MdDoubleArrow/>
+          </div>
+          <div>
+          <p className="md:px-5 text-sm sm:text-xl text-gray-900 dark:text-gray-300" data-aos="fade-right">We all have goals we want to reach, challenges we’re striving to overcome and times when we feel stuck. Partnering with a trainer can change your life, setting you on a path to greater personal and professional fulfillment.</p>
           </div>
         </div>
         </div>
 
         <div className="flex-1 hidden lg:flex items-center justify-center mt-20 mr-10">
-          <Image data-aos="fade-left" className="rounded-xl mt-2 rounded-tl-3xl" src="/img/jobReady.jpg" alt="image" width={700} height={700}></Image>
+          <Image data-aos="fade-left" className="rounded-xl mt-2 object-fit h-auto w-auto" src="/img/16433.jpg" alt="image" width={1500} height={1001}></Image>
         </div>
       </div>
       
 
-      <div className="relative mt-10 sm:ml-10 sm:mr-10 sm:px-5 sm:py-5 mb-10 text-center dark:bg-slate-900">
+      <div className="relative mt-10 lg:px-5 sm:py-5 mb-10 text-center bg-gray-300 dark:bg-slate-900">
       <div className="mt-5 px-5 py-5 md:py-5 md:px-5 mx-auto max-w-5xl text-center">
         <h2 className="block w-full bg-gradient-to-b from-black to-gray-500 bg-clip-text text-transparent dark:text-gray-300 font-bold text-2xl sm:text-3xl">
         OUR KEY FEATURES
         </h2>
       </div>
 
-      <div className="hover:cursor-pointer sm:px-6 sm:py-10 md:py-5 md:px-17 -mx-4 flex flex-wrap p-8">
+      <div className="hover:cursor-pointer px-6 sm:py-10 md:py-5  -mx-4 flex flex-wrap p-8">
+        
        {features.map((feat)=>
-        { return (<div key={feat.id} data-aos="zoom-in-up" className="w-full px-4 md:w-1/2 lg:w-1/3">
-        <div className="mb-10 md:ml-8 md:mr-8 rounded-xl py-8 px-7 bg-gradient-to-br from-violet-950 to-black shadow shadow-gray-600 shadaow-md transition-all hover:shadow-gray-400 hover:shadow-md sm:p-9 lg:px-6 xl:px-9">
-          <div className="flex items-center justify-center text-5xl"><feat.Icon color={feat?.color}/></div>
-          <h3 className="flex items-center justify-center mb-4 text-xl text-gray-200">{feat?.title}</h3>
+        { return (<div key={feat.id} data-aos="zoom-in-up" className="w-full px-4 mb-10 md:w-1/2 lg:w-1/3 hover:flip-90">
+          <div className= "py-8 px-7 md:pl-8 md:pr-8 bg-gradient-to-br from-violet-950 to-black shadow shadow-gray-600 shadaow-md transition-all hover:shadow-gray-400 hover:shadow-md  border-neutral-200 dark:border-slate-800">
+            <div className="flex flex-col md:pl-8 md:pr-8 w-[16rem] h-auto">
+            <div className="flex items-center justify-center text-5xl"><feat.Icon color={feat?.color}/></div>
+            <h3 className="flex items-center justify-center h-20 text-xl text-gray-200">{feat?.title}</h3>
+            </div>
           </div>
-        </div>);
+          </div>
+          );
         }
       )}
       </div>
@@ -122,16 +126,16 @@ const AboutUs = () => {
 
       <div className="relative mx-auto max-w-7xl z-10 grid grid-cols-1 sm:grid-cols-2 dark:bg-gray-950">
         <div className="flex items-center justify-center">
-          <Image className="h-full object-contain rounded-br-full" src="/img/vision.jpg" alt="vision" width={500} height={300}></Image>
+          <Image className="h-full object-contain" src="/img/891.jpg" alt="vision" width={500} height={300}></Image>
         </div>
-        <div className="flex flex-col items-center justify-center" data-aos="zoom-in-up">
-          <h1 className="mt-6 bg-gradient-to-b from-black to-blue-900 dark:from-gray-300 dark:to-blue-300 bg-clip-text font-bold text-transparent text-2xl sm:text-3xl">
+        <div className="flex flex-col items-center md:items-start justify-center" data-aos="fade-right">
+          <h1 className="mt-6 bg-gradient-to-b from-black to-blue-900 dark:from-gray-300 dark:to-blue-300 bg-clip-text font-bold text-transparent text-2xl sm:text-3xl ">
           OUR VISION
           </h1>
           <p className="text-gray-800 dark:text-gray-300 mt-10 text-sm sm:text-l md:text-xl">Our vision is to provide optimal,</p>
           <p className="text-gray-800 dark:text-gray-300 mt-2 text-sm sm:text-l md:text-xl">job oriened and real time training</p>
         </div>
-        <div className="flex flex-col items-center justify-center" data-aos="zoom-in-up">
+        <div className="flex flex-col items-center md:items-end justify-center" data-aos="fade-left">
           <h1 className="mt-6 bg-gradient-to-b from-black to-blue-900 dark:from-gray-300 dark:to-blue-300 bg-clip-text font-bold text-transparent text-2xl sm:text-3xl">
           OUR MISSION
           </h1>
@@ -140,7 +144,7 @@ const AboutUs = () => {
           <p className="text-gray-800 dark:text-gray-300 mt-2 text-sm sm:text-l md:text-xl "> productive and successful</p>
         </div>
         <div className="flex items-center justify-center">
-          <Image className="h-full object-contain rounded-tl-full" src="/img/mission2.jpeg" alt="mission" width={500} height={300}></Image>
+          <Image className="h-full object-contain" src="/img/10330.jpg" alt="mission" width={500} height={300}></Image>
         </div>
       </div>
       </section>

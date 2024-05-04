@@ -42,7 +42,7 @@ function Apply() {
 
   return (
     <div className='flex items-center justify-center'>
-        <button onClick={showModal} className="block w-20 max-w-xs mx-au to bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-1 py-1 font-semibold">Apply</button>
+        <button onClick={showModal} className="block w-20 max-w-xs mx-au to bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 border border-black text-white rounded-lg px-1 py-1 font-semibold">Apply</button>
         <Modal footer={null} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
         <h2 className='flex items-center justify-center font-bold text-xl pb-10 pt-2'>Application form</h2>
         <div className="flex -mx-3">
