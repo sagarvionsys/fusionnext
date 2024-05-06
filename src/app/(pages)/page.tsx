@@ -43,6 +43,7 @@ const Home = () => {
         {/* the image area */}
       </section>
 
+
       <br></br>
       <hr className="p-4 bg-dark" />
       <section className="the Inqury form h-50  bg-violet-300 ">
