@@ -4,14 +4,14 @@ import { Boxes } from "@/components/ui/background-boxes";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
-import Hero_Section from "./interface/Hero_Section";
-import Feature_home from "./interface/Features_home";
+import Hero_Section from "../interface/Hero_Section";
+import Feature_home from "../interface/Features_home";
 
-import SuffleHero from "./interface/SuffleHero";
-import Enquiry_home from "./interface/Enquiry_home";
-import Reviews_section from "./interface/Reviews_section";
-import Course_section from "./interface/Course_section";
-import Faq_section from "./interface/Faq_section";
+import SuffleHero from "../interface/SuffleHero";
+import Enquiry_home from "../interface/Enquiry_home";
+import Reviews_section from "../interface/Reviews_section";
+import Course_section from "../interface/Course_section";
+import Faq_section from "../interface/Faq_section";
 
 const Home = () => {
   const words = [
@@ -37,27 +37,22 @@ const Home = () => {
     <main className="pt-16 bg-white dark:bg-black">
       {/* hero section  */}
 
-
       <section className="bg-white">
         <SuffleHero />
-
-
 
         {/* the image area */}
       </section>
 
-
-
-      <br></br><hr className="p-4 bg-dark" />
+      <br></br>
+      <hr className="p-4 bg-dark" />
       <section className="the Inqury form h-50  bg-violet-300 ">
         <Enquiry_home />
       </section>
       <hr className="text-black-200 bg-black-200"></hr>
-      < Course_section />
+      <Course_section />
       {/* pattaerns sectionn */}
 
       <div className="w-full bg-blue-500">
-
         <div className="w-full flex justify-center text-center">
           <div className="">
             <Reviews_section />
@@ -65,14 +60,10 @@ const Home = () => {
         </div>
       </div>
 
-
       <div className="w-full bg-white text-black justify-center text-center">
         <div className="">
-
-          < Faq_section />
+          <Faq_section />
         </div>
-
-
       </div>
       <Hero_Section />
 
