@@ -85,7 +85,7 @@ const Batches = () => {
           height={1000}
           className="object-cover lg:w-full blur-sm lg:h-[500px]"
         /> 
-        <div className=" absolute flex lg:justify-evenly flex-col mx-8 my-8  z-40 top-0 bottom-0 left-0 right-0 lg:right-[45%]">
+        <div className=" absolute flex lg:justify-evenly flex-col mx-8 my-8 py-8  z-40 top-0 bottom-0 left-0 right-0 lg:right-[45%]">
         <p className="text-white pl-2 md:text-[25px] sm:text-[15px] text-[10px]">OUR APPROACH</p>
         <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500 lg:py-2 pt-2 px-[15%] lg:px-1 md:text-[55px] sm:text-[35px] text-[20px]">
           <p>Batch Schedule for (2024)</p>
@@ -268,7 +268,7 @@ const Batches = () => {
 
        <div 
         data-aos="fade-right" 
-        className="px-10 py-10 w-full  border rounded-md border-slate-800 dark:border-white">
+        className="px-10 py-10  sm:h-72 h-auto  w-full  border rounded-md border-slate-800 dark:border-white">
          <div className="flex justify-center pb-10">
                     <Image 
                         className="object-cover h-auto w-auto"

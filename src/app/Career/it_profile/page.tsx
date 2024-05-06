@@ -63,9 +63,9 @@ const it_profile = () => {
         <div className="absolute z-20 flex justify-start w-11/12 h-[500px]">
           <div className="h-auto w-auto place-content-center">
             <div className="my-12 pl-12 h-auto w-auto">
-              <p className="bg-sky-600 h-2 w-12 mb-4">
-                <p className="h-2 w-1 bg-white"></p>
-              </p>
+              <div className="bg-sky-600 h-2 w-12 mb-4">
+                <div className="h-2 w-1 bg-white"></div>
+              </div>
               <h1 className="leading-tight md:text-5xl text-4xl text-white font-bold">
               Join Our Dynamic Team <br /><span>Today!</span>
               </h1>
@@ -74,7 +74,7 @@ const it_profile = () => {
               <span>Focused on Growth and Innovation.</span></p>
               <div className="flex flex-col sm:flex-row items-center pt-6">
               <Link
-                href={"/ContactUs"}
+                href={"#jobCard"}
                 className="px-6 py-2 bg-sky-600 hover:bg-sky-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]"
               >
                 Explore Opportunities
@@ -115,18 +115,24 @@ const it_profile = () => {
                     </article>
                   </div>
                 </div>
-                <div className="py-6 px-8 text-center" data-aos="fade-left">
+                <div className="py-6 px-8 text-center">
                   <div className="leading-relaxed">
-                    <h2 className="leading-tight md:text-4xl text-3xl dark:text-orange-50 text-sky-700 font-bold">
+                    <h2 
+                    data-aos="fade-left"
+                    className="leading-tight md:text-4xl text-3xl dark:text-orange-50 text-sky-700 font-bold">
                       Your career awaits
                     </h2>
-                    <p className="mt-4 dark:text-gray-300">
+                    <p
+                    data-aos="fade-left" 
+                    className="mt-4 dark:text-gray-300">
                     Embark on a journey of growth and fulfillment with us! Join our dynamic team where innovation thrives, 
                     collaboration flourishes, and opportunities abound. 
                     We're committed to nurturing your potential, fostering creativity,
                      and empowering you to make a meaningful impact.
                     </p>
-                    <p className="mt-4 font-bold text-black hover:transform hover:scale-105 duration-300">
+                    <p 
+                    data-aos="fade-left"
+                    className="mt-4 font-bold text-black hover:transform hover:scale-105 duration-300">
                       Seize the opportunity today!</p>
                   </div>
                 </div>
@@ -147,17 +153,19 @@ const it_profile = () => {
             <section className="font-sans relative z-30">
               <div className="[ lg:flex lg:items-center ] [ fancy-corners fancy-corners--large fancy-corners--top-left fancy-corners--bottom-right ]">
 
-              <div className="py-4 px-8 text-center">
+              <div className="py-8 px-8 text-center">
                   <div className="leading-relaxed">
                     
+                    <h1 data-aos="fade-right" className="font-semibold text-3xl pb-4 text-white">Benefit's</h1> 
                     <p  data-aos="fade-right" className="pb-8 text-gray-200 ">
-                    <h1 className="font-semibold text-3xl pb-4 text-white">Benefit's</h1> 
                     "We prioritizes the well-being and security of its workforce. Flexible work arrangements and professional development opportunities further enhance employee satisfaction and growth."
                     </p>
+
+                    <h1 data-aos="fade-right" className="font-semibold text-3xl pb-4 text-white">Flexible work</h1>
                     <p data-aos="fade-right" className=" text-gray-200 pt-4">
-                    <h1 className="font-semibold text-3xl pb-4 text-white">Flexible work</h1> 
                     "Fusion Software embraces flexible work arrangements, fostering a dynamic environment where employees can balance work and life commitments."
-                     </p>
+                    </p>
+
                   </div>
                 </div>
 
@@ -191,28 +199,30 @@ const it_profile = () => {
                     <article className="h-full">
                       <div className="h-full">
                         <Image
-                          className="h-full rounded-3xl object-cover"
+                          className="h-auto w-auto rounded-3xl object-cover"
                           src={"/img/career1.jpg"}
                           alt=""
                           width={600}
                           height={300}
-                          loading="lazy"
+                          
                         />
                       </div>
                     </article>
                   </div>
                 </div>
-                <div className="py-4 px-8 text-center">
+                <div className="py-8 px-8 text-center">
                 <div className="leading-relaxed">
                     
+                   <h1 data-aos="fade-left" className="font-semibold text-3xl pb-4 text-white">Culture</h1>
                     <p  data-aos="fade-left" className="pb-16 text-gray-200 ">
-                    <h1 className="font-semibold text-3xl pb-4 text-white">Culture</h1> 
                     "We thrive on collaboration, innovation, and inclusivity, fostering an environment where every voice is heard and valued."
                     </p>
+
+                    <h1 data-aos="fade-left" className="font-semibold text-3xl pb-4 text-white">Career Development</h1>
                     <p data-aos="fade-left" className=" text-gray-200 pt-4">
-                    <h1 className="font-semibold text-3xl pb-4 text-white">Career Development</h1> 
                     "Offering tailored paths for growth through mentorship, training programs, and opportunities for advancement. we empower our team to grow professionally, fostering innovation and excellence in software solutions."
-                     </p>
+                    </p>
+
                   </div>
                 </div>
               </div>
@@ -222,8 +232,8 @@ const it_profile = () => {
       </section>
 
 
-      <section className="h-full px-3 pt-12 pb-12 bg-white dark:bg-black">
-        <div className="flex flex-col w-fit px-6 ">
+      <section id="jobCard" className="h-full px-3 py-24 bg-white dark:bg-black">
+        <div className="flex flex-col  px-6 ">
           <h2 className="font-bold text-2xl pb-2 text-black dark:text-white">
             See our areas of Work & Opportunities for you
           </h2>
@@ -237,7 +247,7 @@ const it_profile = () => {
               data-aos="flip-left"
               data-aos-offset="100"
                 key={index}
-                className="w-full max-w-sm bg-white dark:bg-[#180404] mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl"
+                className="w-full max-w-sm bg-white dark:bg-[#180404] sm:mx-3 rounded-lg shadow-2xl mt-5 hover:shadow-xl"
               >
                 <div className="flex flex-col justify-evenly h-full">
                   <div className="flex flex-col h-full items-center md:items-start px-6 py-4 hover:transform hover:scale-105 duration-300">
@@ -251,18 +261,18 @@ const it_profile = () => {
                       <p>{it_profile.jobDescription}</p>
                     </div>
                   </div>
-                  <div className="flex flex-col h-auto w-auto items-center md:items-start bg-white dark:bg-[#11162c] px-6 py-3 rounded-3xl">
+                  <div className="flex flex-col h-auto max-w-full text-sm sm:text-base items-center md:items-start bg-white dark:bg-[#11162c] px-6 py-3 rounded-3xl">
                     <div className="hover:transform hover:scale-105 duration-300">
-                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto ">
+                    <p className="text-gray-600 dark:text-gray-300 max-w-full h-auto ">
                     <span className="text-black font-semibold">EmploymentType:</span>{it_profile.EmploymentType}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
+                    <p className="text-gray-600 dark:text-gray-300 max-w-full h-auto">
                     <span className="text-black font-semibold">Experience:</span>{it_profile.Experience}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 w-full h-auto">
+                    <p className="text-gray-600 dark:text-gray-300 max-w-full h-auto">
                      <span className="text-black font-semibold">Education:</span>{it_profile.education}
                     </p>
-                  <div className="w-full flex justify-center">
+                  <div className="max-w-full flex justify-center">
                     <button
                       className="bg-sky-600 px-6 py-2 mt-3 rounded font-semibold text-white hover:bg-sky-700 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300"
                       onClick={showModal}
