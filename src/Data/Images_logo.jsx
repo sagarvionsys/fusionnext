@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 import accenture from '/public/img/accenture.png';
 import fisver from '/public/img/fisver.png';
 import google from '/public/img/google.jpg';
@@ -16,7 +17,7 @@ import bmc from '/public/img/bmc.png';
 import cybage from '/public/img/cybage.jpg';
 import tibc from '/public/img/tibc.png';
 
-const work_fields = [
+const workFields = [
   { id: 1, logo: accenture },
   { id: 2, logo: fisver },
   { id: 3, logo: google },
@@ -36,9 +37,9 @@ const work_fields = [
 
 const LogoImg = () => {
   return (
-    <div className='grid grid-cols-4 gap-1 py-4 w-full h-[100vh] justify-center'>
-      {work_fields.map((logo) => (
-        <div key={logo.id} className="flex justify-center ">
+    <div className='grid grid-cols-3 gap-1 py-4 w-full justify-center'>
+      {workFields.map((logo) => (
+        <div key={logo.id} className="flex flex-col justify-center items-center">
           <Image
             src={logo.logo}
             alt="brand logo"
@@ -51,6 +52,5 @@ const LogoImg = () => {
     </div>
   );
 };
-
 
 export default LogoImg;

@@ -1,12 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Boxes } from "@/components/ui/background-boxes";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import Hero_Section from "./interface/Hero_Section";
 import Feature_home from "./interface/Features_home";
-
+import Modal from "@/components/Modal";
 import SuffleHero from "./interface/SuffleHero";
 import Enquiry_home from "./interface/Enquiry_home";
 import Reviews_section from "./interface/Reviews_section";
@@ -33,6 +33,8 @@ const Home = () => {
     },
   ];
 
+  const [showModal, setShowModal] = useState(false)
+
   return (
     <main className="pt-16 bg-white dark:bg-black">
       {/* hero section  */}
@@ -48,10 +50,20 @@ const Home = () => {
 
 
 
-      <br></br><hr className="p-4 bg-dark" />
-      <section className="the Inqury form h-50  bg-violet-300 ">
-        <Enquiry_home />
-      </section>
+     
+        <div>
+
+        <button
+  onClick={() => setShowModal(true)}
+  className="fixed bottom-0 right-0 z-10 m-8 bg-gray-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+>
+  Enquiry
+</button>
+
+
+
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
+    </div>
       <hr className="text-black-200 bg-black-200"></hr>
       < Course_section />
       {/* pattaerns sectionn */}
