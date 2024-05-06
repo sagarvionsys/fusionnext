@@ -23,22 +23,23 @@ const page = () => {
       },[])
 
     return (
-        <div>
-            <div className="h-2 overflow-x-hidden"></div>
-            <div className="overflow-hidden flex flex-col mx-auto bg-blue-50 dark:bg-gray-950">
-                <Image className="w-full mt-8 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover" width={1000} height={1000} src="/img/129657.jpg" alt="background image"></Image>
+        <div className="overflow-x-hidden">
+            <div className="h-2 "></div>
+            <div className="relative overflow-hidden flex flex-col mx-auto bg-blue-50 dark:bg-gray-950">
+                <Image className="w-full mt-8 h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] object-cover" width={1000} height={1000} src="/img/2147656715.jpg" alt="background image"></Image>
+                <div className="absolute inset-0 bg-violet-950 opacity-30 rounded-md"></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                <div className="mx-auto p-10 rounded-md cursor-pointer flex flex-col items-center justify-center bg-gradient-to-b from-blue-900 to-gray-600 dark:from-blue-950 dark:to-gray-800 opacity-10 text-gray-200" data-aos="fade-down">
-                    <h1 className="flex items-center justify-center text-xl sm:text-2xl md:text-4xl ">Ignite Your Career: Fuel Your Ambition with Endless Possibilities</h1>
+                <div className="mx-auto p-10 rounded-md cursor-pointer flex flex-col items-center justify-center  dark:from-blue-950 dark:to-gray-800 opacity-10 text-gray-200" data-aos="fade-down">
+                    <h1 className="flex items-center justify-center text-xl sm:text-3xl md:text-4xl ">Ignite Your Career: Fuel Your Ambition with Endless Possibilities</h1>
                     <p className="flex items-center justify-center text-xs sm:text-sm">We believe in fostering a culture where every individual's success is intertwined with the success of our team as a whole.</p>
                     <p className="flex items-center justify-center text-xs sm:text-sm md:text-xl ">because when our associate succeed we all do.</p>
                 </div>
                 </div>
             </div>
 
-            <div className="flex flex-wrap mt-20 md:mt-0 items-center justify-center border-b-2 bg-gray-100 dark:bg-gray-950">
+            {/* <div className="flex flex-wrap mt-20 md:mt-0 items-center justify-center border-b-2 bg-gray-100 dark:bg-gray-950">
                 <div className="flex flex-col pb-10 lg:pb-0 pt-5 lg:pt-0 w-full md:w-2/5 mt-10 md:mt-0 px-5 sm:px-10 rounded-lg items-center justify-center">
-                    <h2 className="flex text-2xl sm:text-3xl lg:text-4xl cursor-pointer bg-gradient-to-b from-purple-700 to-gray-900 bg-clip-text pb-3 lg:pb-10" data-aos="zoom-in-up"><span className="text-red-700 pr-2"><GiCursedStar/> </span> Why work with us?</h2>
+                    <h2 className="flex text-2xl sm:text-3xl lg:text-4xl cursor-pointer bg-gradient-to-b from-purple-700 to-gray-900 bg-clip-text pb-3 lg:pb-10" data-aos="zoom-in-up"> Why work with us?</h2>
                     <div>
                     <div className="flex flex-col gap-1 lg:gap-2 items-start justify-center scroll:scale-105">
                         <div  data-aos="zoom-in" className="flex flex-row items-center cursor-pointer hover:scale-105 transition duration-500">
@@ -67,7 +68,7 @@ const page = () => {
                 <div className="flex w-full md:w-3/5">
                     <Image className="object-contain rounded-lg" src="/img/2147656715.jpg" alt="image" width={1000} height={1000}></Image>
                 </div>
-            </div>
+            </div> */}
 
             <div className="bg-white dark:bg-black">
             <h1 className="flex flex-wrap items-center justify-center px-16 text-xl md:text-3xl pt-4 pb-5 underline underline-offset-4 font-semibold text-black dark:text-white">See Opportunities for you <span><IoMdArrowRoundForward/></span></h1>
