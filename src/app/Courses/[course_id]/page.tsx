@@ -8,6 +8,7 @@ import { GiTeacher } from "react-icons/gi";
 import { FaCheck } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const Page = () => {
   useEffect(() => {
@@ -27,14 +28,24 @@ const Page = () => {
   };
 
   return (
+
     <section className="pt-[70px] bg-white text-black overflow-x-hidden">
+     
+<div className="fixed bottom-[70px] right-4 z-50">
+  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:underline">
+  <Link href="#">
+    Book Demo
+  </Link>
+  </button>
+</div>
+
       <div className="mybgcurved pt-5">
         <div className="relative p-5 md:pt-5  z-10 flex flex-col justify-center items-center h-full text-center">
           <h1 className="text-4xl font-bold leading-tight mb-2">
             Software Testing (Manual+ Automation)
           </h1>
           <button
-            className="bg-yellow-400 text-gray-900 hover:bg-yellow-300 py-2 
+            className="bg-yellow-400 text-gray-900 hover:bg-w=yellow-300 py-2 
             px-6 rounded-full text-sm font-semibold transition duration-300 ease-in-out 
             transform hover:scale-105 hover:shadow-lg"
             onClick={handleDownload}
@@ -52,16 +63,17 @@ const Page = () => {
         </svg>
 
         <div className="flex flex-col lg:flex-row items-center justify-start mt-2">
-          <div className="lg:w-1/2 flex justify-center mb-6 lg:mb-0 ">
+          <div className="lg:w-1/2 flex justify-center mb-6 lg:mb-0">
             <Image
               src="/img/softwareTesting.jpg"
               alt="image"
               width={600}
               height={600}
-              className="rounded-lg  "
+              className="rounded-lg "
             />
           </div>
-          <div className="lg:w-1/2 border-l-4 border-black mb-6 lg:mb-0 p-5">
+         
+          <div className=" lg:w-1/2 lg:border-l-4 lg:border-black mb-6 lg:mb-0 p-5">
             <h1 className="text-4xl p-2 font-bold">
               What is <span className="text-black">Software Testing ?</span>
             </h1>
@@ -167,7 +179,7 @@ const Page = () => {
               data-aos="flip-up"
             >
               <Image
-                src="/img/feature_Courses.jpg"
+                src="/img/imageFeatures.jpg"
                 alt="image"
                 width={600}
                 height={600}
@@ -177,55 +189,54 @@ const Page = () => {
           </div>
         </div>
       </section>
+      <section className="">
+        <div className="relative w-full h-[360px] lg:w-[1562px]">
+          <Image
+            src="/img/CutImage.jpg"
+            alt="side image"
+            layout="fill"
+            objectFit="cover"
+            className="hidden lg:block"
+          />
+          <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start mt-2  ">
+            <div className=" mybg w-full md:w-3/5 mb-2 md:mb-0 mx-full md:pl-[80px] px-2 bg-black lg:bg-transparent p-5">
+              <h2 className=" text-white text-2xl font-semibold mb-2 md:mb-2">
+                Who can apply for the course?
+              </h2>
+              <div className="space-y-4 md:space-y-6">
+                <ul className="text-white text-md font-semibold">
+                  <li className="flex items-center mt-4">
+                    <FaCheck className="mr-2" />
+                    Aspiring Software developers who are interested in switching
+                    careers.
+                  </li>
+                  <li className="flex items-center mt-4">
+                    <FaCheck className="mr-2" />
+                    Graduate/post-graduate students wishing to pursue their
+                    careers in Software testing.
+                  </li>
+                  <li className="flex items-center mt-4">
+                    <FaCheck className="mr-2" />
+                    Professionals from non-IT backgrounds, who want to establish
+                    themselves in IT.
+                  </li>
+                  <li className="flex items-center mt-4">
+                    <FaCheck className="mr-2" />
+                    Candidates who would like to restart their career after a
+                    gap.
+                  </li>
+                  <li className="flex items-center mt-4">
+                    <FaCheck className="mr-2" />
+                    Software testing is a topic of interest to professionals.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section className="">
-  <div className="relative w-full h-[360px] lg:w-[1562px]"> 
-    <Image
-      src="/img/CutImage.jpg"
-      alt="side image"
-      layout="fill"
-      objectFit="cover"
-      className=""
-    />
-    <div className="absolute top-0 left-0 w-full h-full flex items-center justify-start">
-    <div className="w-full md:w-3/5 mb-2 md:mb-0 mx-full py-5 md:pl-[80px] px-2">
-    <h2 className=" text-white text-2xl font-semibold mb-2 md:mb-2">
-      Who can apply for the course?
-    </h2>
-    <div className="space-y-4 md:space-y-6">
-      <ul className="text-black text-md font-semibold">
-        <li className="flex items-center mt-4">
-          <FaCheck className="mr-2 text-white" />
-          Aspiring Software developers who are interested in switching
-          careers.
-        </li>
-        <li className="flex items-center mt-4">
-          <FaCheck className="mr-2 text-white" />
-          Graduate/post-graduate students wishing to pursue their
-          careers in Software testing.
-        </li>
-        <li className="flex items-center mt-4">
-          <FaCheck className="mr-2 text-white" />
-          Professionals from non-IT backgrounds, who want to establish
-          themselves in IT.
-        </li>
-        <li className="flex items-center mt-4">
-          <FaCheck className="mr-2 text-white" />
-          Candidates who would like to restart their career after a gap.
-        </li>
-        <li className="flex items-center mt-4">
-          <FaCheck className="mr-2 text-white" />
-          Software testing is a topic of interest to professionals.
-        </li>
-      </ul>
-    </div>
-  </div>
-    </div>
-  </div>
-</section>
-
-
-      <section className="bg-white ">
+      <section className="bg-white m-10">
         <div className="max-w-7xl mx-auto">
           <div className="container mx-auto px-6 p-6 bg-white">
             <div className="mb-5 text-center ">

@@ -85,7 +85,7 @@ const Courses = () => {
 
 
   return (
-    <div className="bg-orange-50 dark:bg-[#242121] pt-20 md:px-8 lg:px-10  mb-20  ">
+    <div className="bg-white dark:bg-[#242121] pt-20 md:px-8 lg:px-10">
       <div className="flex justify-center items-center">
   <div className="relative inline-block text-center">
     <span className="text-2xl md:text-3xl font-bold">
@@ -94,7 +94,6 @@ const Courses = () => {
     <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-orange-400 to-yellow-600 rounded-full"></span>
   </div>
 </div>
-
       <div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6
        p-10 "
