@@ -13,9 +13,9 @@ const Footer = () => {
 
   
      
-  return <footer className="bg-black text-white w-[100%]">
+  return <footer className="bg-black text-white max-w-full">
 
-    <main className="flex flex-wrap sm:text-[17px] text-[15px] justify-between pt-6 mx-6 ">
+    <main className="flex flex-wrap sm:text-[17px] text-[15px] justify-between pt-6 sm:mx-6 ">
 
       <section className="px-2 pt-2 pb-6 flex  sm:flex-col justify-between flex-col" >
 
@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="pl-2 sm:w-72 w-auto text-slate-400 ">At Fusion Software Institute, we offer dynamic courses blending theory and hands-on training to prepare you for a successful career in IT. With expert instructors and state-of-the-art facilities, we equip you with the skills needed to thrive in IT industry</div>
         </div>
 
-        <div className="flex sm:gap-4 gap-2 pt-4 justify-center ">
+        <div className="flex sm:gap-4 gap-2 pt-4 justify-center flex-wrap ">
 
           <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://www.facebook.com/people/Fusion-Software-Institute/100088395132564/?mibextid=ZbWKwL"}><FaFacebookF style={{ fontSize: '1.5rem' }} color="blue" /></a> </div>
           <div className="rounded-full bg-white dark:bg-gray-400 hover:bg-zinc-200 h-8 w-8 place-content-center px-1  py-1"><a href={"https://api.whatsapp.com/send/?phone=7498992609&text=I+am+intersted+in+course+you+provide"}><FaWhatsapp style={{ fontSize: '1.5rem' }} color="#25D366"/></a></div>

@@ -18,9 +18,10 @@ const Navbar: React.FC = () => {
       <div className="logo">
         <Link href={"/"}>
           <Image
+          className="h-auto w-auto"
             src={"/img/fusion.png"}
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             alt="fusionLogo"
           />
         </Link>
@@ -97,7 +98,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
       onMouseLeave={() => setOpen(false)}
       className="relative w-fit h-fit"
     >
-      <Link href={href} className="relative flex items-center text-white">
+      <div className="relative flex items-center text-white">
         {children}
         <span
           style={{
@@ -105,7 +106,7 @@ const FlyoutLink: React.FC<FlyoutLinkProps> = ({
           }}
           className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
         />
-      </Link>
+      </div>
       <AnimatePresence>
         {showFlyout && (
           <motion.div
