@@ -32,10 +32,10 @@ const SignIn = () => {
   };
 
   return (
-    <section className=" bg-white dark:bg-[#12151a] text-black dark:text-white pt-20 ">
+    <section className=" bg-white dark:bg-[#12151a] text-black dark:text-white pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-2 min-h-[90vh]">
-        <div className="relative flex items-end sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24  mb-2 lg:order-last">
-          <div className="absolute inset-0">
+        <div className="relative flex items-end sm:px-6 sm:pb-16 md:justify-center lg:px-8 lg:pb-24   lg:order-last">
+          <div className="absolute inset-0  mb-10">
             <Image
               className="h-full w-full object-cover object-top rounded-l-lg"
               src="/img/MySignUp.jpg"
@@ -136,8 +136,8 @@ const SignIn = () => {
           </div>
         </div>
 
-        <div className="border-4 border-black rounded-r-lg mb-2 order-first lg:order-last pt-10">
-          <div className="md:mx-20 md:mt-4 mx-10 mt-2">
+        <div className="border-4 border-black dark:border-white rounded-r-lg order-first lg:order-last pt-10 mb-10">
+          <div className="md:mx-20 md:mt-4 mx-10   ">
             <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
               Sign In
             </h2>

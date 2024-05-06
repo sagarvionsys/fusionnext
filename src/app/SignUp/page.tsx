@@ -36,10 +36,10 @@ const SignUp = () => {
   };
 
   return (
-    <section className=" bg-white text-black dark:bg-[#12151a] dark:text-white pt-[70px]">
+    <section className=" bg-white text-black dark:bg-[#12151a] dark:text-white pt-[70px] ">
       <div className="grid grid-cols-1 lg:grid-cols-2 mx-2">
-        <div className="order-first border-4 border-black rounded-l-lg mb-2">
-          <div className="md:mx-20 md:mt-4 mx-10 mt-2">
+        <div className="order-first border-4 border-black  dark:border-white rounded-l-lg mb-2">
+          <div className="md:mx-20 md:mt-4 mx-10 mt-2 mb-2">
             <h2 className="text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl">
               Sign up
             </h2>
