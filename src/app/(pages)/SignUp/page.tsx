@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SignUpSchema } from "@/schema/signUpSchema";
+import { message } from "antd";
 
 type Inputs = {
   userName: string;
@@ -32,6 +33,7 @@ const SignUp = () => {
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data); // Form data will be logged when submitted
+    message.success("SignUp Successfully");
     reset(); // Reset form fields after submission
   };
 
@@ -94,10 +96,9 @@ const SignUp = () => {
                       placeholder="Email"
                       id="email"
                       disabled={isSubmitting}
-                      // name="email"
+                      
                       {...register("email")}
-                      // value={user.email}
-                      // onChange={handleInputes}
+                     
                     />
                     {errors.email && (
                       <div className="text-red-500 text-xs">

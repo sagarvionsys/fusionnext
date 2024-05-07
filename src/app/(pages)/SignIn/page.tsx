@@ -6,6 +6,7 @@ import { FcGoogle } from "react-icons/fc";
 import Image from "next/image";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signInSchema } from "@/schema/signInSchema";
+import { message } from "antd";
 
 type Inputs = {
   email: string;
@@ -28,6 +29,7 @@ const SignIn = () => {
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
+    message.success(" SignIn Successfully");
     reset();
   };
 
