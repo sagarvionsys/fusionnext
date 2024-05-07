@@ -1,5 +1,6 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../interface/Modal";
 import { Boxes } from "@/components/ui/background-boxes";
 import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
 import { cn } from "@/utils/cn";
@@ -14,6 +15,7 @@ import Course_section from "../interface/Course_section";
 import Faq_section from "../interface/Faq_section";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false)
   const words = [
     {
       text: "Build",
@@ -44,12 +46,19 @@ const Home = () => {
       </section>
 
 
-      <br></br>
-      <hr className="p-4 bg-dark" />
-      <section className="the Inqury form h-50  bg-violet-300 ">
-        <Enquiry_home />
-      </section>
-      <hr className="text-black-200 bg-black-200"></hr>
+      <div>
+
+<button
+onClick={() => setShowModal(true)}
+className="fixed bottom-0 right-0 z-10 m-8 bg-gray-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline"
+>
+Enquiry
+</button>
+
+
+
+{showModal && <Modal onClose={() => setShowModal(false)} />}
+</div>
       <Course_section />
       {/* pattaerns sectionn */}
 
