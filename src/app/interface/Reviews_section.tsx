@@ -51,22 +51,24 @@ const TestimonialSlider = () => {
       const keenSliderNext = document.getElementById('keen-slider-next');
       const keenSliderPreviousMobile = document.getElementById('keen-slider-previous-mobile');
       const keenSliderNextMobile = document.getElementById('keen-slider-next-mobile');
-
-      const clickHandler = () => keenSlider.next();
-
-      keenSliderPrevious?.addEventListener('click', clickHandler);
-      keenSliderNext?.addEventListener('click', clickHandler);
-      keenSliderPreviousMobile?.addEventListener('click', clickHandler);
-      keenSliderNextMobile?.addEventListener('click', clickHandler);
-
+  
+      const nextClickHandler = () => keenSlider.next();
+      const prevClickHandler = () => keenSlider.prev(); // Define function for previous slide
+  
+      keenSliderPrevious?.addEventListener('click', prevClickHandler); // Attach previous button to previous slide function
+      keenSliderNext?.addEventListener('click', nextClickHandler);
+      keenSliderPreviousMobile?.addEventListener('click', prevClickHandler); // Attach previous button to previous slide function
+      keenSliderNextMobile?.addEventListener('click', nextClickHandler);
+  
       return () => {
-        keenSliderPrevious?.removeEventListener('click', clickHandler);
-        keenSliderNext?.removeEventListener('click', clickHandler);
-        keenSliderPreviousMobile?.removeEventListener('click', clickHandler);
-        keenSliderNextMobile?.removeEventListener('click', clickHandler);
+        keenSliderPrevious?.removeEventListener('click', prevClickHandler);
+        keenSliderNext?.removeEventListener('click', nextClickHandler);
+        keenSliderPreviousMobile?.removeEventListener('click', prevClickHandler);
+        keenSliderNextMobile?.removeEventListener('click', nextClickHandler);
       };
     }
   }, [keenSlider]);
+
 
   return (
     
