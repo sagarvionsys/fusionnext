@@ -1,99 +1,147 @@
+
 "use client";
-import React, { useState } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { message } from "antd";
+import React from "react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { contactUsSchema} from "@/schema/contactUsSchema";
+
+type Inputs = {
+  firstName: string;
+  lastName:string;
+  email: string;
+  phone: string;
+  message: string;
+};
+
 
 const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    phone: '',
-    email: '',
-    message: ''
+  const{
+    register,
+    handleSubmit,
+    formState:{errors,isSubmitting},
+    reset,
+  }=useForm<Inputs>({
+    defaultValues:{
+      firstName:"",
+      lastName:"",
+      email:"",
+      phone:"",
+      message:""
+    },
+    resolver:zodResolver(contactUsSchema),
   });
 
-  const handleChange = (e:any) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
+    message.success("Message Sent Successfully");
+    reset();
   };
 
-  const handleSubmit = (e:any) => {
-    e.preventDefault();
-    console.log(formData); 
-    setFormData({
-      firstName: '',
-      lastName: '',
-      phone: '',
-      email: '',
-      message: ''
-    });
-  };
   
   return (
-    <>
+
+    <section>
       <div className="flex justify-center items-center py-16 bg-white dark:bg-black">
         <div className="container mx-auto my-4 px-4 lg:px-20">
           <div className="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto dark:bg-gray-900 rounded-2xl shadow-2xl">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit(onSubmit)} >
             <div className="flex">
               <h1 className="font-bold uppercase text-5xl text-black dark:text-slate-100">
                 Send us a <br /> message
               </h1>
             </div>
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+            <div>
               <input
                 className="hover:transform hover:scale-105 duration-300 w-full bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-slate-200 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text" 
                 id="firstName" 
-                name="firstName" 
-                value={formData.firstName} 
-                onChange={handleChange} 
-                required 
+                
+                disabled={isSubmitting}
+                        {...register("firstName")}
+              
                 placeholder="First Name*"
               />
+              {errors.firstName && (
+                      <div className="text-red-500 text-xs">
+                        {errors.firstName.message}
+                      </div>
+                    )}
+              </div>
+              <div>
               <input
                 className="hover:transform hover:scale-105 duration-300 w-full bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-200 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="text" 
                 id="lastName" 
-                name="lastName" 
-                value={formData.lastName} 
-                onChange={handleChange} 
-                required 
+              
+                disabled={isSubmitting}
+                {...register("lastName")}
+              
                 placeholder="Last Name*"
               />
+              {errors.lastName && (
+                      <div className="text-red-500 text-xs">
+                        {errors.lastName.message}
+                      </div>
+                    )}
+              </div>
+              <div>
               <input
                 className="hover:transform hover:scale-105 duration-300 w-full bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-200 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="email" 
                 id="email" 
-                name="email" 
-                value={formData.email} 
-                onChange={handleChange} 
-                required 
+              
+                disabled={isSubmitting}
+                        {...register("email")}
+            
                 placeholder="Email*"
               />
+              {errors.email && (
+                      <div className="text-red-500 text-xs">
+                        {errors.email.message}
+                      </div>
+                    )}
+              </div>
+              <div>
               <input
                 className="hover:transform hover:scale-105 duration-300 w-full bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-200 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
                 type="tel" 
                 id="phone" 
-                name="phone" 
-                value={formData.phone} 
-                onChange={handleChange} 
-                required 
+                
+                disabled={isSubmitting}
+                        {...register("phone")}
+            
                 placeholder="Phone*"
               />
+              {errors.phone && (
+                      <div className="text-red-500 text-xs">
+                        {errors.phone.message}
+                      </div>
+                    )}
             </div>
+            
+            </div>
+            
             <div className="my-4 hover:transform hover:scale-105 duration-300">
               <textarea
                 id="message" 
-                name="message" 
-                value={formData.message} 
-                onChange={handleChange} 
-                required 
+                
+                disabled={isSubmitting}
+                        {...register("message")}
+           
                 placeholder="Message*"
                 className="w-full h-32 bg-gray-100 dark:bg-gray-600 text-gray-900 dark:text-gray-200 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-              ></textarea>
+              >
+               
+              </textarea>
+              {errors.message && (
+                      <div className="text-red-500 text-xs">
+                        {errors.message.message}
+                      </div>
+                    )}
             </div>
+
             <div className="my-2 w-1/2 lg:w-1/4">
               <button
                 type="submit"
@@ -140,8 +188,9 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
 export default ContactUs;
+
