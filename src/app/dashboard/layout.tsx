@@ -10,8 +10,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <h1>dashbord layout</h1>
-      <body>{children}</body>
+      <body>
+        <h1>dashbord layout</h1>
+        {children}
+      </body>
     </html>
   );
 }
