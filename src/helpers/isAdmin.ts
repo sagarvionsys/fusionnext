@@ -6,11 +6,8 @@ const isAdmin = (request: NextRequest) => {
   const { id, role } = useGetUserIdRole(token);
   console.log("the id is", id + "the role is", role);
 
-  if (!role) {
-    throw new Error("Invalid token or token is expired");
-  }
   if (role !== "ADMIN") {
-    throw new Error("Unauthorized access, you connot performe this action");
+    throw new Error("Unauthorized access, you cannot perform this action");
   }
   return role;
 };
