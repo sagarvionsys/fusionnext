@@ -1,9 +1,12 @@
 import dbConnect from "@/database/dbconnect";
+import isAdmin from "@/helpers/isAdmin";
 import batchModel from "@/models/batchModel";
+import { NextRequest } from "next/server";
 
-export async function DELETE(request: Request) {
+export async function DELETE(request: NextRequest) {
   await dbConnect();
   try {
+    isAdmin(request);
     const { searchParams } = new URL(request.url);
     const batchId = searchParams.get("batchId");
 
@@ -22,10 +25,13 @@ export async function DELETE(request: Request) {
       { status: "success", message: "Batch Deleted Succesfully" },
       { status: 200 }
     );
-  } catch (error) {
+  } catch (error: any) {
     console.log("Delete Batch error - ", error);
     return Response.json(
-      { status: "failed", error: "something went wrong in Deleting Batch" },
+      {
+        status: "failed",
+        error: error?.message || "something went wrong in Deleting Batch",
+      },
       { status: 500 }
     );
   }
