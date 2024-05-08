@@ -3,6 +3,15 @@ import KeenSlider from 'keen-slider';
 import 'keen-slider/keen-slider.min.css';
 import Image from 'next/image';
 import { Rate } from "antd";
+import ravi from '/public/img/ravi.jpg';
+import man from '/public/img/karl.jpg';
+import shivam from '/public/img/shivam.jpg';
+
+const work_fields = [
+  { id: 1, logo: ravi, content: "Working at Fusion has been an incredible experience. The work culture fosters collaboration, creativity, and continuous learning. The leadership team is supportive and truly values employee input. The institute also offers career guidance I couldn't ask for a better place to grow my career in IT.", starval: 4, name: 'Ravi Waghmare', rating: "4.8 / 5 rating" },
+  { id: 2, logo: man, content: "The quality of education at Fusion Institute is commendable. The instructors are knowledgeable and experienced professionals who provide comprehensive learning experiences. The curriculum is well-structured, The institute also offers career guidance covering both theoretical concepts and practical.", starval: 3, name: 'Jayesh Singh', rating: "3.1 / 5 rating" },
+  { id: 3, logo: shivam, content: "Fusion Institute provides excellent support services to its students. From enrollment to graduation, students receive assistance from the administrative staff and faculty members.  The instructors are knowledgeable and experienced professionals  The institute also offers career guidances.", starval: 5, name: 'Mohit Ram', rating: "5 / 5 rating" }
+];
 
 const TestimonialSlider = () => {
   const sliderRef = useRef(null);
@@ -40,146 +49,100 @@ const TestimonialSlider = () => {
     if (keenSlider) {
       const keenSliderPrevious = document.getElementById('keen-slider-previous');
       const keenSliderNext = document.getElementById('keen-slider-next');
-
       const keenSliderPreviousMobile = document.getElementById('keen-slider-previous-mobile');
       const keenSliderNextMobile = document.getElementById('keen-slider-next-mobile');
-
-      const clickHandler = () => keenSlider.next();
-
-      keenSliderPrevious?.addEventListener('click', clickHandler);
-      keenSliderNext?.addEventListener('click', clickHandler);
-
-      keenSliderPreviousMobile?.addEventListener('click', clickHandler);
-      keenSliderNextMobile?.addEventListener('click', clickHandler);
-
+  
+      const nextClickHandler = () => keenSlider.next();
+      const prevClickHandler = () => keenSlider.prev(); // Define function for previous slide
+  
+      keenSliderPrevious?.addEventListener('click', prevClickHandler); // Attach previous button to previous slide function
+      keenSliderNext?.addEventListener('click', nextClickHandler);
+      keenSliderPreviousMobile?.addEventListener('click', prevClickHandler); // Attach previous button to previous slide function
+      keenSliderNextMobile?.addEventListener('click', nextClickHandler);
+  
       return () => {
-        keenSliderPrevious?.removeEventListener('click', clickHandler);
-        keenSliderNext?.removeEventListener('click', clickHandler);
-        keenSliderPreviousMobile?.removeEventListener('click', clickHandler);
-        keenSliderNextMobile?.removeEventListener('click', clickHandler);
+        keenSliderPrevious?.removeEventListener('click', prevClickHandler);
+        keenSliderNext?.removeEventListener('click', nextClickHandler);
+        keenSliderPreviousMobile?.removeEventListener('click', prevClickHandler);
+        keenSliderNextMobile?.removeEventListener('click', nextClickHandler);
       };
     }
   }, [keenSlider]);
 
+
   return (
+    
     <section className="bg-gray-50">
       <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
           <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
             <h2 className="text-3xl font-bold text-left tracking-tight text-gray-900 sm:text-4xl">
-              India’s Best Professional
-              IT-Training Institute...
+              India’s Best Professional IT-Training Institute...
             </h2>
-
             <p className="mt-4 text-gray-700">
-              Our Success lies in our student's Success Stories
-              Read to those who have experienced the Magic...
+              Our Success lies in our student's Success Stories. Read to those who have experienced the Magic...
             </p>
-
             <div className="hidden lg:mt-8 lg:flex lg:gap-4">
               <button
                 aria-label="Previous slide"
                 id="keen-slider-previous"
-                className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+                className="rounded-full border border-rose-600 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white"
               >
                 Previous
               </button>
-
               <button
                 aria-label="Next slide"
                 id="keen-slider-next"
-                className="rounded-full border border-rose-600 p-3 text-rose-600 transition hover:bg-rose-600 hover:text-white"
+                className="rounded-full border border-rose-600 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white"
               >
                 Next
               </button>
             </div>
           </div>
-
           <div className="-mx-6 lg:col-span-2 lg:mx-0">
             <div ref={sliderRef} className="keen-slider">
-              <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600">
-                <blockquote className="testimonial">
-                  <span className='flex'>
-                    <Image style={{ borderRadius: '50%' }}
-                      src="/img/ravi.jpg"
+              {work_fields.map((logo) => (
+                <div key={logo.id} className="keen-slider__slide bg-slate-400 p-5 rounded-lg border border-wheat-600">
+                  <blockquote className="testimonial flex items-center">
+                    <Image
+                      src={logo.logo}
                       alt=""
                       width={80}
                       height={70}
+                      layout="fixed"
+                      objectFit="cover"
+                      className="rounded-full mr-4"
                     />
-                    <p className='m-1'>
-                      "Working at Vionsys has been an incredible experience. The work culture fosters collaboration, creativity, and continuous learning. The leadership team is supportive and truly values employee input. I couldn't ask for better place to grow my career in IT."
-                    </p>
-                  </span>
-                  <footer className='font-bold text-black m-1'>- Ravi Waghmare</footer>
+                    <p className="h-154 sm:h-auto">{logo.content}</p>
 
-                  <span className="start_symbol ">
-                    <Rate disabled defaultValue={5} />
-                  </span>
-                  <p className="the_rating_text text-sm p-1">4.8 / 5 rating</p>
-                </blockquote>
-              </div>
-              <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600">
-                <blockquote className="testimonial">
-                  <span className='flex'>
-                    <Image style={{ borderRadius: '50%' }}
-                      src="/img/shivam.jpg"
-                      alt=""
-                      width={80}
-                      height={70}
-                    />
-                    <p className='m-1'>
-                      "Vionsys IT Solutions shares my positive experience and satisfaction with the services provided by the company. One of the key strengths of Vionsys IT Solutions is the depth of technical knowledge possessed by your professionals."
-                    </p>
-                  </span>
-                  <footer className='font-bold text-black m-1'>- Mohini Rokade</footer>
+                  </blockquote>
+                  <footer className="font-bold text-black flex justify-center items-end mt-auto sm:mt-0">- {logo.name}</footer>
 
-                  <span className="start_symbol">
-                    <Rate disabled defaultValue={2} />
-                  </span>
-                  <p className="the_rating_text text-sm p-1">2.8 / 5 rating</p>
-                </blockquote>
-              </div>
-              <div className="keen-slider__slide  bg-slate-400 p-5 rounded-lg border border-wheat-600" >
-                <blockquote className="testimonial">
-                  <span className='flex'>
-                    <Image style={{ borderRadius: '50%' }}
-                      src="/img/shivv.jpg"
-                      alt=""
-                      width={80}
-                      height={70}
-                    />
-                    <p className='m-1'>
-                      "Vionsys IT Solution is recognized foe its good work culture and job stability. The organization provided me numerous opportunities to learn new things , to enhance my existing knowledge. That is all I felt. Greatful for being a part of Vionsys family."
-                    </p>
-                  </span>
-                  <footer className='font-bold text-black m-1'>- Vishnu Jadhav</footer>
-
-                  <span className="start_symbol">
-                    <Rate disabled defaultValue={4} />
-                  </span>
-                  <p className="the_rating_text text-sm p-1">4.1 / 5 rating</p>
-                </blockquote>
-              </div>
-              {/* Add more testimonial slides as needed */}
+                  <div className="flex items-center">
+                    <span className="start_symbol">
+                      <Rate disabled defaultValue={logo.starval} />
+                    </span>
+                    <p className="the_rating_text text-sm p-1">{logo.rating}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
         <button
           aria-label="Previous slide"
           id="keen-slider-previous-mobile"
-          className="rounded-full border border-rose-600 m-4 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
+          className="rounded-full border border-rose-600 m-4 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
         >
           Previous
         </button>
-
         <button
           aria-label="Next slide"
           id="keen-slider-next-mobile"
-          className="rounded-full border border-rose-600 m-4 p-4 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
+          className="rounded-full border border-rose-600 m-4 p-2 text-rose-600 transition hover:bg-rose-600 hover:text-white lg:hidden"
         >
           Next
         </button>
-
       </div>
     </section>
   );
