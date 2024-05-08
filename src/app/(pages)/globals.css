@@ -164,3 +164,27 @@ body {
   }
 }
 
+
+
+
+
+
+
+
+.slide-track {
+  width: calc(150px * 20);
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(calc(-150px * 10));
+  }
+}
+
+
+
+

@@ -37,18 +37,20 @@ const workFields = [
 
 const LogoImg = () => {
   return (
-    <div className='grid grid-cols-5 md:grid-cols-3 gap-4 py-4 w-full justify-center'>
-      {workFields.map((logo) => (
-        <div key={logo.id} className="flex flex-col justify-center items-center">
-          <Image
-            src={logo.logo}
-            alt="brand logo"
-            width={80}
-            height={100}
-            className='rounded-full'
-          />
-        </div>
-      ))}
+    <div className='slider h-60 relative w-full grid place-items-center overflow-hidden pb-5'>
+      <div className='slide-track w-3000 flex animate-scroll justify-between'>
+        {workFields.map((logo) => (
+          <div key={logo.id} className='w-150 h-60 grid place-items-center transition duration-500 cursor-pointer hover:scale-80'>
+            <Image
+              src={logo.logo}
+              alt='brand logo'
+              width={80}
+              height={100}
+              className='rounded-full'
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
