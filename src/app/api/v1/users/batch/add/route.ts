@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
     return Response.json(
       {
         status: "success",
-        message: "New Batch Created Succesfully",
+        message: "New Batch Created Successfully",
         NewBatch,
       },
       { status: 201 }
