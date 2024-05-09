@@ -10,7 +10,7 @@ export interface User extends Document {
   role: string;
 }
 
-const userScheama: Schema<User> = new Schema({
+const userSchema: Schema<User> = new Schema({
   userName: {
     type: String,
     trim: true,
@@ -27,7 +27,7 @@ const userScheama: Schema<User> = new Schema({
   },
   isVerified: {
     type: Boolean,
-    defoult: false,
+    default: false,
   },
   verifyCode: {
     type: String,
@@ -44,6 +44,6 @@ const userScheama: Schema<User> = new Schema({
 
 const userModel =
   (mongoose.models.User as mongoose.Model<User>) ||
-  mongoose.model<User>("User", userScheama);
+  mongoose.model<User>("User", userSchema);
 
 export default userModel;
