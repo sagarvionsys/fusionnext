@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { PiCertificate } from "react-icons/pi";
 import { GoProjectSymlink } from "react-icons/go";
@@ -9,35 +9,43 @@ import { FaCheck } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
+import { toast, Toaster } from "react-hot-toast";
 
 const Page = () => {
   useEffect(() => {
     AOS.init({ offset: 200, duration: 1000, delay: 100 });
   }, []);
-
   const handleDownload = () => {
-    const pdfPath = "/Pdf_Syllabus/Software_Testing_Syllabus.pdf";
-    const fileName = (pdfPath ? pdfPath.split("/").pop() : "default_filename")!;
-    const aTag = document.createElement("a");
-    aTag.href = pdfPath;
-    //aTag.setAttribute("download",fileName);
-    aTag.download = fileName;
-    // document.body.appendChild(aTag)
-    aTag.click();
-    aTag.remove();
+    const pdfUrl =
+      "https://res.cloudinar782/Course-Images/k6fsaqjy3epudyb60m5a.pdf";
+    const fileName = pdfUrl.split("/").pop();
+
+    fetch(pdfUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        const url = window.URL.createObjectURL(new Blob([blob]));
+        const aTag = document.createElement("a");
+        aTag.href = url;
+        aTag.download = fileName || "";
+        document.body.appendChild(aTag);
+        aTag.click();
+        document.body.removeChild(aTag);
+        window.URL.revokeObjectURL(url);
+      })
+      .catch((error) => {
+        toast.error("Error downloading the Brochure");
+        // Handle error, e.g., display a message to the user
+      });
   };
 
   return (
-
     <section className="pt-[70px] bg-white text-black overflow-x-hidden">
-     
-<div className="fixed bottom-[70px] right-4 z-50">
-  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:underline">
-  <Link href="#">
-    Book Demo
-  </Link>
-  </button>
-</div>
+      <Toaster />
+      <div className="fixed bottom-[70px] right-4 z-50">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded hover:underline">
+          <Link href="#">Book Demo</Link>
+        </button>
+      </div>
 
       <div className="mybgcurved pt-5">
         <div className="relative p-5 md:pt-5  z-10 flex flex-col justify-center items-center h-full text-center">
@@ -72,7 +80,7 @@ const Page = () => {
               className="rounded-lg "
             />
           </div>
-         
+
           <div className=" lg:w-1/2 lg:border-l-4 lg:border-black mb-6 lg:mb-0 p-5">
             <h1 className="text-4xl p-2 font-bold">
               What is <span className="text-black">Software Testing ?</span>

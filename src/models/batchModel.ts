@@ -8,7 +8,7 @@ export interface Batch extends Document {
   batchStatus: string;
 }
 
-const batchScheama: Schema<Batch> = new Schema({
+const batchSchema: Schema<Batch> = new Schema({
   batchName: {
     type: String,
     required: [true, "BatchName is required"],
@@ -35,6 +35,6 @@ const batchScheama: Schema<Batch> = new Schema({
 
 const batchModel =
   (mongoose.models.Batch as mongoose.Model<Batch>) ||
-  mongoose.model<Batch>("Batch", batchScheama);
+  mongoose.model<Batch>("Batch", batchSchema);
 
 export default batchModel;

@@ -106,13 +106,10 @@ const ShuffleHero = () => {
 
           <div class="grid md:grid-cols-2 grid-cols-1 gap-4  ">
             <div className="slider-container p-4 w-full h-auto hidden sm:hidden md:block ">
-              {/* Add your slider content here */}
+            <span style={{ position:"relative", top: "-80px", left:"-50px" }} class="text-1xl bg-red-500 py-1 px-6 rounded font-mono  text-white">7498992609 inquiry@fusion-institute.com</span>
+
             </div>
-
-
-
-
-            <div className="">
+             <div className="">
               <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-bold">
                 <h3 className="text-2xl text-black font-mono">Brighten Your Career</h3>
               </span>
@@ -123,12 +120,7 @@ const ShuffleHero = () => {
               <p className="text-base md:text-lg text-black my-4 md:my-6">
                 5,000,000 careers advanced 1,500 live classes every month 85% report career benefits including promotion or a new job
               </p>
-
-
-
-
-
-              <br />
+               <br />
               <p className="font-medium text-black">
                 Est. 2010. Trusted by
                 +

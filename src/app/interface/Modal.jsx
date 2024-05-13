@@ -95,9 +95,22 @@ function Modal({ onClose }) {
                   value={formData.selectedOption}
                   onChange={handleSelectChange}
                 >
-                  <option value="AWS">AWS</option>
-                  <option value="DevOps">DevOps</option>
-                  <option value="PHP">PHP</option>
+                  <option value="Software Testing">Software Testing</option>
+                  <option value="Java Full Stack">Java Full Stack</option>
+                  <option value="Python ">Python</option>
+                  <option value="Data Scientist">Data Scientist</option>
+                  <option value="Data Analytics">Data Analytics</option>
+                  <option value="Power BI">Power BI</option>
+                  <option value="Microsoft Azure">Microsoft Azure</option>
+                  <option value="AWS/DevOps">AWS/DevOps</option>
+                  <option value="Salesforce">Salesforce</option>
+                  <option value=".NET Development">.NET Development</option>
+                  <option value="SAP FICO">SAP FICO</option>
+                  <option value="SAP MM">SAP MM</option>
+                  <option value="RPA (Robotic Process Automation)">RPA (Robotic Process Automation)</option>
+                  <option value="React.js">React.js</option>
+                  <option value="MERN Full Stack">MERN Full Stack</option>
+
                 </select>
               </div>
 
